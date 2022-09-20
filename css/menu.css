@@ -1,0 +1,23 @@
+
+fieldset {
+    grid-column: 4;
+    grid-row: 6;
+    padding: 20px;
+}
+
+.menuButton {
+    margin: 10px;
+    padding: 10px;
+    background-color: black;
+    color: red;
+    font-family: Rock Salt;
+}
+.menuButton:hover {
+    opacity: 0.8;
+}
+
+#startOver{
+    background-color: red;
+    color: black;
+    font-size: x-large;
+}

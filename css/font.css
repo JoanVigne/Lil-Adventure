@@ -1,0 +1,22 @@
+
+
+@font-face {
+    font-family: smooch;
+    src: url(../fonts/Smooch-Regular.ttf);
+}
+@font-face {
+    font-family: Rock Salt;
+    src: url(../fonts/RockSalt-Regular.ttf);
+}
+* {
+    font-family:Georgia, 'Times New Roman', Times, serif
+}
+
+h1 {
+    font-family: Rock Salt;
+    font-size: 1em;
+}
+p {
+    font-family: 'Courier New', Courier, monospace;
+}
+

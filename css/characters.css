@@ -1,0 +1,47 @@
+#player {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+     z-index: 2; /*TO BE ABLE TO CHOSE IF I PASS ON OR BEHIND OBSTACLES */
+}
+#basicGuard {
+    background-image: url("../images/characters/guard.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+#hat {
+    background-image: url("../images/stuff/startHat.png");
+    grid-column: 2 /span 2;
+    grid-row: 1;
+    background-size: initial;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+#face {
+    background-image: url("../images/savana.png");
+    grid-column: 2 /span 2;
+    grid-row: 2;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+#bodyPlayer {
+    background-image: url("../images/stuff/startShirt.png");
+    grid-column: 2 /span 2;
+    grid-row: 3 / span 2;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+#weapon {
+    background-image: url("../images/stuff/startAxe.png");
+    grid-column: 1;
+    grid-row: 2 / span 3;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+

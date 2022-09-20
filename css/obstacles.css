@@ -1,0 +1,94 @@
+.obstacle {
+    color: black;
+}
+
+#lightFromOutside {
+    background-color: rgba(250, 250, 250, 0.4);
+    z-index: 1
+}
+
+#tableMirror {
+    background-image: url("../images/obstacles/tableMirror.png");
+    background-repeat: no-repeat;
+    z-index: 3;
+}
+
+#purpleBed {
+    background-image: url("../images/obstacles/purpleBed.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: bottom;
+    z-index: 1;
+}
+
+#home {
+    background-image: url("../images/obstacles/home.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    z-index: 3;
+    background-position: bottom;
+}
+#burningHouse {
+    background-image: url("../images/obstacles/burningHouse.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    z-index: 1;
+    background-position: bottom;
+}
+
+/* VILLAGE */
+#villageGate {
+    background-image: url("../images/obstacles/villageGate.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: 1;
+    background-position: bottom;
+}
+#brownWall {
+    background-image: url("../images/obstacles/brownWall.png");
+    background-repeat: no-repeat;
+    background-size: initial;
+    z-index: 1;
+    background-position: bottom;
+}
+/* TREES */
+/* LEFT TREE */
+#leftTreeFresh {
+    background-image: url("../images/obstacles/trees/leftTreeFresh.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: bottom;
+}
+
+#leftTreeBlack {
+    background-image: url("../images/obstacles/trees/leftTreeBlack.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: bottom;
+}
+/* BIG TREE */
+#bigTreeFresh {
+    background-image: url("../images/obstacles/trees/leftTreeFresh.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: bottom;
+}
+#bigTreeBlack {
+    background-image: url("../images/obstacles/trees/bigTreeBlack.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: bottom;
+}
+/* PINE TREE */
+#pineTreeFresh {
+    background-image: url("../images/obstacles/trees/pineTreeFresh.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: bottom;
+}
+#pineTreeBlack {
+    background-image: url("../images/obstacles/trees/pineTreeBlack.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: bottom;
+}
