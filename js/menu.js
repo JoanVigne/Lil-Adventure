@@ -49,8 +49,15 @@ function menu() {
 // CONTINUE MENU IN LOAD.JS
 
 function start() {
-  /*   clear le local storage pour remettre a 0 tout le jeu */
-  localStorage.clear();
+  /*   clear local storage to reboot game except saves*/
+  let localStorageSaves = localStorage.getItem("saves");
+  if (localStorageSaves === "null") {
+    localStorage.clear();
+    let arrayOfSaves = [];
+    localStorage.setItem("saves", JSON.stringify(arrayOfSaves));
+  } else {
+    localStorage.setItem("saves", localStorageSaves);
+  }
   quitMenu();
   appearDirections();
   titleH1[0].innerHTML = `Home sweet home`;
@@ -68,7 +75,6 @@ function start() {
     xp: 0,
   };
   localStorage.setItem("gameStuff", JSON.stringify(newGameStuff));
-
   container.append(player);
   playerStuff();
   whereAmI();
