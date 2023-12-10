@@ -86,6 +86,9 @@ function playerPositionEvent() {
       }
       break;
     case "Tunnel second":
+      if (numberRow == 9) {
+        autoSave();
+      }
       if (numberRow == 5) {
         bubble("player", "WOW !!", 0, -1);
         setTimeout(() => {

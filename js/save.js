@@ -35,16 +35,43 @@ function saveFunction() {
     date.getMonth() + 1
   }/${date.getFullYear()} at ${date.getHours()}:${date.getMinutes()}`;
 
-  thisSave = [nameOfTheSaved, location, stuff, dateOfSaving, thePosition];
-  if (saves.length >= 7) {
+  let thisSave = [nameOfTheSaved, location, stuff, dateOfSaving, thePosition];
+
+  if (nameOfTheSaved === "auto-save") {
+    // delete the previous auto-save
+    const autoSaveIndex = saves.findIndex((save) => save[0] === "auto-save");
+    if (autoSaveIndex !== -1) {
+      saves.splice(autoSaveIndex, 1);
+    }
+  }
+  saves.unshift(thisSave);
+  if (saves.length > 7) {
     saves.pop();
-    saves.splice(0, 0, thisSave);
-  } else {
-    saves.splice(0, 0, thisSave);
   }
 
   localStorage.setItem("saves", JSON.stringify(saves));
 
   bubble("player", "game saved!", 0, -1);
   closePromptBox();
+}
+
+function autoSave() {
+  let saves = JSON.parse(localStorage.getItem("saves"));
+  let location = titleH1[0].innerHTML;
+  let stuff = localStorage.getItem("gameStuff");
+  let thePosition = player.style.gridArea;
+  let nameOfTheSaved = "auto-save";
+  let date = new Date();
+  let dateOfSaving = `${date.getDate()}/${
+    date.getMonth() + 1
+  }/${date.getFullYear()} at ${date.getHours()}:${date.getMinutes()}`;
+
+  let thisSave = [nameOfTheSaved, location, stuff, dateOfSaving, thePosition];
+  const autoSaveIndex = saves.findIndex((save) => save[0] === "auto-save");
+  if (autoSaveIndex !== -1) {
+    saves.splice(autoSaveIndex, 1);
+  }
+  saves.unshift(thisSave);
+  localStorage.setItem("saves", JSON.stringify(saves));
+  bubble("player", "game auto-saved!", 0, -1);
 }
