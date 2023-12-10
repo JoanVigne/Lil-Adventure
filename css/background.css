@@ -1,0 +1,86 @@
+.menuImg {
+    background-color: beige;
+}
+
+.homeSweetHome {
+    background-image: url("../images/floor-ground/woodenFloor.jpg");
+}
+
+/* OUTSIDE FLOOR */
+.dryGround {
+    background-image: url("../images/floor-ground/dryGround.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.grass {
+    background-image: url("../images/floor-ground/grass.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+
+/* CITY FLOORS */
+.cityFloor1 {
+    background-image: url("../images/floor-ground/cityFloor.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.cityFloor2 {
+    background-image: url("../images/floor-ground/cityFloor2.jpg");
+    background-size: contain;
+    background-repeat: repeat;
+}
+
+.cityFloorRich {
+    background-image: url("../images/floor-ground/cityFloorRich.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.cityFloorHolly {
+    background-image: url("../images/floor-ground/cityFloorHolly.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+/* CAVE */
+
+.tunnelEntrance {
+    background-image: url("../images/floor-ground/woodenFloor.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.tunnel {
+    background-image: url("../images/floor-ground/tunnel.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+/* NORTH */
+
+.lightSnow {
+    background-image: url("../images/floor-ground/lightSnow.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.wildSnow {
+    background-image: url("../images/floor-ground/wildSnow.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.bigSnow {
+    background-image: url("../images/floor-ground/bigSnow.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.fightArena {
+    background-image: url("../images/floor-ground/fightArena.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+}

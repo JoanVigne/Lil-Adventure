@@ -1,0 +1,32 @@
+#xpContainer {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+#xpDisplay {
+    margin-left: 25px;
+}
+
+#LevelDisplay {
+    background-color: rgb(109, 163, 255);
+    padding: 0 5px 0 5px;
+    border: 1px solid black;
+    border-radius: 50%;
+}
+
+#xpBar {
+    height: 18px;
+    width: 70px;
+    border: 1px solid black;
+}
+
+#xpFiller {
+    height: 18px;
+    width: 1%;
+    background: linear-gradient(to bottom,
+            rgb(0, 183, 55),
+            rgb(166, 230, 55) 20%,
+            rgb(0, 183, 55) 50%);
+    transition: 1s;
+}

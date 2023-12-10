@@ -1,0 +1,23 @@
+#good-t-shirt {
+    background-image: url("../images/stuff/good-t-shirt.png");
+    background-repeat: no-repeat;
+    background-size: auto;
+    background-position: bottom;
+    opacity: 0.7;
+}
+
+#hammer-small {
+    background-image: url("../images/stuff/hammerSmall.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: bottom;
+    opacity: 0.7;
+}
+
+#basic-shield {
+    background-image: url("../images/stuff/shield.png");
+    background-repeat: no-repeat;
+    background-size: auto;
+    background-position: bottom;
+    opacity: 0.7;
+}

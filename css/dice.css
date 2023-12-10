@@ -1,0 +1,44 @@
+.containerForFightDices {
+    display: flex;
+    flex-direction: column;
+}
+
+.choseYourDice {
+    margin: 2px;
+    padding: 1px;
+    background-color: white;
+}
+
+.choseYourDice:hover {
+    background-color: tomato;
+}
+
+.diceContainers {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.dice {
+    border: 1px white solid;
+    margin: auto;
+    width: 40px;
+    height: 40px;
+    background-image: url("../images/dice.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    font: 800 40px system-ui;
+}
+
+.dice:hover {
+    border: 1px black solid;
+}
+
+.numberContainer {
+    color: red;
+    width: 15px;
+    font: 800 40px system-ui;
+    padding: 3px;
+    font-size: medium;
+}

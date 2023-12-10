@@ -1,0 +1,144 @@
+#basicGuard {
+    background-image: url("../images/characters/guard.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    z-index: 2
+}
+
+#mayor {
+    background-image: url("../images/characters/mayor.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    z-index: 2
+}
+
+#farmerMan {
+    background-image: url("../images/characters/farmerMan.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    z-index: 2
+}
+
+#farmerWoman {
+    background-image: url("../images/characters/farmerWoman.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    z-index: 2
+}
+
+#farmerBoy {
+    background-image: url("../images/characters/farmerBoy.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    z-index: 2
+}
+
+#detective {
+    background-image: url("../images/characters/detective.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    z-index: 2
+}
+
+#girl {
+    background-image: url("../images/characters/girl.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    z-index: 2
+}
+
+#oldWoman {
+    background-image: url("../images/characters/oldWoman.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    z-index: 2
+}
+
+#priest {
+    background-image: url("../images/characters/priest.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    z-index: 2
+}
+
+#goodMan {
+    background-image: url("../images/characters/goodMan.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    z-index: 2
+}
+
+
+#rogue {
+    background-image: url("../images/characters/rogue.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    z-index: 2
+}
+
+/* PLAYER  */
+#player {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    z-index: 2;
+    /*TO BE ABLE TO CHOSE IF I PASS ON OR BEHIND OBSTACLES */
+}
+
+.joan {
+    background-image: url("../images/joan.png");
+    grid-column: 2 /span 2;
+    grid-row: 2;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.savana {
+    background-image: url("../images/savana.png");
+    grid-column: 2 /span 2;
+    grid-row: 2;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+
+/* VENCE */
+#vence {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    z-index: 2;
+}
+
+#smallVence {
+    background-image: url("../images/characters/venceFace.png");
+    grid-column: 1 /span 2;
+    grid-row: 1 / span 2;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    z-index: 2;
+}
+
+#venceFace {
+    background-image: url("../images/characters/venceFace.png");
+    grid-column: 1 /span 4;
+    grid-row: 1 / span 4;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    z-index: 2;
+}

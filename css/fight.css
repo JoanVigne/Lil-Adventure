@@ -1,0 +1,76 @@
+#mainChatContainer {
+    background-color: rgb(226 226 226 / 50%);
+    border: 2px outset black;
+    grid-column: 1 /span 7;
+    grid-row: 4 /span 5;
+    padding-top: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+/* PLAYER */
+#playerContainer {
+    display: grid;
+    grid-column: 1 /span 2;
+    grid-row: 9 /span 3;
+}
+
+#playerContainer #player {
+    display: grid;
+    grid-area: 1 / 1 / auto / auto;
+}
+
+#statPlayerContainer {
+    background-color: rgb(226 226 226 / 50%);
+    border: 1px dotted black;
+    grid-column: 3 /span 2;
+    grid-row: 9 /span 3;
+}
+
+/* FOR THE DICE ETC */
+#actionContainer {
+    background-color: rgb(226 226 226 / 50%);
+    border: 2px solid tomato;
+    grid-column: 5 /span 3;
+    grid-row: 9 /span 3;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+/* ENEMY */
+#enemyContainer {
+    display: grid;
+    grid-column: 6 /span 2;
+    grid-row: 1 /span 3;
+}
+
+#statEnemyContainer {
+    background-color: rgb(226 226 226 / 50%);
+    border: 1px dotted black;
+    grid-column: 4 /span 2;
+    grid-row: 1 /span 3;
+}
+
+#enemyChatContainer {
+    background-color: rgba(52, 49, 49, 0.978);
+    color: rgb(226 226 226 / 50%);
+    font-weight: 700;
+    font-size: large;
+    border: 1px solid black;
+    grid-column: 1 /span 3;
+    grid-row: 1 /span 3;
+}
+
+#hpFight {
+    background-color: coral;
+    padding: 0 4px 4px 4px;
+    font-weight: 600;
+}
+
+#hpPlayer {
+    background-color: coral;
+    padding: 0 4px 4px 4px;
+    font-weight: 600;
+}
