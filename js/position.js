@@ -86,6 +86,16 @@ function playerPositionEvent() {
         whereAmI();
       }
       break;
+    case "The local master":
+      if (
+        position == "6 / 5" ||
+        position == "7 / 6" ||
+        position == "7 / 5" ||
+        position == "7 / 4"
+      ) {
+        bubble("smallVence", "Don't touch my bed !!", 1, -1);
+      }
+      break;
     case "Tunnel second":
       if (numberRow == 9) {
         autoSave();

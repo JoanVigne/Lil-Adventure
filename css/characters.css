@@ -91,11 +91,8 @@
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-template-rows: 1fr 1fr 1fr 1fr;
-  z-index: 2;
   /*TO BE ABLE TO CHOSE IF I PASS ON OR BEHIND OBSTACLES */
-  /* transition grid-area */
-  transition: grid-row-start 600ms ease, grid-area 600ms ease,
-    grid-column-start 600ms ease;
+  z-index: 2;
 }
 
 .joan {

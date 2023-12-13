@@ -79,15 +79,17 @@ function toTheNorth() {
       case "The local master":
         titleH1[0].innerHTML = `Tunnel entrance`;
         player.style.gridRowStart = 10;
-        bubble("player", "It's so dark!", 0, -1);
+
         break;
       case "Tunnel entrance":
         titleH1[0].innerHTML = `Tunnel first`;
         player.style.gridRowStart = 10;
+        bubble("player", "It's so dark!", 0, -1);
         break;
       case "Tunnel first":
         titleH1[0].innerHTML = `Tunnel second`;
         player.style.gridRowStart = 10;
+
         break;
       case "Tunnel second":
         titleH1[0].innerHTML = `Tunnel third`;
@@ -319,7 +321,7 @@ function toTheSouth() {
       // MASTER HOUSE
       case "The local master":
         titleH1[0].innerHTML = `The local master's house`;
-        player.style.gridRowStart = 2;
+        player.style.gridRowStart = 5;
         break;
       case "Tunnel entrance":
         titleH1[0].innerHTML = `The local master`;

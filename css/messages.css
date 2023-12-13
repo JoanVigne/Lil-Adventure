@@ -1,58 +1,60 @@
-    /* BUBBLE */
-    .bubble {
-        display: grid;
-        background-color: white;
-        text-align: center;
-        border: black 1px solid;
-        border-radius: 6px;
-        z-index: 1;
-        font-size: small;
-    }
+/* BUBBLE */
+.bubble {
+  display: grid;
+  background-color: white;
+  text-align: center;
+  border: black 1px solid;
+  border-radius: 6px;
+  z-index: 1;
+  font-size: small;
+}
 
-    input[type=button] {
-        background: darkgoldenrod;
-    }
+input[type="button"] {
+  background: darkgoldenrod;
+}
 
-    #alertBox {
-        background-color: whitesmoke;
-        border-radius: 10px;
-        padding: 0 20px 20px 20px;
-        position: absolute;
-        width: 300px;
-        margin-top: 10%;
-        margin-left: auto;
-        margin-right: auto;
-        left: 0;
-        right: 0;
-        text-align: center;
-        z-index: 4;
+#alertBox {
+  background-color: whitesmoke;
+  border-radius: 10px;
+  padding: 0 20px 20px 20px;
+  position: absolute;
+  width: 300px;
+  margin-top: 10%;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+  text-align: center;
+  z-index: 4;
+}
 
-    }
+/* LE PROMPT FAIT MAISON */
+#promptBox {
+  background-color: whitesmoke;
+  border-radius: 10px;
+  padding: 0 20px 20px 20px;
+  position: absolute;
+  width: 300px;
+  margin-top: 10%;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+  text-align: center;
+  z-index: 4;
+}
 
-    /* LE PROMPT FAIT MAISON */
-    #promptBox {
-        background-color: whitesmoke;
-        border-radius: 10px;
-        padding: 0 20px 20px 20px;
-        position: absolute;
-        width: 300px;
-        margin-top: 10%;
-        margin-left: auto;
-        margin-right: auto;
-        left: 0;
-        right: 0;
-        text-align: center;
-        z-index: 4;
-    }
+#promptBox input {
+  text-align: center;
+  width: 75%;
+  height: 35px;
+  padding: 2px;
+  margin: 5px;
+}
+#promptBox input[type="button"]:focus {
+  outline: 2px solid rgb(36, 136, 243);
+}
 
-    #promptBox input {
-        text-align: center;
-        width: 75%;
-        height: 35px;
-        padding: 2px;
-        margin: 5px;
-    }
-
-    ::placeholder {
-        color: rgb(208, 205, 205);
-    }
+::placeholder {
+  color: rgb(208, 205, 205);
+}

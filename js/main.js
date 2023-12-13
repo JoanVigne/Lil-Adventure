@@ -65,6 +65,34 @@ function directionDisappear() {
 }
 // directions au clavier
 document.addEventListener("keydown", function (event) {
+  const alertBox = document.querySelector("#alertBox");
+  const choice = document.querySelector("#promptBox");
+  if (choice) {
+    const buttons = Array.from(choice.querySelectorAll('input[type="button"]'));
+    const focusedButtonIndex = buttons.findIndex(
+      (button) => button === document.activeElement
+    );
+    console.log(focusedButtonIndex);
+    switch (event.key) {
+      case "ArrowUp":
+        if (focusedButtonIndex > 0) {
+          buttons[focusedButtonIndex - 1].focus();
+        } else {
+          buttons[buttons.length - 1].focus();
+        }
+        break;
+      case "ArrowDown":
+        if (focusedButtonIndex < buttons.length - 1) {
+          buttons[focusedButtonIndex + 1].focus();
+        } else {
+          buttons[0].focus();
+        }
+        break;
+      default:
+        break;
+    }
+    return;
+  }
   switch (event.key) {
     case "ArrowUp":
       moveNorth();
@@ -79,7 +107,6 @@ document.addEventListener("keydown", function (event) {
       moveWest();
       break;
     case "Enter":
-      const alertBox = document.querySelector("#alertBox");
       if (alertBox) {
         closeHomeMadeAlert();
       }
