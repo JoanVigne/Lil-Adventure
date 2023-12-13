@@ -17,6 +17,7 @@ function directionArrowsOnAndOff(north, east, south, west) {
 function whereAmI() {
   let containerBGI = container.classList;
   playerStuff();
+
   xpAndLevelDisplay();
   let iAmHere = titleH1[0].innerHTML;
   // to delet the previous obstacles of the last visited map
@@ -165,7 +166,7 @@ function whereAmI() {
       creationOfPeople("goodMan", 6, 9);
       creationOfPeople("oldWoman", 6, 7);
       creationOfPeople("priest", 2, 7);
-      creationOfPeople("girl", 2, 8);
+      /*       creationOfPeople("girl", 2, 8); */
       creationOfPeople("mayor", 4, 7);
       creationOfPeople("rogue", 3, 9);
       directionArrowsOnAndOff(north, east, south, west);

@@ -1,4 +1,7 @@
 function playerPositionEvent() {
+  // QUEL EST MON STUFF :
+  let actualStuff = localStorage.getItem("gameStuff");
+  let stuff = JSON.parse(actualStuff);
   // A METTRE ICI LOW HP ANIMATION
   let position = player.style.gridArea;
   let column = player.style.gridColumnStart;
@@ -28,9 +31,18 @@ function playerPositionEvent() {
       }
       break;
     case "The village center":
+      //gran-ma :
       if (position == "8 / 6") {
+        console.log(stuff.top);
+        if (stuff.top === "black-T-shirt") {
+          homeMadeAlert(
+            "Gran-ma",
+            "You look amazing with this cute shirt now !"
+          );
+          return;
+        }
         confirmMessage(
-          "Gran-ma: Dear Lord, your t-shirt is dirty, i can't let you wear this",
+          "Gran-ma: Dear Lord, your clothes are dirty, i can't let you wear this",
           "Accepting new T-shirt",
           () => {
             modifyTop("black-T-shirt");
@@ -38,8 +50,13 @@ function playerPositionEvent() {
           }
         );
       }
+      //mayor
       if (position == "8 / 4") {
-        bubble("mayor", "Good luck son!", 0, -1);
+        bubble("mayor", "Good luck!", 0, -1);
+      }
+      //priest
+      if (position == "8 / 2") {
+        bubble("priest", "God bless you, son", 0, -1);
       }
       break;
     case "The local master's garden":
@@ -55,12 +72,10 @@ function playerPositionEvent() {
       break;
     case "The crossroad of the north":
       if (position == "6 / 3") {
-        setTimeout(() => {
-          homeMadeAlert(
-            "Directions",
-            'North: Flaketown, and the "Dark Montains"<br><br>South: "Hometown" Village<br><br>East: The "Old Castle"<br><br>West: The local master'
-          );
-        }, 300);
+        homeMadeAlert(
+          "Directions",
+          'North: Flaketown, and the "Dark Montains"<br><br>South: "Hometown" Village<br><br>East: The "Old Castle"<br><br>West: The local master'
+        );
       }
       break;
     case "The east of the crossroad":
@@ -73,9 +88,9 @@ function playerPositionEvent() {
     case "The army roadblock":
       if (row == 2) {
         theArmyRoadBlockMessage();
-        player.style.gridRowStart = 5;
+        player.style.gridRowStart = 7;
         setTimeout(() => {
-          bubble("player", "omg!", 0, -1);
+          bubble("player", "omg!", 0, 1);
         }, 1000);
       }
       break;

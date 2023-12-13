@@ -44,7 +44,10 @@ function homeMadeAlert(title, message) {
   alertBox.innerHTML = `<h3>${title}</h3><br>
                                 <p>${message}</p><br>
                                 <input type="button" value="Okay" onclick="closeHomeMadeAlert()">`;
-  container.append(alertBox);
+  /* container.append(alertBox); */
+  setTimeout(() => {
+    container.append(alertBox);
+  }, 100);
 }
 function closeHomeMadeAlert() {
   let alertBoxToClose = document.getElementById("alertBox");
@@ -52,17 +55,35 @@ function closeHomeMadeAlert() {
 }
 
 // THE SCENARIO MESSAGES
+let indexOfVillageCenter = 0;
 function theVillageCenterMessage() {
-  homeMadeAlert(
-    "Greatings people!",
-    "We all noticed what happend around, burnt houses, and dead lands. I invite everyone who can to investigate about it. Be rewarded for any usefull informations ! "
-  );
+  if (indexOfVillageCenter === 0) {
+    homeMadeAlert(
+      "Greatings people!",
+      "We all noticed what happend around, burnt houses, and dead lands. I invite everyone who can to investigate about it. Be rewarded for any usefull informations ! "
+    );
+  } else {
+    return;
+  }
+  indexOfVillageCenter++;
 }
+
+let indexArmyRoadBlock = 0;
 function theArmyRoadBlockMessage() {
-  homeMadeAlert(
-    "Halt civilian !",
-    "This way is closed, ordered by the General Edmund. Back off. <br>[A soldier push you]"
-  );
+  if (indexArmyRoadBlock === 0) {
+    // Afficher le premier message si c'est la première fois
+    homeMadeAlert(
+      "Halt civilian !",
+      "This way is closed, ordered by General Edmund. Back off. <br>[A soldier pushes you]"
+    );
+  } else {
+    // Afficher le deuxième message pour les appels suivants
+    homeMadeAlert(
+      "Halt again!",
+      "You've been warned. This road is off-limits. <br>[The soldier looks annoyed]"
+    );
+  }
+  indexArmyRoadBlock++;
 }
 
 function homeMadePrompt(

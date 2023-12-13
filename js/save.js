@@ -3,28 +3,33 @@ saveLogo.addEventListener("click", saveGamePrompt);
 
 function saveGamePrompt() {
   let itsAFight = document.getElementById("enemyContainer");
-
-  if (itsAFight == null) {
-    homeMadePrompt(
-      "<p>Do you wanna save this game? It is gonna be saved in your browser.</p>",
-      "SAVE",
-      saveFunction,
-      "Name of your save"
-    );
-    let saves = localStorage.getItem("saves");
-    if (saves == null) {
-      let arrayOfSaves = [];
-      localStorage.setItem("saves", JSON.stringify(arrayOfSaves));
-    }
-  } else {
+  if (itsAFight) {
     homeMadeAlert(
       "Cannot save here",
       "You cannot save during a fight session, finish it before saving..."
     );
+    return;
+  }
+  const isMenu = document.querySelector(".menuImg");
+  if (isMenu) {
+    homeMadeAlert("Cannot save here", "You need to be in a game to save");
+    return;
+  }
+  // IF YOU CAN SAVE :
+  homeMadePrompt(
+    "<p>Do you wanna save this game? It is gonna be saved in your browser.</p>",
+    "SAVE",
+    saveFunction,
+    "Name of your save"
+  );
+  let saves = localStorage.getItem("saves");
+  if (saves == null) {
+    let arrayOfSaves = [];
+    localStorage.setItem("saves", JSON.stringify(arrayOfSaves));
   }
 }
 function saveFunction() {
-  let saves = JSON.parse(localStorage.getItem("saves"));
+  let saves = JSON.parse(localStorage.getItem("saves")) || [];
 
   let location = titleH1[0].innerHTML;
   let stuff = localStorage.getItem("gameStuff");
@@ -45,7 +50,7 @@ function saveFunction() {
     }
   }
   saves.unshift(thisSave);
-  if (saves.length > 7) {
+  if (saves.length > 10) {
     saves.pop();
   }
 

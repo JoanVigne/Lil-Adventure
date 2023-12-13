@@ -66,13 +66,20 @@ function directionDisappear() {
 // directions au clavier
 document.addEventListener("keydown", function (event) {
   const alertBox = document.querySelector("#alertBox");
-  const choice = document.querySelector("#promptBox");
-  if (choice) {
-    const buttons = Array.from(choice.querySelectorAll('input[type="button"]'));
+  if (alertBox) {
+    switch (event.key) {
+      case "Enter":
+        closeHomeMadeAlert();
+        break;
+    }
+  }
+  // choix selectionner
+  const inputButtons = document.querySelectorAll('input[type="button"]');
+  if (inputButtons.length > 0) {
+    const buttons = Array.from(inputButtons);
     const focusedButtonIndex = buttons.findIndex(
       (button) => button === document.activeElement
     );
-    console.log(focusedButtonIndex);
     switch (event.key) {
       case "ArrowUp":
         if (focusedButtonIndex > 0) {
@@ -93,6 +100,7 @@ document.addEventListener("keydown", function (event) {
     }
     return;
   }
+  // MOUVEMENT SUR MAP CLASSIQUE
   switch (event.key) {
     case "ArrowUp":
       moveNorth();
@@ -107,9 +115,6 @@ document.addEventListener("keydown", function (event) {
       moveWest();
       break;
     case "Enter":
-      if (alertBox) {
-        closeHomeMadeAlert();
-      }
       break;
     default:
       break;
