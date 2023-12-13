@@ -1,69 +1,69 @@
 html {
-    width: 100%;
-    height: 100%;
-    padding: 0;
-    margin: 0;
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  margin: 0;
 }
 
 body {
-    max-width: 420px;
-    height: 92%;
-    margin: auto;
-    text-align: center;
+  max-width: 420px;
+  height: 92%;
+  margin: auto;
+  text-align: center;
 }
 
 a {
-    color: black;
+  color: black;
 }
 
 #titleAndSave {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 #titleAndSave h1 {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    max-height: 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-height: 50px;
 }
 
 #titleAndSave img {
-    width: 30px;
-    height: 30px;
+  width: 30px;
+  height: 30px;
 }
 
-
 #titleAndSave img:hover {
-    opacity: 0.5;
+  opacity: 0.5;
 }
 
 #container {
-    max-width: 420px;
-    height: 95%;
-    margin: auto;
-    /* background-image: url(""); */
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-    z-index: 0;
+  max-width: 420px;
+  height: 95%;
+  margin: auto;
+  /* background-image: url(""); */
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  z-index: 0;
+  transition: opacity 700ms;
 }
 
 .forceBut {
-    background-color: black;
-    color: white;
-    padding: 2px;
-    margin: 5px;
+  background-color: black;
+  color: white;
+  padding: 2px;
+  margin: 5px;
 }
 
 .hpBut {
-    background-color: rgb(32, 175, 32);
-    color: white;
-    padding: 2px;
-    margin: 5px;
+  background-color: rgb(32, 175, 32);
+  color: white;
+  padding: 2px;
+  margin: 5px;
 }
 
 button:active {
-    background-color: blue;
+  background-color: blue;
 }

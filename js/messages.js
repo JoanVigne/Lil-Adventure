@@ -10,6 +10,22 @@ function bubble(id, message, bubCol, bubRow) {
   let numberRow = Number(row);
   bubble.style.gridColumnStart = numberColumn += bubCol;
   bubble.style.gridRowStart = numberRow += bubRow;
+  //
+  console.log(row);
+  // pour eviter la bulle hors jeu :
+  if (row === "2") {
+    bubble.style.gridRowStart = numberRow += 2;
+    console.log(bubble.style.gridRowStart);
+  }
+  if (row === "10") {
+    bubble.style.gridRowStart = numberRow += 0;
+  }
+  if (column === "2") {
+    bubble.style.gridColumnStart = numberColumn += 0;
+  }
+  if (column === "7") {
+    bubble.style.gridRowStart = numberRow += 2;
+  }
 
   container.append(bubble);
   setTimeout(function () {

@@ -1,4 +1,5 @@
 function playerPositionEvent() {
+  // A METTRE ICI LOW HP ANIMATION
   let position = player.style.gridArea;
   let column = player.style.gridColumnStart;
   let numberColumn = Number(column);
