@@ -44,23 +44,17 @@ function menu() {
       spe: null,
     })
   );
+  focusFirstInput();
 }
 
 // CONTINUE MENU IN LOAD.JS
 
 function start() {
-  /*   clear local storage to reboot game except saves*/
-  let localStorageSaves = localStorage.getItem("saves");
-  if (localStorageSaves === "null") {
-    localStorage.clear();
-    let arrayOfSaves = [];
-    localStorage.setItem("saves", JSON.stringify(arrayOfSaves));
-  } else {
-    localStorage.setItem("saves", localStorageSaves);
-  }
   quitMenu();
   appearDirections();
   titleH1[0].innerHTML = `Home sweet home`;
+  // reset des enemies :
+  enemyArrayLocalStorage(enemyArray);
   let newGameStuff = {
     face: "joan",
     weapon: "bambou",

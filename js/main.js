@@ -63,6 +63,14 @@ function directionDisappear() {
   southDirection.remove();
   westDirection.remove();
 }
+function focusFirstInput() {
+  const inputButtons = document.querySelectorAll('input[type="button"]');
+  if (inputButtons.length > 0) {
+    if (inputButtons[0] !== document.activeElement) {
+      inputButtons[0].focus(); // Set focus on the first input button
+    }
+  }
+}
 // directions au clavier
 document.addEventListener("keydown", function (event) {
   const alertBox = document.querySelector("#alertBox");
@@ -75,11 +83,17 @@ document.addEventListener("keydown", function (event) {
   }
   // choix selectionner
   const inputButtons = document.querySelectorAll('input[type="button"]');
+  /*   const aPrompt = document.querySelector("#promptBox");
+  if (aPrompt) {
+    console.log("a prompt is present here");
+  } */
   if (inputButtons.length > 0) {
     const buttons = Array.from(inputButtons);
     const focusedButtonIndex = buttons.findIndex(
       (button) => button === document.activeElement
     );
+    console.log(focusedButtonIndex);
+    console.log(inputButtons.length);
     switch (event.key) {
       case "ArrowUp":
         if (focusedButtonIndex > 0) {
@@ -95,6 +109,11 @@ document.addEventListener("keydown", function (event) {
           buttons[0].focus();
         }
         break;
+      case "Escape":
+        let backButton = document.getElementById("continueTitleAndBack");
+        if (backButton) {
+          backFunction();
+        }
       default:
         break;
     }

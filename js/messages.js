@@ -11,7 +11,6 @@ function bubble(id, message, bubCol, bubRow) {
   bubble.style.gridColumnStart = numberColumn += bubCol;
   bubble.style.gridRowStart = numberRow += bubRow;
   //
-  console.log(row);
   // pour eviter la bulle hors jeu :
   if (row === "2") {
     bubble.style.gridRowStart = numberRow += 2;

@@ -51,15 +51,15 @@ a {
 }
 
 .forceBut {
-  background-color: black;
-  color: white;
+  background-color: black !important;
+  color: white !important;
   padding: 2px;
   margin: 5px;
 }
 
 .hpBut {
-  background-color: rgb(32, 175, 32);
-  color: white;
+  background-color: rgb(32, 175, 32) !important;
+  color: white !important;
   padding: 2px;
   margin: 5px;
 }

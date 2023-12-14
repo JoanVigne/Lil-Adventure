@@ -28,12 +28,20 @@ function continueGame() {
       let stuff = element[2];
       let timeOfSaving = element[3];
       let position = element[4];
+      let enemyArray = element[5];
+
       let space = " ";
       let elementContent = document.createElement("input");
       elementContent.type = "button";
 
       elementContent.addEventListener("click", () =>
-        load(title, location, JSON.parse(stuff), position)
+        load(
+          title,
+          location,
+          JSON.parse(stuff),
+          position,
+          JSON.parse(enemyArray)
+        )
       );
 
       let buttonDelet = document.createElement("button");
@@ -49,6 +57,7 @@ function continueGame() {
 
     continueMenu.append(theGameSaved);
     container.append(continueMenu);
+    focusFirstInput();
 
     function deletASaving(element) {
       confirmMessage(
@@ -69,13 +78,14 @@ function continueGame() {
   }
 }
 // LOAD AND START PLAYING
-function load(title, location, stuff, position) {
+function load(title, location, stuff, position, enemies) {
   let continueMenu = document.getElementById("continueMenu");
   continueMenu.remove();
 
   appearDirections();
   titleH1[0].innerHTML = location;
   localStorage.setItem("gameStuff", JSON.stringify(stuff));
+  localStorage.setItem("enemyArray", JSON.stringify(enemies));
 
   container.append(player);
   player.style.gridArea = position;
