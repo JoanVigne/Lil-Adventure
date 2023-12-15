@@ -81,7 +81,8 @@ function load(title, location, stuff, position, enemies) {
 
   appearDirections();
   titleH1[0].innerHTML = location;
-  localStorage.setItem("gameStuff", JSON.stringify(stuff));
+  /*  localStorage.setItem("gameStuff", JSON.stringify(stuff)); */
+  gameStuffData = stuff;
   // var global enemyArray ou localstorage?
   /*  localStorage.setItem("enemyArray", JSON.stringify(enemies)); */
   enemyArray = enemies;

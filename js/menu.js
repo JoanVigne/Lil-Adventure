@@ -55,7 +55,8 @@ function start() {
   titleH1[0].innerHTML = `Home sweet home`;
   // reset des enemies :
   enemyArrayLocalStorage(enemyArray);
-  let newGameStuff = {
+  let newGameStuff = gameStuffData;
+  /*  let newGameStuff = {
     face: "joan",
     weapon: "bambou",
     shield: "",
@@ -67,8 +68,8 @@ function start() {
     spe: "",
     level: 1,
     xp: 0,
-  };
-  localStorage.setItem("gameStuff", JSON.stringify(newGameStuff));
+  }; */
+  /*   localStorage.setItem("gameStuff", JSON.stringify(newGameStuff)); */
   container.append(player);
   playerStuff();
   whereAmI();

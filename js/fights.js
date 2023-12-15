@@ -25,6 +25,9 @@ function detailEnemy(arrayEnemyIndex, sentence) {
   // sentence of the enemy
   enemyChatContainer.innerHTML = `<h4>${thisEnemy.name}</h4><p> ${sentence}</p>`;
 }
+function oneToAHundred() {
+  return Math.floor(Math.random() * (100 - 1)) + 1;
+}
 
 function youTouch(DMG) {
   // var enemy :
@@ -47,9 +50,6 @@ function youTouch(DMG) {
   //
   let dammAndForce = (DMG += forcePlayer);
   let newHPEnemy = (hp -= dammAndForce -= armor);
-  console.log("DMG:", DMG);
-  console.log("forcePlayer:", forcePlayer);
-  console.log("dammAndForce:", dammAndForce);
   // player dead ?
 
   // switch
@@ -84,10 +84,8 @@ function youTouch(DMG) {
           enemyImgToDelet[0].remove();
           hpx.innerHTML = newHPEnemy;
           //
-          let actualStuff = localStorage.getItem("gameStuff");
-          let stuff = JSON.parse(actualStuff);
-          stuff.hp = hpPlayer;
-          localStorage.setItem("gameStuff", JSON.stringify(stuff));
+          gameStuffData.hp = hpPlayer;
+
           playerStuff();
           //
           mainChatContainer.innerHTML = `You hit one last time, deal ${DMG} and kill ! <br> you win!`;
@@ -110,10 +108,10 @@ function youTouch(DMG) {
             dmgDisplay();
           } else {
             // ENEMY DAMMAGE
-            const changeToTouch = Math.floor(Math.random() * (100 - 1)) + 1;
+            const chanceToTouch = oneToAHundred();
             const dmgEnemy = 1 + force - armorPlayer;
             let newHPPlayer = hpPlayer - dmgEnemy;
-            if (changeToTouch <= 50 + force * 2) {
+            if (chanceToTouch <= 50 + force * 2) {
               if (newHPPlayer <= 0 || hpPlayer <= 0) {
                 playerDeath();
               }
@@ -130,10 +128,10 @@ function youTouch(DMG) {
       }
       // armor too high?
       else {
-        const changeToTouch = Math.floor(Math.random() * (100 - 1)) + 1;
+        const chanceToTouch = oneToAHundred();
         const dmgEnemy = 1 + force - armorPlayer;
         let newHPPlayer = hpPlayer - dmgEnemy;
-        if (changeToTouch <= 50 + force * 2) {
+        if (chanceToTouch <= 50 + force * 2) {
           if (hpPlayer <= 0) {
             playerDeath();
           }
@@ -169,10 +167,10 @@ function youMiss(result) {
       break;
     default:
       // ENEMY DAMMAGE
-      const changeToTouch = Math.floor(Math.random() * (100 - 1)) + 1;
+      const chanceToTouch = oneToAHundred();
       const dmgEnemy = 1 + force - armorPlayer;
       let newHPPlayer = hpPlayer - dmgEnemy;
-      if (changeToTouch <= 50 + force * 2) {
+      if (chanceToTouch <= 50 + force * 2) {
         if (hpPlayer <= 0) {
           playerDeath();
         }

@@ -1,38 +1,31 @@
 // xpConcideringLevel(xpRecieved) to give xp to player
 
 function displayStatsPlayer(container) {
-  let stuff = localStorage.getItem("gameStuff");
-  actualStuff = JSON.parse(stuff);
   container.innerHTML = `<u>Stats:</u><br>    
     <p>
-    <bold>HP:<span id="hpPlayer">${actualStuff.hp}</span></bold><br>
-    armor:<span id="armorPlayer">${actualStuff.armor}</span>
-    force:<span id="forcePlayer">${actualStuff.force}</span>
-    spe:<span id="spePlayer">${actualStuff.spe}</span> 
+    <bold>HP:<span id="hpPlayer">${gameStuffData.hp}</span></bold><br>
+    armor:<span id="armorPlayer">${gameStuffData.armor}</span>
+    force:<span id="forcePlayer">${gameStuffData.force}</span>
+    spe:<span id="spePlayer">${gameStuffData.spe}</span> 
     </p>
     `;
 }
 
 function profile() {
-  let stuff = localStorage.getItem("gameStuff");
-  actualStuff = JSON.parse(stuff);
   homeMadeAlert(
     "Profile",
-    `<p> <u>Level</u>:${actualStuff.level} <u>HP</u>:${actualStuff.hp} <u>force</u>:${actualStuff.force}   
-    <p><u>spe</u>:${actualStuff.spe}</p>
-    <h4>stuff</h4>
-    <p><u>total armor</u>:${actualStuff.armor}</p>
-    <p><u>hat</u>:${actualStuff.hat} <u>top</u>:${actualStuff.top} </p>
-    <p><u>weapon</u>:${actualStuff.weapon} <u>shield</u>:${actualStuff.shield} </p>
+    `<p> <u>Level</u>:${gameStuffData.level} <u>HP</u>:${gameStuffData.hp} <u>force</u>:${gameStuffData.force}   
+    <p><u>spe</u>:${gameStuffData.spe}</p>
+    <h4>gameStuffData</h4>
+    <p><u>total armor</u>:${gameStuffData.armor}</p>
+    <p><u>hat</u>:${gameStuffData.hat} <u>top</u>:${gameStuffData.top} </p>
+    <p><u>weapon</u>:${gameStuffData.weapon} <u>shield</u>:${gameStuffData.shield} </p>
  `
   );
   focusFirstInput();
 }
 
 function statUpgrade() {
-  let stuff = localStorage.getItem("gameStuff");
-  actualStats = JSON.parse(stuff);
-  console.log(actualStats);
   promptBox(`<h3><u>Level up !</u></h3> <br> 
     <h4>Chose a stat to upgrade :</h4>
     <br>
@@ -45,27 +38,18 @@ let xpContainer = document.getElementById("xpContainer");
 xpContainer.addEventListener("click", profile);
 
 function addingHp(howMuch) {
-  let actualStuff = localStorage.getItem("gameStuff");
-  let stuff = JSON.parse(actualStuff);
-  stuff.hp = stuff.hp += howMuch;
-  localStorage.setItem("gameStuff", JSON.stringify(stuff));
-  if (stuff.hp <= 0) {
+  gameStuffData.hp = gameStuffData.hp += howMuch;
+  if (gameStuffData.hp <= 0) {
     playerDeath();
   }
   playerStuff();
 }
 function addingForce(howMuch) {
-  let actualStuff = localStorage.getItem("gameStuff");
-  let stuff = JSON.parse(actualStuff);
-  stuff.force = stuff.force += howMuch;
-  localStorage.setItem("gameStuff", JSON.stringify(stuff));
+  gameStuffData.force = gameStuffData.force += howMuch;
   playerStuff();
 }
 function addingArmor(howMuch) {
-  let actualStuff = localStorage.getItem("gameStuff");
-  let stuff = JSON.parse(actualStuff);
-  stuff.armor = stuff.armor += howMuch;
-  localStorage.setItem("gameStuff", JSON.stringify(stuff));
+  gameStuffData.armor = gameStuffData.armor += howMuch;
   playerStuff();
 }
 function orcBeerDrink() {
@@ -87,8 +71,5 @@ function greenPotion() {
 }
 
 /* function modifySpe(newSpe) {
-    let actualStuff = localStorage.getItem("gameStuff");
-    let stuff = JSON.parse(actualStuff);
-       stuff.weapon = newWeapon;
-        localStorage.setItem("gameStuff", JSON.stringify(stuff));
+       gameStuffData.weapon = newWeapon;
 } */

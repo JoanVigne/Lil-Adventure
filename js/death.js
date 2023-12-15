@@ -10,7 +10,7 @@ function importantEnemyDeath(where) {
     case "Tunnel fourth":
       /* localStorage.setItem("spiderQueen", "dead"); */
       enemyArray[1].done = true;
-      localStorage.setItem("enemyArray", JSON.stringify(enemyArray));
+      /*  localStorage.setItem("enemyArray", JSON.stringify(enemyArray)); */
       break;
     case "The north of the graveyard":
       localStorage.setItem("skeleton", "dead");
