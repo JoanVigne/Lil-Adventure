@@ -184,6 +184,7 @@ let enemyArray = [
   },
 ];
 
-function enemyArrayLocalStorage(data) {
+/* function enemyArrayLocalStorage(data) {
   localStorage.setItem("enemyArray", JSON.stringify(data));
 }
+ */

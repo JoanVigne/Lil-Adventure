@@ -1,7 +1,6 @@
 function playerPositionEvent() {
   // QUEL EST MON STUFF :
-  let actualStuff = localStorage.getItem("gameStuff");
-  let stuff = JSON.parse(actualStuff);
+  let stuff = gameStuffData;
   // A METTRE ICI LOW HP ANIMATION
   let position = player.style.gridArea;
   let column = player.style.gridColumnStart;
@@ -129,14 +128,16 @@ function playerPositionEvent() {
       break;
     case "Tunnel fourth":
       if (numberRow == 6) {
-        let spiderQueenAlive = localStorage.getItem("spiderQueen");
-        if (spiderQueenAlive == "dead") {
+        if (enemyArray[1].done == true) {
           homeMadeAlert(
             "yerk",
             "The giant body of the spider is smelling strong now"
           );
         } else {
-          detailEnemy(enemyArray[1], "KSKSKSS MY BABIES ARE DEAD");
+          setTimeout(() => {
+            bubble("player", "Let's goooo", 0, -1);
+            detailEnemy(enemyArray[1], "KSKSKSS MY BABIES ARE DEAD");
+          }, 500);
         }
       }
       break;
@@ -186,7 +187,7 @@ function playerPositionEvent() {
       break;
     case "The north of the graveyard":
       if (position == "5 / 4") {
-        let skeletonAlive = localStorage.getItem("skeleton");
+        enemyArray[3].done = true;
         if (skeletonAlive == "dead") {
           bubble("player", "Just bones", 1, 1);
         } else {

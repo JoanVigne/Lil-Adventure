@@ -2,6 +2,34 @@
 // - going from a map to an other
 // - bubble and alert when you arrive on a map
 
+// arrow creations
+let northArrow = document.createElement("div");
+northArrow.setAttribute("id", "north");
+northArrow.setAttribute("class", "arrows");
+let estArrow = document.createElement("div");
+estArrow.setAttribute("id", "est");
+estArrow.setAttribute("class", "arrows");
+let southArrow = document.createElement("div");
+southArrow.setAttribute("id", "south");
+southArrow.setAttribute("class", "arrows");
+let westArrow = document.createElement("div");
+westArrow.setAttribute("id", "west");
+westArrow.setAttribute("class", "arrows");
+
+function arrowAppear() {
+  container.append(northArrow);
+  container.append(estArrow);
+  container.append(southArrow);
+  container.append(westArrow);
+}
+function arrowDisapear() {
+  northArrow.remove();
+  estArrow.remove();
+  southArrow.remove();
+  westArrow.remove();
+}
+
+// north east south west
 function toTheNorth() {
   let iAmHere = titleH1[0].innerHTML;
   let row = player.style.gridRowStart;
@@ -79,7 +107,6 @@ function toTheNorth() {
       case "The local master":
         titleH1[0].innerHTML = `Tunnel entrance`;
         player.style.gridRowStart = 10;
-
         break;
       case "Tunnel entrance":
         titleH1[0].innerHTML = `Tunnel first`;

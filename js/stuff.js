@@ -94,7 +94,6 @@ theWeapon.setAttribute("id", "weapon");
 theShield.setAttribute("id", "shield");
 
 function playerStuff() {
-  // Utilisez la variable globale au lieu de localStorage
   let hat = gameStuffData.hat;
   let face = gameStuffData.face;
   let top = gameStuffData.top;

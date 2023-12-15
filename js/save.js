@@ -36,11 +36,10 @@ function saving(name) {
   const saves = JSON.parse(localStorage.getItem("saves")) || [];
 
   const location = titleH1[0].innerHTML;
-  const stuff = localStorage.getItem("gameStuff");
+  const stuff = gameStuffData;
   const thePosition = player.style.gridArea;
   const dateOfSaving = getFormattedDate();
-  // var global ou localstorage?
-  // const newEnemyArray = localStorage.getItem("enemyArray");
+
   const existingSaveIndex = saves.findIndex((save) => save[0] === name);
   if (existingSaveIndex !== -1) {
     saves.splice(existingSaveIndex, 1);
@@ -51,7 +50,7 @@ function saving(name) {
   const thisSave = [
     name,
     location,
-    stuff,
+    JSON.stringify(stuff),
     dateOfSaving,
     thePosition,
     JSON.stringify(enemyArray),

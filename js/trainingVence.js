@@ -137,9 +137,7 @@ function upgradeRollingPin() {
 }
 
 function trainingVence3() {
-  localStorage.setItem("localMaster", 4);
   enemyArray[2].done = true;
-  localStorage.setItem("enemyArray", JSON.stringify(enemyArray));
   endOfFight();
   const venceFace = document.getElementById("venceFace");
   if (venceFace) {

@@ -3,9 +3,6 @@ let player = document.createElement("div");
 player.setAttribute("id", "player");
 //
 
-/* let vence = document.createElement("div");
-vence.setAttribute("id", "vence"); */
-
 function venceInFight() {
   let venceContainer = document.getElementById("vence");
   let venceFace = document.createElement("div");

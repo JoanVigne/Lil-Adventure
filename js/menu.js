@@ -29,21 +29,6 @@ function menu() {
     "about()",
     menuButtonContainer
   );
-
-  localStorage.setItem(
-    "gameStuff",
-    JSON.stringify({
-      face: "joan",
-      weapon: "bambou",
-      shield: "",
-      top: "startShirt",
-      hat: "startHat",
-      hp: 10,
-      armor: 0,
-      force: 0,
-      spe: null,
-    })
-  );
   focusFirstInput();
 }
 
@@ -53,23 +38,6 @@ function start() {
   quitMenu();
   appearDirections();
   titleH1[0].innerHTML = `Home sweet home`;
-  // reset des enemies :
-  enemyArrayLocalStorage(enemyArray);
-  let newGameStuff = gameStuffData;
-  /*  let newGameStuff = {
-    face: "joan",
-    weapon: "bambou",
-    shield: "",
-    top: "startShirt",
-    hat: "startHat",
-    hp: 10,
-    armor: 0,
-    force: 0,
-    spe: "",
-    level: 1,
-    xp: 0,
-  }; */
-  /*   localStorage.setItem("gameStuff", JSON.stringify(newGameStuff)); */
   container.append(player);
   playerStuff();
   whereAmI();

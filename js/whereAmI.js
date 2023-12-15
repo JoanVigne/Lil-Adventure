@@ -429,19 +429,6 @@ function whereAmI() {
       break;
     case "Tunnel fourth":
       container.classList.replace(containerBGI, "tunnel");
-      /*       let spiderQueen = JSON.parse(localStorage.getItem("enemyArray"));
-      console.log(spiderQueen);
-      if (spiderQueen[1].done == false) {
-        console.log("spiderqueen false");
-        obstacleCreationSPAN("queenSpider", 3, 3, 3, 3);
-      } 
-
-      if (spiderQueen[1].done == true) {
-        console.log("spiderqueen true");
-        obstacleCreation1("blood", 4, 4);
-        obstacleCreation1("blood", 6, 3);
-      }
-      */
       if (enemyArray[1].done == false) {
         obstacleCreationSPAN("queenSpider", 3, 3, 3, 3);
       }

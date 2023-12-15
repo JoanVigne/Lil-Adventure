@@ -4,17 +4,13 @@ function bubble(id, message, bubCol, bubRow) {
   bubble.classList.add("bubble");
   bubble.innerHTML = message;
   let whoIsTalking = document.getElementById(id);
-  let column = whoIsTalking.style.gridColumnStart;
-  let numberColumn = Number(column);
-  let row = whoIsTalking.style.gridRowStart;
-  let numberRow = Number(row);
+  const column = Number(whoIsTalking.style.gridColumnStart);
+  const row = Number(whoIsTalking.style.gridRowStart);
   bubble.style.gridColumnStart = numberColumn += bubCol;
   bubble.style.gridRowStart = numberRow += bubRow;
-  //
   // pour eviter la bulle hors jeu :
   if (row === "2") {
     bubble.style.gridRowStart = numberRow += 2;
-    console.log(bubble.style.gridRowStart);
   }
   if (row === "10") {
     bubble.style.gridRowStart = numberRow += 0;
@@ -31,8 +27,8 @@ function bubble(id, message, bubCol, bubRow) {
     deletBubble();
   }, 1100);
   function deletBubble() {
-    let allTheBubble = document.getElementsByClassName("bubble");
-    allTheBubble[0].parentNode.removeChild(bubble);
+    const allTheBubble = document.getElementsByClassName("bubble");
+    allTheBubble[0]?.parentNode.removeChild(bubble);
   }
 }
 
@@ -56,14 +52,13 @@ function closeHomeMadeAlert() {
 // THE SCENARIO MESSAGES
 let indexOfVillageCenter = 0;
 function theVillageCenterMessage() {
-  if (indexOfVillageCenter === 0) {
-    homeMadeAlert(
-      "Greatings people!",
-      "We all noticed what happend around, burnt houses, and dead lands. I invite everyone who can to investigate about it. Be rewarded for any usefull informations ! "
-    );
-  } else {
+  if (indexOfVillageCenter !== 0) {
     return;
   }
+  homeMadeAlert(
+    "Greatings people!",
+    "We all noticed what happend around, burnt houses, and dead lands. I invite everyone who can to investigate about it. Be rewarded for any usefull informations ! "
+  );
   indexOfVillageCenter++;
 }
 

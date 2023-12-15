@@ -1,8 +1,5 @@
 function weaponChoseDices() {
-  let actualStuff = localStorage.getItem("gameStuff");
-  let stuff = JSON.parse(actualStuff);
-  let actualWeapon = stuff.weapon;
-  switch (actualWeapon) {
+  switch (gameStuffData.weapon) {
     case "bambou":
       choseYourDice(1, 2, null, null);
       break;
