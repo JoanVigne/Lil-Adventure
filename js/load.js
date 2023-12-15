@@ -67,10 +67,7 @@ function continueGame() {
           let index = gameSaved.indexOf(element);
           console.log("index de chaque element", gameSaved.indexOf(element));
           gameSaved.splice(index, 1);
-          console.log(gameSaved);
           closePromptBox();
-          console.log(element);
-          console.log(gameSaved);
           localStorage.setItem("saves", JSON.stringify(gameSaved));
         }
       );
@@ -85,7 +82,9 @@ function load(title, location, stuff, position, enemies) {
   appearDirections();
   titleH1[0].innerHTML = location;
   localStorage.setItem("gameStuff", JSON.stringify(stuff));
-  localStorage.setItem("enemyArray", JSON.stringify(enemies));
+  // var global enemyArray ou localstorage?
+  /*  localStorage.setItem("enemyArray", JSON.stringify(enemies)); */
+  enemyArray = enemies;
 
   container.append(player);
   player.style.gridArea = position;

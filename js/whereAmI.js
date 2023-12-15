@@ -429,9 +429,25 @@ function whereAmI() {
       break;
     case "Tunnel fourth":
       container.classList.replace(containerBGI, "tunnel");
-      let spiderQueen = localStorage.getItem("spiderQueen");
-      if (spiderQueen == null) {
+      /*       let spiderQueen = JSON.parse(localStorage.getItem("enemyArray"));
+      console.log(spiderQueen);
+      if (spiderQueen[1].done == false) {
+        console.log("spiderqueen false");
         obstacleCreationSPAN("queenSpider", 3, 3, 3, 3);
+      } 
+
+      if (spiderQueen[1].done == true) {
+        console.log("spiderqueen true");
+        obstacleCreation1("blood", 4, 4);
+        obstacleCreation1("blood", 6, 3);
+      }
+      */
+      if (enemyArray[1].done == false) {
+        obstacleCreationSPAN("queenSpider", 3, 3, 3, 3);
+      }
+      if (enemyArray[1].done == true) {
+        obstacleCreation1("blood", 4, 4);
+        obstacleCreation1("blood", 6, 3);
       }
       obstacleCreation1("spiderWeb", 2, 2);
       obstacleCreation1("spiderWeb", 4, 2);
@@ -470,6 +486,7 @@ function whereAmI() {
       obstacleCreation1("pineTreeFrozen", 5, 3);
       obstacleCreation1("leftTreeFrozen", 2, 8);
       obstacleCreation4("bigTreeFrozen", 5, 9);
+      bubble("player", "it's freezing here!", -1, -1);
       break;
     case "The Graveyard entrance":
       container.classList.replace(containerBGI, "bigSnow");

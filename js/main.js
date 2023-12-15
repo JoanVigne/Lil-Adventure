@@ -83,17 +83,12 @@ document.addEventListener("keydown", function (event) {
   }
   // choix selectionner
   const inputButtons = document.querySelectorAll('input[type="button"]');
-  /*   const aPrompt = document.querySelector("#promptBox");
-  if (aPrompt) {
-    console.log("a prompt is present here");
-  } */
+
   if (inputButtons.length > 0) {
     const buttons = Array.from(inputButtons);
     const focusedButtonIndex = buttons.findIndex(
       (button) => button === document.activeElement
     );
-    console.log(focusedButtonIndex);
-    console.log(inputButtons.length);
     switch (event.key) {
       case "ArrowUp":
         if (focusedButtonIndex > 0) {

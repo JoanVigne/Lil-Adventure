@@ -163,6 +163,9 @@ function playerPositionEvent() {
       }
       break;
     case "The Graveyard entrance":
+      if (numberColumn === 3) {
+        autoSave();
+      }
       if (numberColumn == 5) {
         if (numberRow == 5 || numberRow == 6 || numberRow == 7) {
           confirmMessage(
