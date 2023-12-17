@@ -32,21 +32,10 @@ function playerPositionEvent() {
     case "The village center":
       //gran-ma :
       if (position == "8 / 6") {
-        console.log(stuff.top);
-        if (stuff.top === "black-T-shirt") {
-          homeMadeAlert(
-            "Gran-ma",
-            "You look amazing with this cute shirt now !"
-          );
-          return;
-        }
-        confirmMessage(
-          "Gran-ma: Dear Lord, your clothes are dirty, i can't let you wear this",
-          "Accepting new T-shirt",
-          () => {
-            modifyTop("black-T-shirt");
-            closePromptBox();
-          }
+        newStuff(
+          "black-T-shirt",
+          "top",
+          "Gran-ma : Dear Lord, your clothes are dirty, i can't let you wear this!"
         );
       }
       //mayor
@@ -134,8 +123,8 @@ function playerPositionEvent() {
             "The giant body of the spider is smelling strong now"
           );
         } else {
+          bubble("player", "Let's goooo", 0, 1);
           setTimeout(() => {
-            bubble("player", "Let's goooo", 0, -1);
             detailEnemy(enemyArray[1], "KSKSKSS MY BABIES ARE DEAD");
           }, 500);
         }
@@ -143,24 +132,10 @@ function playerPositionEvent() {
       break;
     case "Tunnel exit":
       if (position == "6 / 6") {
-        confirmMessage(
-          "<h4> Oh!? </h4> This shirt looks better than mine...",
-          "wearing this shirt",
-          () => {
-            modifyTop("good-t-shirt");
-            closePromptBox();
-          }
-        );
+        newStuff("good-t-shirt", "top");
       }
       if (position == "3 / 3") {
-        confirmMessage(
-          "<h4> Nice hammer </h4> Should i take it?",
-          "Yes !",
-          () => {
-            modifyWeapon("hammer-small");
-            closePromptBox();
-          }
-        );
+        newStuff("hammer-small", "weapon");
       }
       break;
     case "The Graveyard entrance":

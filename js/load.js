@@ -34,7 +34,7 @@ function continueGame() {
     let timeOfSaving = element[3];
     let position = element[4];
     let enemyArray = element[5];
-    console.log(stuff);
+
     let space = " ";
     let elementContent = document.createElement("input");
     elementContent.type = "button";

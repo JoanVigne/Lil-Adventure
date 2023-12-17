@@ -536,7 +536,12 @@ function whereAmI() {
       obstacleCreation1("graveStoneRIP", 2, 2);
 
       obstacleCreationSPAN("graveStoneTopCross", 3, 3, 1, 2);
-      obstacleCreation1("graveStonePurple", 4, 4);
+      if ((enemyArray[3].done = true)) {
+        obstacleCreation1("dark-small-sword", 4, 4);
+      }
+      if ((enemyArray[3].done = false)) {
+        obstacleCreation1("graveStonePurple", 4, 4);
+      }
       obstacleCreationSPAN("graveStoneTopCross", 5, 3, 1, 2);
 
       obstacleCreationSPAN("graveStoneChrist", 2, 7, 2, 2);

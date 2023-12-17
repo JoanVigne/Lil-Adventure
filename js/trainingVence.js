@@ -105,11 +105,10 @@ function trainingVence() {
   choseYourDice(2, 4, 6, 8);
 }
 function trainingVence2() {
-  console.log("trainingVence2");
   enemyChatContainer.innerHTML = `<p>I can see that you don't have any weapons. I only have this for you</p>`;
   mainChatContainer.innerHTML = `<p>You recieve a rolling pin ... 
      </p>`;
-  modifyWeapon("rolling-pin");
+  newStuff("rolling-pin", "weapon");
 
   buttons(
     "no",
@@ -132,7 +131,7 @@ function upgradeRollingPin() {
   mainChatContainer.innerHTML = `<p>Vence found a little hammer !<br>
     You recieve a little hammer 
     </p>`;
-  modifyWeapon("hammer-small");
+  newStuff("hammer-small", "weapon");
   buttons("ok", "ok", "Okay", "trainingVence3()", mainChatContainer);
 }
 

@@ -4,10 +4,12 @@ function bubble(id, message, bubCol, bubRow) {
   bubble.classList.add("bubble");
   bubble.innerHTML = message;
   let whoIsTalking = document.getElementById(id);
-  const column = Number(whoIsTalking.style.gridColumnStart);
-  const row = Number(whoIsTalking.style.gridRowStart);
-  bubble.style.gridColumnStart = numberColumn += bubCol;
-  bubble.style.gridRowStart = numberRow += bubRow;
+  let column = Number(whoIsTalking.style.gridColumnStart);
+  let row = Number(whoIsTalking.style.gridRowStart);
+  console.log("column => ", column);
+  console.log("row => ", row);
+  bubble.style.gridColumnStart = column += bubCol;
+  bubble.style.gridRowStart = row += bubRow;
   // pour eviter la bulle hors jeu :
   if (row === "2") {
     bubble.style.gridRowStart = numberRow += 2;
@@ -42,6 +44,7 @@ function homeMadeAlert(title, message) {
   /* container.append(alertBox); */
   setTimeout(() => {
     container.append(alertBox);
+    focusThisInput("alertBox");
   }, 100);
 }
 function closeHomeMadeAlert() {
@@ -189,6 +192,7 @@ function confirmMessage(message, valueOfFirstButton, functionFirstButton) {
 
   promptBox.append(firstButton, secondButton);
   container.append(promptBox);
+  focusThisInput(0);
 }
 function promptBox(innerHtml) {
   let promptBox = document.createElement("div");
@@ -196,6 +200,7 @@ function promptBox(innerHtml) {
   promptBox.innerHTML = innerHtml;
 
   container.append(promptBox);
+  focusThisInput(0);
 }
 
 function closePromptBox() {

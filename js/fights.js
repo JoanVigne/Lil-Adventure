@@ -70,7 +70,6 @@ function youTouch(DMG) {
           "weaponChoseDices(); removeThis()",
           mainChatContainer
         );
-        focusFirstInput();
       }
       //  armor ?
       if (dammAndForce >= armor) {
@@ -124,7 +123,6 @@ function youTouch(DMG) {
             }
           }
         }
-        focusFirstInput();
       }
       // armor too high?
       else {

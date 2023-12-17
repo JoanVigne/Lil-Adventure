@@ -29,7 +29,6 @@ function menu() {
     "about()",
     menuButtonContainer
   );
-  focusFirstInput();
 }
 
 // CONTINUE MENU IN LOAD.JS

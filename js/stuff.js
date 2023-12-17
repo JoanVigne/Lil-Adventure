@@ -1,71 +1,3 @@
-/* 
-
-let theHat = document.createElement("div");
-let theFace = document.createElement("div");
-let theBody = document.createElement("div");
-let theWeapon = document.createElement("div");
-let theShield = document.createElement("div");
-theHat.setAttribute("id", "hat");
-theFace.setAttribute("id", "face");
-theBody.setAttribute("id", "top");
-theWeapon.setAttribute("id", "weapon");
-theShield.setAttribute("id", "shield");
-
-function playerStuff() {
-
-    var gameStuff = JSON.parse(localStorage.getItem("gameStuff"));
-    let hat = gameStuff.hat;
-    let face = gameStuff.face;
-    let top = gameStuff.top;
-    let weapon = gameStuff.weapon;
-    let shield = gameStuff.shield;
-
-
-    theHat.setAttribute("class", hat);
-    player.append(theHat);
-
-    theFace.setAttribute("class", face);
-    player.append(theFace);
-
-    theBody.setAttribute("class", top);
-    player.append(theBody);
-
-    theWeapon.setAttribute("class", weapon);
-    player.append(theWeapon);
-
-    theShield.setAttribute("class", shield);
-    player.append(theShield);
-}
-// WEAPON ODDS IN DICE.JS
-function modifyWeapon(newWeapon) {
-    let actualStuff = localStorage.getItem("gameStuff");
-    let stuff = JSON.parse(actualStuff);
-    stuff.weapon = newWeapon;
-    localStorage.setItem("gameStuff", JSON.stringify(stuff));
-    playerStuff();
-}
-function modifyHat(newHat) {
-    let actualStuff = localStorage.getItem("gameStuff");
-    let stuff = JSON.parse(actualStuff);
-    stuff.hat = newHat;
-    localStorage.setItem("gameStuff", JSON.stringify(stuff));
-    playerStuff();
-}
-function modifyShield(newShield) {
-    let actualStuff = localStorage.getItem("gameStuff");
-    let stuff = JSON.parse(actualStuff);
-    stuff.shield = newShield;
-    localStorage.setItem("gameStuff", JSON.stringify(stuff));
-    playerStuff();
-}
-function modifyTop(newTop) {
-    let actualStuff = localStorage.getItem("gameStuff");
-    let stuff = JSON.parse(actualStuff);
-    stuff.top = newTop;
-    localStorage.setItem("gameStuff", JSON.stringify(stuff));
-    playerStuff();
-} */
-
 // Déclarez une variable globale pour stocker les informations du gameStuff
 let gameStuffData = {
   face: "joan",
@@ -81,6 +13,41 @@ let gameStuffData = {
   xp: 0,
 };
 
+function createAndAppend(id, className) {
+  const element = document.createElement("div");
+  element.setAttribute("id", id);
+  element.setAttribute("class", className);
+  player.append(element);
+  return element;
+}
+function playerStuff() {
+  createAndAppend("hat", gameStuffData.hat);
+  createAndAppend("face", gameStuffData.face);
+  createAndAppend("top", gameStuffData.top);
+  createAndAppend("weapon", gameStuffData.weapon);
+  createAndAppend("shield", gameStuffData.shield);
+}
+
+function newStuff(item, slot, title) {
+  if (gameStuffData[slot] === item) {
+    return;
+  }
+  if (titleH1 === "The local master") {
+    gameStuffData[slot] = item;
+    playerStuff();
+    return;
+  }
+  if (title === "" || title === null || title === undefined) {
+    title = `<h4> Nice ${item} </h4>`;
+  }
+  confirmMessage(title + "<p> Should i take it? </p>", "Yes !", () => {
+    gameStuffData[slot] = item;
+    closePromptBox();
+    playerStuff();
+  });
+}
+
+/*  ANCIENNE VERSION PLAYERSTUFF
 let theHat = document.createElement("div");
 let theFace = document.createElement("div");
 let theBody = document.createElement("div");
@@ -114,25 +81,4 @@ function playerStuff() {
 
   theShield.setAttribute("class", shield);
   player.append(theShield);
-}
-
-// Fonctions pour modifier la variable globale gameStuffData
-function modifyWeapon(newWeapon) {
-  gameStuffData.weapon = newWeapon;
-  playerStuff();
-}
-
-function modifyHat(newHat) {
-  gameStuffData.hat = newHat;
-  playerStuff();
-}
-
-function modifyShield(newShield) {
-  gameStuffData.shield = newShield;
-  playerStuff();
-}
-
-function modifyTop(newTop) {
-  gameStuffData.top = newTop;
-  playerStuff();
-}
+} */
