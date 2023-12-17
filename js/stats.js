@@ -69,7 +69,3 @@ function greenPotion() {
   );
   addingHp(-2);
 }
-
-/* function modifySpe(newSpe) {
-       gameStuffData.weapon = newWeapon;
-} */

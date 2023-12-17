@@ -17,7 +17,8 @@ function obey() {
     "I tell them to relax",
     refuse
   );
-  modifyWeapon("");
+  /*   modifyWeapon(""); */
+  newStuff("", "weapon");
   addingHp(-1);
 }
 function refuse() {
@@ -31,13 +32,15 @@ function refuse() {
   );
 }
 function toTheLeader() {
-  modifyWeapon("");
+  /*   modifyWeapon(""); */
+  newStuff("", "weapon");
   closePromptBox();
   noFightLeader();
 }
 
 function fightOrcs() {
-  modifyWeapon("small-Axe");
+  /* modifyWeapon("small-Axe"); */
+  newStuff("small-Axe", "weapon");
   closePromptBox();
   promptBox(`<h3>yEAAAAHhaA!!!! </h3>
     <br><p> They all are so happy to bring you to their Arena, and they are <bold>ALL</bold> warming up</p><br>
@@ -177,11 +180,16 @@ function investigate() {
 
 function fightLeaderOrc() {
   closePromptBox();
-  modifyWeapon("small-Axe");
-  homeMadeAlert(
-    "Really? AHAHAHA",
+  /*   modifyWeapon("small-Axe"); */
+  newStuff(
+    "small-Axe",
+    "weapon",
     "An other orc give you a small axe, smile at you, and run away. The leader comes to you."
   );
+  /*   homeMadeAlert(
+    "Really? AHAHAHA",
+    "An other orc give you a small axe, smile at you, and run away. The leader comes to you."
+  ); */
   detailEnemy(enemyArray[12], "Idiot.");
 }
 
@@ -194,10 +202,8 @@ function agreeWithLeaderOrc() {
     [new stuff!]</p><br>
     
     
-    <input type="button" onclick='closePromptBox(), TP("After the river"), appearDirections()' value="Let's go! Thank chef!">`);
-  modifyWeapon("white-sword");
-  modifyShield("bouclier");
-  modifyTop("armure");
+    <input type="button" onclick='closePromptBox(), TP("After the river"), appearDirections(), orcLeaderStuff()' value="Let's go! Thank chef!">`);
+
   addingForce(1);
   addingHp(3);
   addingArmor(2);

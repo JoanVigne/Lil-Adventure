@@ -14,10 +14,13 @@ let gameStuffData = {
 };
 
 function createAndAppend(id, className) {
-  const element = document.createElement("div");
-  element.setAttribute("id", id);
+  let element = document.getElementById(id);
+  if (!element) {
+    element = document.createElement("div");
+    element.setAttribute("id", id);
+    player.append(element);
+  }
   element.setAttribute("class", className);
-  player.append(element);
   return element;
 }
 function playerStuff() {
@@ -45,6 +48,13 @@ function newStuff(item, slot, title) {
     closePromptBox();
     playerStuff();
   });
+}
+function orcLeaderStuff() {
+  console.log("changemente de stuff");
+  gameStuffData.weapon = "white-sword";
+  gameStuffData.shield = "bouclier";
+  gameStuffData.top = "armure";
+  playerStuff();
 }
 
 /*  ANCIENNE VERSION PLAYERSTUFF
