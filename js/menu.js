@@ -40,6 +40,8 @@ function start() {
   container.append(player);
   playerStuff();
   whereAmI();
+  player.style.gridColumn = 4;
+  player.style.gridRow = 6;
   homeMadeAlert(
     "Good morning sunshine",
     "Welcome home, you wake up as usual in your little house"

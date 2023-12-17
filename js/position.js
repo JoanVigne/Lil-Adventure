@@ -101,7 +101,7 @@ function playerPositionEvent() {
       break;
     case "Tunnel second":
       if (numberRow == 9) {
-        autoSave();
+        saving("auto-save");
       }
       if (numberRow == 5) {
         bubble("player", "WOW !!", 0, -1);
@@ -140,7 +140,7 @@ function playerPositionEvent() {
       break;
     case "The Graveyard entrance":
       if (numberColumn === 3) {
-        autoSave();
+        saving("auto-save");
       }
       if (numberColumn == 5) {
         if (numberRow == 5 || numberRow == 6 || numberRow == 7) {
@@ -162,8 +162,7 @@ function playerPositionEvent() {
       break;
     case "The north of the graveyard":
       if (position == "5 / 4") {
-        enemyArray[3].done = true;
-        if (skeletonAlive == "dead") {
+        if (enemyArray[3].done == true) {
           bubble("player", "Just bones", 1, 1);
         } else {
           confirmMessage(

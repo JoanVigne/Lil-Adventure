@@ -1,85 +1,90 @@
 #hat {
-    grid-column: 2 /span 2;
-    grid-row: 1;
-    background-size: initial;
-    background-repeat: no-repeat;
-    background-position: center;
+  grid-column: 2 / span 2;
+  grid-row: 1;
+  background-size: initial;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 #top {
-    grid-column: 2 /span 2;
-    grid-row: 3 / span 2;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
+  grid-column: 2 / span 2;
+  grid-row: 3 / span 2;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 #weapon {
-    grid-column: 1;
-    grid-row: 2 / span 3;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
+  grid-column: 1;
+  grid-row: 2 / span 3;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 #shield {
-    grid-column: 4;
-    grid-row: 2 / span 2;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
+  grid-column: 4;
+  grid-row: 2 / span 2;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 .startHat {
-    background-image: url("../images/stuff/startHat.png");
+  background-image: url("../images/stuff/startHat.png");
 }
 
 .startShirt {
-    background-image: url("../images/stuff/startShirt.png");
+  background-image: url("../images/stuff/startShirt.png");
 }
 
 .bambou {
-    background-image: url("../images/stuff/bambou.png");
+  background-image: url("../images/stuff/bambou.png");
 }
 
 .black-T-shirt {
-    background-image: url("../images/stuff/blackTshirt.png");
+  background-image: url("../images/stuff/blackTshirt.png");
 }
 
 .rolling-pin {
-    background-image: url("../images/stuff/rollingPin.png");
+  background-image: url("../images/stuff/rollingPin.png");
 }
 
 .hammer-small {
-    background-image: url("../images/stuff/hammerSmall.png");
+  background-image: url("../images/stuff/hammerSmall.png");
 }
 
 .dark-small-sword {
-    background-image: url("../images/stuff/dark-small-sword.png");
+  background-image: url("../images/stuff/dark-small-sword.png");
+}
+#dark-small-sword {
+  background: url("../images/stuff/dark-small-sword.png") center center
+    no-repeat;
+  background-size: contain;
 }
 
 .white-sword {
-    background-image: url("../images/stuff/white-sword.png");
+  background-image: url("../images/stuff/white-sword.png");
 }
 
 .small-Axe {
-    background-image: url("../images/stuff/small-Axe.png");
+  background-image: url("../images/stuff/small-Axe.png");
 }
 
 .good-t-shirt {
-    background-image: url("../images/stuff/good-t-shirt.png");
+  background-image: url("../images/stuff/good-t-shirt.png");
 }
 
 .basic-shield {
-    background-image: url("../images/stuff/shield.png");
+  background-image: url("../images/stuff/shield.png");
 }
 
 .armure {
-    background-image: url("../images/stuff/armure.png");
+  background-image: url("../images/stuff/armure.png");
 }
 
 .bouclier {
-    background-image: url("../images/stuff/bouclier.png");
+  background-image: url("../images/stuff/bouclier.png");
 }
 
 /* .axeSmall {

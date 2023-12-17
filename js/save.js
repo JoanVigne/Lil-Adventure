@@ -59,6 +59,7 @@ function saving(name) {
   localStorage.setItem("saves", JSON.stringify(saves));
 
   bubble("player", "game saved!", 0, -1);
+
   closePromptBox();
 }
 

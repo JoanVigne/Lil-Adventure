@@ -42,14 +42,13 @@ function toTheNorth() {
     switch (iAmHere) {
       // BEGGNING OF THE GAME { neighborhood }
       case "Home sweet home":
-        if (numberColumn == 4) {
-          titleH1[0].innerHTML = `The Garden`;
-          player.style.gridRowStart = 8;
-          homeMadeAlert(
-            "What The Hell !!!",
-            "My garden was green and full of life, what happend ?? My trees are dead and my lands are as dry as bones"
-          );
-        }
+        titleH1[0].innerHTML = `The Garden`;
+        player.style.gridRowStart = 8;
+        homeMadeAlert(
+          "What The Hell !!!",
+          "My garden was green and full of life, what happend ?? My trees are dead and my lands are as dry as bones"
+        );
+
         break;
       case "The Garden":
         titleH1[0].innerHTML = `The way to the village`;
@@ -416,13 +415,14 @@ function toTheSouth() {
 
 function toTheWest() {
   let iAmHere = titleH1[0].innerHTML;
-  let row = player.style.gridRowStart;
-  let numberRow = Number(row);
   let column = player.style.gridColumnStart;
   let numberColumn = Number(column);
   if (numberColumn == 2) {
     switch (iAmHere) {
       // BEGGNING OF THE GAME { neighborhood }
+      case "Home sweet home":
+        player.style.gridColumnStart = 2;
+        break;
       case "The Garden": // dead-end
         titleH1[0].innerHTML = `The west Neighbor's`;
         player.style.gridColumnStart = 6;

@@ -29,8 +29,8 @@ function whereAmI() {
   switch (iAmHere) {
     // BEGGNING OF THE GAME { neighborhood }
     case "Home sweet home":
-      player.style.gridColumn = 4;
-      player.style.gridRow = 6;
+      /*       player.style.gridColumn = 4;
+      player.style.gridRow = 6; */
       container.classList.replace(containerBGI, "homeSweetHome");
       obstacleCreation1("lightFromOutside", 4, 2);
       obstacleCreation1("tableMirror", 2, 4);
@@ -536,10 +536,10 @@ function whereAmI() {
       obstacleCreation1("graveStoneRIP", 2, 2);
 
       obstacleCreationSPAN("graveStoneTopCross", 3, 3, 1, 2);
-      if ((enemyArray[3].done = true)) {
+      if (enemyArray[3].done === true) {
         obstacleCreation1("dark-small-sword", 4, 4);
       }
-      if ((enemyArray[3].done = false)) {
+      if (enemyArray[3].done === false) {
         obstacleCreation1("graveStonePurple", 4, 4);
       }
       obstacleCreationSPAN("graveStoneTopCross", 5, 3, 1, 2);

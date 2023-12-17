@@ -4,25 +4,32 @@ function bubble(id, message, bubCol, bubRow) {
   bubble.classList.add("bubble");
   bubble.innerHTML = message;
   let whoIsTalking = document.getElementById(id);
-  let column = Number(whoIsTalking.style.gridColumnStart);
-  let row = Number(whoIsTalking.style.gridRowStart);
-  console.log("column => ", column);
-  console.log("row => ", row);
-  bubble.style.gridColumnStart = column += bubCol;
-  bubble.style.gridRowStart = row += bubRow;
-  // pour eviter la bulle hors jeu :
-  if (row === "2") {
-    bubble.style.gridRowStart = numberRow += 2;
+
+  /*   let column = Number(whoIsTalking.style.gridColumnStart);
+  let row = Number(whoIsTalking.style.gridRowStart); */
+
+  let column = Number(whoIsTalking.style.gridColumn);
+  let row = Number(whoIsTalking.style.gridRow);
+
+  let resultBubbleCol = column + bubCol;
+  let resultBubbleRow = row + bubRow;
+
+  if (resultBubbleCol === 1) {
+    resultBubbleCol = 3;
+  } else if (resultBubbleCol === 7) {
+    resultBubbleCol = 5;
   }
-  if (row === "10") {
-    bubble.style.gridRowStart = numberRow += 0;
+  if (resultBubbleRow === 1) {
+    resultBubbleRow = 3;
+  } else if (resultBubbleRow === 11) {
+    resultBubbleRow = 9;
   }
-  if (column === "2") {
-    bubble.style.gridColumnStart = numberColumn += 0;
-  }
-  if (column === "7") {
-    bubble.style.gridRowStart = numberRow += 2;
-  }
+
+  bubble.style.gridColumnStart = resultBubbleCol;
+  bubble.style.gridRowStart = resultBubbleRow;
+
+  console.log("result col => ", resultBubbleCol);
+  console.log("result row => ", resultBubbleRow);
 
   container.append(bubble);
   setTimeout(function () {
@@ -205,5 +212,5 @@ function promptBox(innerHtml) {
 
 function closePromptBox() {
   let promptBox = document.getElementById("promptBox");
-  promptBox.remove();
+  promptBox && promptBox.remove();
 }
