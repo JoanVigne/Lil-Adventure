@@ -1,298 +1,299 @@
 .obstacle {
-    color: black;
+  color: black;
 }
 
-
+.brickWall {
+  background-image: url("../images/obstacles/brickWall.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: 1;
+  background-position: bottom;
+}
 
 #home {
-    background-image: url("../images/obstacles/home.png");
-    background-repeat: no-repeat;
-    background-size: contain;
-    z-index: 1;
-    background-position: bottom;
+  background-image: url("../images/obstacles/home.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  z-index: 1;
+  background-position: bottom;
 }
 
 #masterHouse {
-    background-image: url("../images/obstacles/masterHouse.png");
-    background-repeat: no-repeat;
-    background-size: contain;
-    z-index: 1;
-    background-position: bottom;
+  background-image: url("../images/obstacles/masterHouse.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  z-index: 1;
+  background-position: bottom;
 }
 
 #burningHouse {
-    background-image: url("../images/obstacles/burningHouse.png");
-    background-repeat: no-repeat;
-    background-size: contain;
-    z-index: 1;
-    background-position: bottom;
+  background-image: url("../images/obstacles/burningHouse.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  z-index: 1;
+  background-position: bottom;
 }
-
 
 /* VILLAGE */
 #villageGate {
-    background-image: url("../images/obstacles/villageGate.png");
-    background-repeat: no-repeat;
-    background-size: cover;
-    z-index: 1;
-    background-position: bottom;
+  background-image: url("../images/obstacles/villageGate.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: 1;
+  background-position: bottom;
 }
 
 #brownWall {
-    background-image: url("../images/obstacles/brownWall.png");
-    background-repeat: no-repeat;
-    background-size: initial;
-    z-index: 1;
-    background-position: bottom;
+  background-image: url("../images/obstacles/brownWall.png");
+  background-repeat: no-repeat;
+  background-size: initial;
+  z-index: 1;
+  background-position: bottom;
 }
 
 #brickWall {
-    background-image: url("../images/obstacles/brickWall.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    z-index: 1;
-    background-position: bottom;
+  background-image: url("../images/obstacles/brickWall.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: 1;
+  background-position: bottom;
 }
 
-
-
 #cityHall {
-    background-image: url("../images/obstacles/cityHall.png");
-    background-repeat: no-repeat;
-    background-size: contain;
-    z-index: 1;
-    background-position: bottom;
+  background-image: url("../images/obstacles/cityHall.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  z-index: 1;
+  background-position: bottom;
 }
 
 #cityHall2 {
-    /* SPAN 5 3 */
-    background-image: url("../images/obstacles/cityHall2.png");
-    background-repeat: no-repeat;
-    background-size: cover;
-    z-index: 1;
-    background-position: bottom;
+  /* SPAN 5 3 */
+  background-image: url("../images/obstacles/cityHall2.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: 1;
+  background-position: bottom;
 }
 
 /* NORTH OF THE VILLAGE */
 
-
 #sign {
-    background-image: url("../images/obstacles/sign.png");
-    background-repeat: no-repeat;
-    background-size: contain;
-    z-index: 1;
-    background-position: bottom;
+  background-image: url("../images/obstacles/sign.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  z-index: 1;
+  background-position: bottom;
 }
 
 #blueWater {
-    background-color: rgb(57, 57, 162);
+  background-color: rgb(57, 57, 162);
 }
 
 /* TREES */
 /* LEFT TREE */
 #leftTreeFresh {
-    background-image: url("../images/obstacles/trees/leftTreeFresh.png");
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: bottom;
+  background-image: url("../images/obstacles/trees/leftTreeFresh.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: bottom;
 }
 
 #leftTreeBlack {
-    background-image: url("../images/obstacles/trees/leftTreeBlack.png");
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: bottom;
+  background-image: url("../images/obstacles/trees/leftTreeBlack.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: bottom;
 }
 
 /* BIG TREE */
 #bigTreeFresh {
-    background-image: url("../images/obstacles/trees/leftTreeFresh.png");
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: bottom;
+  background-image: url("../images/obstacles/trees/leftTreeFresh.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: bottom;
 }
 
 #bigTreeBlack {
-    background-image: url("../images/obstacles/trees/bigTreeBlack.png");
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: bottom;
+  background-image: url("../images/obstacles/trees/bigTreeBlack.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: bottom;
 }
 
 /* PINE TREE */
 #pineTreeFresh {
-    background-image: url("../images/obstacles/trees/pineTreeFresh.png");
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: bottom;
+  background-image: url("../images/obstacles/trees/pineTreeFresh.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: bottom;
 }
 
 #pineTreeBlack {
-    background-image: url("../images/obstacles/trees/pineTreeBlack.png");
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: bottom;
+  background-image: url("../images/obstacles/trees/pineTreeBlack.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: bottom;
 }
 
 /* PALM TREES */
 #palmTreeFresh {
-    background-image: url("../images/obstacles/trees/palmTreeFresh.png");
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: bottom;
+  background-image: url("../images/obstacles/trees/palmTreeFresh.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: bottom;
 }
 
 #palmTreeBlack {
-    background-image: url("../images/obstacles/trees/palmTreeBlack.png");
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: bottom;
+  background-image: url("../images/obstacles/trees/palmTreeBlack.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: bottom;
 }
-
 
 /* NORTH  */
 
 #leftTreeFrozen {
-    background-image: url("../images/obstacles/trees/leftTreeFrozen.png");
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: bottom;
+  background-image: url("../images/obstacles/trees/leftTreeFrozen.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: bottom;
 }
 
 #bigTreeFrozen {
-    background-image: url("../images/obstacles/trees/bigTreeFrozen.png");
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: bottom;
+  background-image: url("../images/obstacles/trees/bigTreeFrozen.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: bottom;
 }
 
 #pineTreeFrozen {
-    background-image: url("../images/obstacles/trees/pineTreeFrozen.png");
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: bottom;
+  background-image: url("../images/obstacles/trees/pineTreeFrozen.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: bottom;
 }
 
 #gateWest {
-    background-image: url("../images/obstacles/graveYard/gateWest.png");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: bottom;
+  background-image: url("../images/obstacles/graveYard/gateWest.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom;
 }
 
 #gateEast {
-    background-image: url("../images/obstacles/graveYard/gateEast.png");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: bottom;
+  background-image: url("../images/obstacles/graveYard/gateEast.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom;
 }
 
 #graveStoneChrist {
-    background-image: url("../images/obstacles/graveYard/graveStoneChrist.png");
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: bottom;
+  background-image: url("../images/obstacles/graveYard/graveStoneChrist.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: bottom;
 }
 
 #graveStoneClean {
-    background-image: url("../images/obstacles/graveYard/graveStoneClean.png");
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: bottom;
+  background-image: url("../images/obstacles/graveYard/graveStoneClean.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: bottom;
 }
 
 #graveStoneCool {
-    background-image: url("../images/obstacles/graveYard/graveStoneCool.png");
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: bottom;
+  background-image: url("../images/obstacles/graveYard/graveStoneCool.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: bottom;
 }
 
 #graveStonePurple {
-    border-radius: 50%;
-    border: yellow 2px dashed;
-    background-image: url("../images/obstacles/graveYard/graveStonePurple.png");
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: bottom;
+  border-radius: 50%;
+  border: yellow 2px dashed;
+  background-image: url("../images/obstacles/graveYard/graveStonePurple.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: bottom;
 }
 
 #graveStoneRIP {
-    background-image: url("../images/obstacles/graveYard/graveStoneRIP.png");
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: bottom;
+  background-image: url("../images/obstacles/graveYard/graveStoneRIP.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: bottom;
 }
 
 #graveStoneTopCross {
-    background-image: url("../images/obstacles/graveYard/graveStoneTopCross.png");
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: bottom;
+  background-image: url("../images/obstacles/graveYard/graveStoneTopCross.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: bottom;
 }
 
 /* ORCS */
 
 #tentOrc {
-    background-image: url("../images/obstacles/tentOrc.png");
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: bottom;
-    opacity: 0.7;
+  background-image: url("../images/obstacles/tentOrc.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: bottom;
+  opacity: 0.7;
 }
 
 #tentOrc2 {
-    background-image: url("../images/obstacles/tentOrc2.png");
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: bottom;
-    opacity: 0.7;
+  background-image: url("../images/obstacles/tentOrc2.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: bottom;
+  opacity: 0.7;
 }
 
 #yourte {
-    background-image: url("../images/obstacles/yourte.png");
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: bottom;
-    opacity: 0.7;
+  background-image: url("../images/obstacles/yourte.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: bottom;
+  opacity: 0.7;
 }
 
 #fireCamp {
-    background-image: url("../images/obstacles/fireCamp.png");
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: bottom;
-    opacity: 0.7;
+  background-image: url("../images/obstacles/fireCamp.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: bottom;
+  opacity: 0.7;
 }
 
 #fireCamp2 {
-    background-image: url("../images/obstacles/fireCamp2.png");
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: bottom;
-    opacity: 0.7;
+  background-image: url("../images/obstacles/fireCamp2.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: bottom;
+  opacity: 0.7;
 }
 
 #mug {
-    background-image: url("../images/obstacles/mug.png");
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: bottom;
-    opacity: 0.7;
+  background-image: url("../images/obstacles/mug.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: bottom;
+  opacity: 0.7;
 }
 
 #greenChimical {
-    background-image: url("../images/obstacles/greenChimical.png");
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: bottom;
-    opacity: 0.7;
+  background-image: url("../images/obstacles/greenChimical.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: bottom;
+  opacity: 0.7;
 }
 
 #blackGate {
-    background-image: url("../images/obstacles/blackGate.png");
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: bottom;
-    z-index: 3;
+  background-image: url("../images/obstacles/blackGate.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: bottom;
+  z-index: 3;
 }

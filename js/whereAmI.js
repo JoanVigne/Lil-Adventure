@@ -1,19 +1,5 @@
 // to put the good background, the decorations and obstacles
 
-// appearing and disapearing arrow function
-let notThisArrow = "none";
-let north = `url("images/northArrow.png")`;
-let east = `url("images/eastArrow.png")`;
-let south = `url("images/southArrow.png")`;
-let west = `url("images/westArrow.png")`;
-function directionArrowsOnAndOff(north, east, south, west) {
-  // can be "notThisArrow"
-  northDirection.style.backgroundImage = north;
-  eastDirection.style.backgroundImage = east;
-  southDirection.style.backgroundImage = south;
-  westDirection.style.backgroundImage = west;
-}
-
 function whereAmI() {
   let containerBGI = container.classList;
   playerStuff();
@@ -95,32 +81,34 @@ function whereAmI() {
       directionArrowsOnAndOff(north, east, south, west);
       break;
     case "The village south-west":
+      // corner left top
+      obstacleCreation1("brickWall", 1, 1);
+      // corner bottom left
+      obstacleCreation1("brickWall", 1, 11);
+      // corner bottom right
+      obstacleCreation1("brickWall", 7, 11);
       obstacleCreationSPAN("cityRoad", 5, 2, 1, 9);
       obstacleCreationSPAN("cityRoad", 5, 4, 2, 1);
       obstacleCreation4("home", 3, 2);
       obstacleCreationSPAN("home", 3, 4, 2, 3);
       obstacleCreationSPAN("home", 3, 7, 2, 3);
-      obstacleCreationSPAN("brickWall", 3, 10, 2, 1);
-      obstacleCreationSPAN("brickWall", 5, 10, 2, 1);
-      obstacleCreationSPAN("brickWall", 2, 2, 1, 2);
-      obstacleCreationSPAN("brickWall", 2, 4, 1, 2);
-      obstacleCreationSPAN("brickWall", 2, 6, 1, 2);
-      obstacleCreationSPAN("brickWall", 2, 8, 1, 3);
+
       // obstacleCreation1("brownWall", col, row, spanCol, spanRow);
-      directionArrowsOnAndOff(north, east, notThisArrow, notThisArrow);
+      directionArrowsOnAndOff(north, east, brickWall, brickWall);
       break;
     case "The village west":
+      // corner left top
+      obstacleCreation1("brickWall", 1, 1);
+      // corner right top
+      obstacleCreation1("brickWall", 7, 1);
+      // corner bottom left
+      obstacleCreation1("brickWall", 1, 11);
       obstacleCreationSPAN("cityRoad", 5, 5, 1, 6);
       obstacleCreationSPAN("cityRoad", 5, 5, 2, 1);
       obstacleCreation4("home", 3, 3);
       obstacleCreation4("home", 5, 3);
-      obstacleCreationSPAN("brickWall", 3, 2, 2, 1);
-      obstacleCreationSPAN("brickWall", 5, 2, 2, 1);
-      obstacleCreationSPAN("brickWall", 2, 2, 1, 2);
-      obstacleCreationSPAN("brickWall", 2, 4, 1, 2);
-      obstacleCreationSPAN("brickWall", 2, 6, 1, 2);
-      obstacleCreationSPAN("brickWall", 2, 8, 1, 3);
-      directionArrowsOnAndOff(notThisArrow, east, south, notThisArrow);
+
+      directionArrowsOnAndOff(brickWall, east, south, brickWall);
       break;
     case "The village south-east":
       obstacleCreationSPAN("cityRoad", 2, 3, 1, 8);
@@ -129,33 +117,38 @@ function whereAmI() {
       obstacleCreationSPAN("home", 3, 7, 3, 3);
       obstacleCreationSPAN("home", 3, 4, 3, 3);
       // obstacleCreation4("home", 3, 6);
-      obstacleCreationSPAN("brickWall", 2, 10, 2, 1);
-      obstacleCreationSPAN("brickWall", 4, 10, 2, 1);
-      obstacleCreationSPAN("brickWall", 6, 2, 1, 2);
-      obstacleCreationSPAN("brickWall", 6, 4, 1, 2);
-      obstacleCreationSPAN("brickWall", 6, 6, 1, 2);
-      obstacleCreationSPAN("brickWall", 6, 8, 1, 3);
-      directionArrowsOnAndOff(north, notThisArrow, notThisArrow, west);
+      // corner right top
+      obstacleCreation1("brickWall", 7, 1);
+      // corner bottom right
+      obstacleCreation1("brickWall", 7, 11);
+      // corner bottom left
+      obstacleCreation1("brickWall", 1, 11);
+      directionArrowsOnAndOff(north, brickWall, brickWall, west);
       break;
     case "The village east":
-      obstacleCreationSPAN("cityRoad", 4, 9, 1, 2);
+      /*       obstacleCreationSPAN("cityRoad", 4, 9, 1, 2);
       obstacleCreationSPAN("cityRoad", 3, 9, 1, 1);
-      obstacleCreationSPAN("cityRoad", 3, 3, 1, 7);
+      obstacleCreationSPAN("cityRoad", 3, 2, 1, 7); */
       obstacleCreationSPAN("cityRoad", 2, 6, 2, 1);
-      obstacleCreationSPAN("home", 4, 3, 2, 2);
-      obstacleCreationSPAN("home", 4, 5, 2, 2);
-      obstacleCreationSPAN("home", 4, 7, 2, 2);
-      obstacleCreationSPAN("brickWall", 2, 2, 2, 1);
-      obstacleCreationSPAN("brickWall", 4, 2, 2, 1);
-      obstacleCreationSPAN("brickWall", 6, 2, 1, 2);
-      obstacleCreationSPAN("brickWall", 6, 4, 1, 2);
-      obstacleCreationSPAN("brickWall", 6, 6, 1, 2);
-      obstacleCreationSPAN("brickWall", 6, 8, 1, 3);
-      directionArrowsOnAndOff(notThisArrow, notThisArrow, south, west);
+      obstacleCreationSPAN("cityRoad", 4, 2, 1, 2);
+      obstacleCreationSPAN("cityRoad", 4, 4, 1, 2);
+      obstacleCreationSPAN("cityRoad", 4, 6, 1, 2);
+      obstacleCreationSPAN("cityRoad", 4, 8, 1, 2);
+      obstacleCreationSPAN("cityRoad", 4, 10, 1, 1);
+      // corner left top
+      obstacleCreation1("brickWall", 1, 1);
+      // corner right top
+      obstacleCreation1("brickWall", 7, 1);
+      // corner bottom right
+      obstacleCreation1("brickWall", 7, 11);
+
+      obstacleCreationSPAN("home", 5, 2, 2, 2);
+      obstacleCreationSPAN("home", 5, 5, 2, 2);
+      obstacleCreationSPAN("home", 5, 7, 2, 2);
+
+      directionArrowsOnAndOff(brickWall, brickWall, south, west);
       break;
     case "The village center":
-      obstacleCreation1("brickWall", 2, 2);
-      obstacleCreation1("brickWall", 6, 2);
       obstacleCreationSPAN("cityHall2", 3, 3, 3, 5);
       creationOfPeople("basicGuard", 3, 7);
       creationOfPeople("basicGuard", 5, 7);
@@ -174,15 +167,16 @@ function whereAmI() {
       break;
     case "The village north":
       container.classList.replace(containerBGI, "cityFloorHolly");
-      obstacleCreationSPAN("brickWall", 6, 2, 1, 2);
-      obstacleCreationSPAN("brickWall", 6, 4, 1, 2);
-      obstacleCreationSPAN("brickWall", 6, 6, 1, 2);
-      obstacleCreationSPAN("brickWall", 6, 8, 1, 3);
-      obstacleCreationSPAN("brickWall", 2, 2, 1, 2);
-      obstacleCreationSPAN("brickWall", 2, 4, 1, 2);
-      obstacleCreationSPAN("brickWall", 2, 6, 1, 2);
-      obstacleCreationSPAN("brickWall", 2, 8, 1, 3);
-      directionArrowsOnAndOff(north, notThisArrow, south, notThisArrow);
+      // corner left top
+      obstacleCreation1("brickWall", 1, 1);
+      // corner right top
+      obstacleCreation1("brickWall", 7, 1);
+      // corner bottom right
+      obstacleCreation1("brickWall", 7, 11);
+      // corner bottom left
+      obstacleCreation1("brickWall", 1, 11);
+
+      directionArrowsOnAndOff(north, brickWall, south, brickWall);
       break;
     // END OF THE VILLAGE
     case "The north entrance of the village":

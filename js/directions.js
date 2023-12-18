@@ -2,6 +2,33 @@
 // - going from a map to an other
 // - bubble and alert when you arrive on a map
 
+// directions click
+let northDirection = document.createElement("div");
+northDirection.setAttribute("id", "northDirection");
+let eastDirection = document.createElement("div");
+eastDirection.setAttribute("id", "eastDirection");
+let southDirection = document.createElement("div");
+southDirection.setAttribute("id", "southDirection");
+let westDirection = document.createElement("div");
+westDirection.setAttribute("id", "westDirection");
+
+function appearDirections() {
+  container.append(northDirection);
+  northDirection.addEventListener("click", moveNorth);
+  container.append(eastDirection);
+  eastDirection.addEventListener("click", moveEast);
+  container.append(southDirection);
+  southDirection.addEventListener("click", moveSouth);
+  container.append(westDirection);
+  westDirection.addEventListener("click", moveWest);
+}
+
+function directionDisappear() {
+  northDirection.remove();
+  eastDirection.remove();
+  southDirection.remove();
+  westDirection.remove();
+}
 // arrow creations
 let northArrow = document.createElement("div");
 northArrow.setAttribute("id", "north");
@@ -16,6 +43,21 @@ let westArrow = document.createElement("div");
 westArrow.setAttribute("id", "west");
 westArrow.setAttribute("class", "arrows");
 
+// appearing and disapearing arrow function
+let notThisArrow = "none";
+let brickWall = 'url("images/obstacles/brickWall.jpg")';
+let north = `url("images/northArrow.png")`;
+let east = `url("images/eastArrow.png")`;
+let south = `url("images/southArrow.png")`;
+let west = `url("images/westArrow.png")`;
+function directionArrowsOnAndOff(north, east, south, west) {
+  // can be "notThisArrow"
+  northDirection.style.backgroundImage = north;
+  eastDirection.style.backgroundImage = east;
+  southDirection.style.backgroundImage = south;
+  westDirection.style.backgroundImage = west;
+}
+
 function arrowAppear() {
   container.append(northArrow);
   container.append(estArrow);
@@ -27,6 +69,11 @@ function arrowDisapear() {
   estArrow.remove();
   southArrow.remove();
   westArrow.remove();
+}
+
+function changeBackGroundDirections(direction, classBG) {
+  const containerDirection = document.getElementById(direction);
+  containerDirection.classList.add(classBG);
 }
 
 // north east south west

@@ -4,32 +4,26 @@ function bubble(id, message, bubCol, bubRow) {
   bubble.classList.add("bubble");
   bubble.innerHTML = message;
   let whoIsTalking = document.getElementById(id);
-
-  /*   let column = Number(whoIsTalking.style.gridColumnStart);
-  let row = Number(whoIsTalking.style.gridRowStart); */
-
-  let column = Number(whoIsTalking.style.gridColumn);
-  let row = Number(whoIsTalking.style.gridRow);
+  let column = Number(whoIsTalking.style.gridColumnStart);
+  let row = Number(whoIsTalking.style.gridRowStart);
 
   let resultBubbleCol = column + bubCol;
   let resultBubbleRow = row + bubRow;
-
+  // savoir si la bulle n'est pas hors ecran
   if (resultBubbleCol === 1) {
     resultBubbleCol = 3;
-  } else if (resultBubbleCol === 7) {
+  }
+  if (resultBubbleCol === 7) {
     resultBubbleCol = 5;
   }
   if (resultBubbleRow === 1) {
     resultBubbleRow = 3;
-  } else if (resultBubbleRow === 11) {
+  }
+  if (resultBubbleRow === 11) {
     resultBubbleRow = 9;
   }
-
   bubble.style.gridColumnStart = resultBubbleCol;
   bubble.style.gridRowStart = resultBubbleRow;
-
-  console.log("result col => ", resultBubbleCol);
-  console.log("result row => ", resultBubbleRow);
 
   container.append(bubble);
   setTimeout(function () {

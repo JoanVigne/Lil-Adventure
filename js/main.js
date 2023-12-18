@@ -38,32 +38,6 @@ function removeThisClass(thisOne) {
   });
 }
 
-// directions au click
-let northDirection = document.createElement("div");
-northDirection.setAttribute("id", "northDirection");
-let eastDirection = document.createElement("div");
-eastDirection.setAttribute("id", "eastDirection");
-let southDirection = document.createElement("div");
-southDirection.setAttribute("id", "southDirection");
-let westDirection = document.createElement("div");
-westDirection.setAttribute("id", "westDirection");
-
-function appearDirections() {
-  container.append(northDirection);
-  northDirection.addEventListener("click", moveNorth);
-  container.append(eastDirection);
-  eastDirection.addEventListener("click", moveEast);
-  container.append(southDirection);
-  southDirection.addEventListener("click", moveSouth);
-  container.append(westDirection);
-  westDirection.addEventListener("click", moveWest);
-}
-function directionDisappear() {
-  northDirection.remove();
-  eastDirection.remove();
-  southDirection.remove();
-  westDirection.remove();
-}
 function focusFirstInput() {
   const inputButtons = document.querySelectorAll('input[type="button"]');
   if (inputButtons.length > 0) {
