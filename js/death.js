@@ -21,21 +21,7 @@ function importantEnemyDeath(where) {
         `You got closer to the sword that the skeleton left. <br>
       You grab it and feel something strange passing through your body... some kind of strength? <br>`
       );
-      /* choice(
-        `<h4>What is this on the floor?</h4>
-            You can see the sword of the skeleton, you touch it and feel 
-            strange in your body... stronger?
-             You stop touching and the blade fades away slowly. <br>
-             Quick! if you want this new weapon, it is now or never.`,
-        "Take this sword",
-        () => {
-          modifyWeapon("dark-small-sword");
-          addingForce(2);
-          closePromptBox();
-        },
-        "Let it go",
-        closePromptBox
-      ); */
+      addingStat("force", 2);
       break;
     case "The northen crossroad":
       console.log("against leather");

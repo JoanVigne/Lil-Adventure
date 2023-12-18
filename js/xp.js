@@ -128,3 +128,12 @@ function moreXp(amountOfXp) {
 
   xpAndLevelDisplay();
 }
+
+function statUpgrade() {
+  promptBox(`<h3><u>Level up !</u></h3> <br> 
+    <h4>Chose a stat to upgrade :</h4>
+    <br>
+    <input type="button" class="forceBut" onClick="addingStat('force', 1); closePromptBox();" value="Force +1"/> <br>
+    <input type="button" class="hpBut" onClick="addingStat('hp', 2); closePromptBox()" value="HP +2"/>`);
+  focusThisInput(0);
+}

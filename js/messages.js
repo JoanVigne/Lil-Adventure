@@ -72,7 +72,7 @@ function theArmyRoadBlockMessage() {
     // Afficher le premier message si c'est la première fois
     homeMadeAlert(
       "Halt civilian !",
-      "This way is closed, ordered by General Edmund. Back off. <br>[A soldier pushes you]"
+      "This path is closed by order of General Edmund. Back off. <br>[A soldier pushes you]"
     );
   } else {
     // Afficher le deuxième message pour les appels suivants

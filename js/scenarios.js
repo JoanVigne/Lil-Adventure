@@ -19,7 +19,7 @@ function obey() {
   );
   /*   modifyWeapon(""); */
   newStuff("", "weapon");
-  addingHp(-1);
+  addingStat("hp", -1);
 }
 function refuse() {
   closePromptBox();
@@ -130,7 +130,7 @@ function dontKnee() {
                 You feel a pain in your right leg, you take a look and realise 
                     that you have a spear through your thigh..<br>[-2hp] </p>
                 <input type="button" onclick="kneeling()" value="Ouch">`);
-  addingHp(-2);
+  addingStat("hp", -2);
 }
 function kneeling() {
   closePromptBox();
@@ -204,9 +204,9 @@ function agreeWithLeaderOrc() {
     
     <input type="button" onclick='closePromptBox(), TP("After the river"), appearDirections(), orcLeaderStuff()' value="Let's go! Thank chef!">`);
 
-  addingForce(1);
-  addingHp(3);
-  addingArmor(2);
+  addingStat("force", 1);
+  addingStat("hp", 3);
+  addingStat("armor", 2);
   localStorage.setItem("theLostLandScenario", 1);
 }
 
@@ -244,7 +244,8 @@ function poop() {
     His hand comes back from his back full of his own poop... and start throwing it to you<br>
     The worm feeling of it on your face makes you lose your means, and you lose [-1 force].. <br></p>
     <input type="button" onclick='fightGorilla()' value="I am gonna kill IT">`);
-  addingForce(-1);
+
+  addingStat("force", -1);
 }
 function fightGorilla() {
   closePromptBox();
@@ -301,7 +302,7 @@ function obeyingEdmund2() {
 
 function fightEdmund1() {
   closePromptBox();
-  addingHp(-1);
+  addingStat("hp", -1);
   promptBox(`<h4> You attack Edmund !</h4><br>
     <p> The moment you raise your sword to hit first... <br>
      the gorilla jumps on you and push you away, <br>

@@ -23,7 +23,7 @@ function weaponChoseDices() {
       console.log("default choseYourDice in weaponChoseDices");
       break;
   }
-  focusFirstInput();
+  focusThisInput(1);
 }
 
 function choseYourDice(first, second, third, fourth) {
@@ -143,7 +143,7 @@ function appearTheDice(dammageValue, oddValue) {
     oddNumberContainer
   );
   actionContainer.append(oddDiceContainer);
-  focusFirstInput();
+  focusThisInput(1);
 }
 function roll(dammageValue, oddValue) {
   removeThisClass("choseYourDice");

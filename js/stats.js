@@ -22,22 +22,22 @@ function profile() {
     <p><u>weapon</u>:${gameStuffData.weapon} <u>shield</u>:${gameStuffData.shield} </p>
  `
   );
-  focusFirstInput();
-}
-
-function statUpgrade() {
-  promptBox(`<h3><u>Level up !</u></h3> <br> 
-    <h4>Chose a stat to upgrade :</h4>
-    <br>
-    <input type="button" class="forceBut" onClick="addingForce(1); closePromptBox();" value="Force +1"/> <br>
-    <input type="button" class="hpBut" onClick="addingHp(2); closePromptBox()" value="HP +2"/>`);
-  focusFirstInput();
+  focusThisInput("alertBox");
 }
 
 let xpContainer = document.getElementById("xpContainer");
 xpContainer.addEventListener("click", profile);
 
-function addingHp(howMuch) {
+function addingStat(stat, howMuch) {
+  gameStuffData[stat] += howMuch;
+  playerStuff();
+
+  if (gameStuffData.hp <= 0) {
+    playerDeath();
+  }
+}
+
+/* function addingHp(howMuch) {
   gameStuffData.hp = gameStuffData.hp += howMuch;
   if (gameStuffData.hp <= 0) {
     playerDeath();
@@ -51,14 +51,17 @@ function addingForce(howMuch) {
 function addingArmor(howMuch) {
   gameStuffData.armor = gameStuffData.armor += howMuch;
   playerStuff();
-}
+} */
+
 function orcBeerDrink() {
   homeMadeAlert(
     "GlupGlup",
     "You drink a pint of this orc beer of cheap quality. Your biceps got bigger but it hurt you... <br>[+1force]<br>[-1 HP]"
   );
-  addingForce(1);
-  addingHp(-1);
+  /*  addingForce(1); */
+  addingStat("force", 1);
+  /*   addingHp(-1); */
+  addingStat("hp", -1);
 }
 function greenPotion() {
   homeMadeAlert(
@@ -67,5 +70,6 @@ function greenPotion() {
     you feel your face and all your body burning!!<br>
     You lose 2hp...`
   );
-  addingHp(-2);
+  /*   addingHp(-2); */
+  addingStat("hp", -2);
 }

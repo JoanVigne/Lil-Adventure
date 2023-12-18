@@ -215,13 +215,13 @@ function playerPositionEvent() {
     case "The orc camp":
       if (position == "9 / 2" || position == "8 / 5") {
         bubble("player", "fire burn.. [-1 hp]", 0, 1);
-        addingHp(-1);
+        addingStat("hp", -1);
       }
       break;
     case "The west of the orc camp":
       if (position == "10 / 2" || position == "8 / 4") {
         bubble("player", "fire burn.. [-1 hp]", 0, 1);
-        addingHp(-1);
+        addingStat("hp", -1);
       }
       if (numberRow <= 5) {
         let westCampOrc = localStorage.getItem("westCampOrc");
@@ -246,7 +246,7 @@ function playerPositionEvent() {
     case "The north of the orc camp":
       if (position == "10 / 2") {
         bubble("player", "fire burn.. [-1 hp]", 0, 1);
-        addingHp(-1);
+        addingStat("hp", -1);
       }
       break;
     case "The lost land":

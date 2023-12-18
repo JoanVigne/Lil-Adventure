@@ -56,7 +56,7 @@ function continueGame() {
 
   continueMenu.append(theGameSaved);
   container.append(continueMenu);
-  focusFirstInput();
+  focusThisInput(0);
 
   function deletASaving(element) {
     confirmMessage(

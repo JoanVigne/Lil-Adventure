@@ -46,6 +46,7 @@ westArrow.setAttribute("class", "arrows");
 // appearing and disapearing arrow function
 let notThisArrow = "none";
 let brickWall = 'url("images/obstacles/brickWall.jpg")';
+let flowers = 'url("images/floor-ground/pinkFlowers.jpg")';
 let north = `url("images/northArrow.png")`;
 let east = `url("images/eastArrow.png")`;
 let south = `url("images/southArrow.png")`;

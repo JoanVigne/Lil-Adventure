@@ -111,11 +111,18 @@ function whereAmI() {
       directionArrowsOnAndOff(brickWall, east, south, brickWall);
       break;
     case "The village south-east":
-      obstacleCreationSPAN("cityRoad", 2, 3, 1, 8);
-      obstacleCreationSPAN("cityRoad", 3, 3, 2, 1);
-      obstacleCreationSPAN("cityRoad", 4, 2, 1, 1);
-      obstacleCreationSPAN("home", 3, 7, 3, 3);
-      obstacleCreationSPAN("home", 3, 4, 3, 3);
+      obstacleCreationSPAN("cityRoad", 4, 2, 1, 2);
+      obstacleCreationSPAN("cityRoad", 4, 4, 1, 2);
+
+      obstacleCreationSPAN("cityRoad", 3, 5, 1, 2);
+      obstacleCreationSPAN("cityRoad", 3, 7, 1, 2);
+      obstacleCreationSPAN("cityRoad", 3, 9, 1, 2);
+      obstacleCreationSPAN("cityRoad", 4, 2, 1, 2);
+
+      obstacleCreationSPAN("cityRoad", 2, 4, 2, 1);
+
+      obstacleCreationSPAN("home", 4, 8, 3, 3);
+      obstacleCreationSPAN("home", 4, 5, 3, 3);
       // obstacleCreation4("home", 3, 6);
       // corner right top
       obstacleCreation1("brickWall", 7, 1);
@@ -223,8 +230,8 @@ function whereAmI() {
     case "The east of the crossroad":
       homeMadeAlert(
         "Woaw",
-        `This water looks deep ! And i sadly never learn how to swim ... <br>
-            It used to have a bridge in here... so it seems that i have to go back.`
+        `This water looks deep ! Unfortunately, I never learned how to swim ... <br>
+            Here was a bridge... so it seems that i have to go back.`
       );
       container.classList.replace(containerBGI, "dryGround");
       directionArrowsOnAndOff(notThisArrow, notThisArrow, notThisArrow, west);

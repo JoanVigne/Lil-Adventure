@@ -38,18 +38,18 @@ function removeThisClass(thisOne) {
   });
 }
 
-function focusFirstInput() {
-  const inputButtons = document.querySelectorAll('input[type="button"]');
-  if (inputButtons.length > 0) {
-    if (inputButtons[0] !== document.activeElement) {
-      inputButtons[0].focus(); // Set focus on the first input button
-    }
-  }
-}
 function focusThisInput(indexOrContainer) {
   if (indexOrContainer === "alertBox") {
-    const alertButton = alertBox.querySelector('input[type="button"]');
-    alertButton.focus();
+    const alertButton = document.querySelector(
+      "#alertBox input[type='button']"
+    );
+    alertButton?.focus();
+    return;
+  }
+
+  const promptboxON = document.querySelector("#promptBox");
+  if (promptboxON) {
+    promptboxON.querySelector('input[type="button"]').focus();
     return;
   }
   const inputButtons = document.querySelectorAll('input[type="button"]');

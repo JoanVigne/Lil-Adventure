@@ -2,8 +2,8 @@
 // appearDirections(); directionDisappear();
 function localMasterPlace() {
   let localMasterScenario = localStorage.getItem("localMaster");
-  let isVenceDone = JSON.parse(localStorage.getItem("enemyArray"));
-  if (isVenceDone[2].done === true) {
+  let isVenceDone = enemyArray[2].done;
+  if (isVenceDone === true) {
     localStorage.setItem("localMaster", 4);
     console.log("isVenceDone true ??", isVenceDone);
   }
@@ -137,10 +137,9 @@ function upgradeRollingPin() {
 
 function trainingVence3() {
   enemyArray[2].done = true;
+  localStorage.setItem("localMaster", 4);
   endOfFight();
-  const venceFace = document.getElementById("venceFace");
-  if (venceFace) {
-    venceFace.remove();
-  }
+  const venceFace = document.querySelector("#venceFace");
+  venceFace.remove();
   localMasterPlace();
 }
