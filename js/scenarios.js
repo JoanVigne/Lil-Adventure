@@ -17,7 +17,7 @@ function obey() {
     "I tell them to relax",
     refuse
   );
-  /*   modifyWeapon(""); */
+
   newStuff("", "weapon");
   addingStat("hp", -1);
 }
@@ -32,15 +32,17 @@ function refuse() {
   );
 }
 function toTheLeader() {
-  /*   modifyWeapon(""); */
-  newStuff("", "weapon");
+  gameStuffData.weapon = "";
+  playerStuff();
+  /*   newStuff("", "weapon"); */
   closePromptBox();
   noFightLeader();
 }
 
 function fightOrcs() {
-  /* modifyWeapon("small-Axe"); */
-  newStuff("small-Axe", "weapon");
+  gameStuffData.weapon = "small-Axe";
+  playerStuff();
+  /*   newStuff("small-Axe", "weapon"); */
   closePromptBox();
   promptBox(`<h3>yEAAAAHhaA!!!! </h3>
     <br><p> They all are so happy to bring you to their Arena, and they are <bold>ALL</bold> warming up</p><br>

@@ -466,7 +466,7 @@ function whereAmI() {
     case "Random House":
       container.classList.replace(containerBGI, "homeSweetHome");
       directionArrowsOnAndOff(north, notThisArrow, south, notThisArrow);
-      obstacleCreationSPAN("purpleBed", 2, 2, 3, 3);
+      obstacleCreationSPAN("purpleBed", 2, 2, 2, 2);
       break;
     case "The North West":
       container.classList.replace(containerBGI, "wildSnow");
@@ -609,9 +609,15 @@ function whereAmI() {
       obstacleCreation1("blood", 2, 3);
       obstacleCreation1("blood", 6, 8);
       obstacleCreation1("metalPieces", 2, 5);
-      obstacleCreation1("blood", 6, 10);
+      obstacleCreation1("blood", 6, 8);
+
+      if (enemyArray[4].done === true) {
+        obstacleCreation1("blood", 5, 10);
+        obstacleCreation1("blood", 6, 10);
+        obstacleCreation1("blood", 5, 9);
+      }
       //
-      obstacleCreation1("sign", 3, 5);
+      obstacleCreation1("sign", 5, 5);
 
       break;
     case "The front":
@@ -642,6 +648,11 @@ function whereAmI() {
       obstacleCreation1("orc-Soldier-Light", 4, 8);
       obstacleCreation1("orc-Soldier-Armor-2", 5, 8);
       obstacleCreation1("orc-Leather", 6, 8);
+      obstacleCreation1("orc-Soldier-Dark", 6, 7);
+      obstacleCreation1("orc-Soldier-Armor", 5, 7);
+      obstacleCreation1("orc-Soldier-Light", 2, 7);
+      obstacleCreation1("orc-Soldier-Armor-2", 3, 7);
+      obstacleCreation1("orc-Leather", 4, 7);
       break;
 
     case "The orc camp":
@@ -664,12 +675,15 @@ function whereAmI() {
     case "The west of the orc camp":
       container.classList.replace(containerBGI, "bigSnow");
       directionArrowsOnAndOff(notThisArrow, east, notThisArrow, notThisArrow);
+      /*  let westCampOrc = localStorage.getItem("westCampOrc"); */
 
-      let westCampOrc = localStorage.getItem("westCampOrc");
-      if (westCampOrc != "dead") {
+      if (enemyArray[5].done === true) {
+        obstacleCreation1("blood", 4, 2);
+      }
+      /* if (westCampOrc != "dead") {
         obstacleCreation1("orc-Leather", 4, 2);
         bubble("orc-Leather", "zzzz", 0, 1);
-      }
+      } */
       obstacleCreation1("mug", 3, 9);
 
       obstacleCreationSPAN("tentOrc", 2, 2, 2, 2);

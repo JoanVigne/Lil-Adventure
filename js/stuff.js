@@ -40,12 +40,20 @@ function newStuff(item, slot, title) {
     playerStuff();
     return;
   }
+
   if (title === "" || title === null || title === undefined) {
     title = `<h4> Nice ${item} </h4>`;
   }
   confirmMessage(title + "<p> Should i take it? </p>", "Yes !", () => {
     gameStuffData[slot] = item;
     closePromptBox();
+    if (item === "dark-small-sword") {
+      addingStat("force", 2);
+      homeMadeAlert(
+        "Oh ! I can feel it !",
+        "A surge courses through me as I grasp the sword! This blade grants newfound strength! [+2]"
+      );
+    }
     playerStuff();
   });
 }

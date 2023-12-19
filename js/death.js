@@ -19,9 +19,9 @@ function importantEnemyDeath(where) {
         "dark-small-sword",
         "weapon",
         `You got closer to the sword that the skeleton left. <br>
-      You grab it and feel something strange passing through your body... some kind of strength? <br>`
+      While getting your hand clother of it, you feel something strange, It's as if the blade retains a whisper of the fallen warrior's essence. <br>`
       );
-      addingStat("force", 2);
+
       break;
     case "The northen crossroad":
       console.log("against leather");

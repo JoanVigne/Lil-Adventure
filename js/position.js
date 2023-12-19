@@ -177,7 +177,7 @@ function playerPositionEvent() {
       }
       break;
     case "The northen crossroad":
-      if (position == "6 / 3") {
+      if (position == "6 / 5") {
         setTimeout(() => {
           homeMadeAlert(
             "Directions",
@@ -185,8 +185,7 @@ function playerPositionEvent() {
           );
         }, 300);
       }
-      let leatherGuardAlive = localStorage.getItem("leatherGuard");
-      if (leatherGuardAlive !== "dead") {
+      if (enemyArray[4].done === false) {
         // orc
         obstacleCreation1("orc-Leather", 6, 10);
         bubble("orc-Leather", "zZzzz", 0, -1);
@@ -198,8 +197,10 @@ function playerPositionEvent() {
           setTimeout(() => {
             detailEnemy(enemyArray[4], "Me smash human");
           }, 500);
+          enemyArray[4].done = true;
         }
       }
+
       break;
     case "The front":
       if (numberRow == 4) {
@@ -219,18 +220,20 @@ function playerPositionEvent() {
       }
       break;
     case "The west of the orc camp":
+      if (enemyArray[5].done === false) {
+        obstacleCreation1("orc-Leather", 4, 2);
+        bubble("orc-Leather", "zzzz", 0, 1);
+        if (numberRow <= 5) {
+          bubble("orc-Leather", "HUMANNN !!!!", 0, 1);
+          setTimeout(() => {
+            detailEnemy(enemyArray[5], "HUMAN IN CAMP? NEED ALERT");
+          }, 500);
+          enemyArray[5].done === true;
+        }
+      }
       if (position == "10 / 2" || position == "8 / 4") {
         bubble("player", "fire burn.. [-1 hp]", 0, 1);
         addingStat("hp", -1);
-      }
-      if (numberRow <= 5) {
-        let westCampOrc = localStorage.getItem("westCampOrc");
-        if (westCampOrc != "dead") {
-          bubble("orc-Leather", "HUMANNN", 0, 1);
-          setTimeout(() => {
-            detailEnemy(enemyArray[4], "HUMAN IN CAMP? NEED ALERT");
-          }, 500);
-        }
       }
       if (position == "9 / 3") {
         confirmMessage(
