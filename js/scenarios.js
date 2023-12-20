@@ -17,7 +17,6 @@ function obey() {
     "I tell them to relax",
     refuse
   );
-
   newStuff("", "weapon");
   addingStat("hp", -1);
 }
@@ -67,28 +66,28 @@ function orderFightOrcs() {
         "ME FIRST !!",
         "One of them come forward and get his weapon. He is ready to fight"
       );
-      detailEnemy(enemyArray[6], "ME FIRST");
+      detailEnemy(enemyArray[7], "ME FIRST");
       break;
     case "2":
       homeMadeAlert(
         "ME ME ME !!",
         "The moment the first orc body touch the floor, an other take a step forward"
       );
-      detailEnemy(enemyArray[7], "ME BETTER");
+      detailEnemy(enemyArray[8], "ME BETTER");
       break;
     case "3":
       homeMadeAlert("NEXT", "It feels like it will never end...");
-      detailEnemy(enemyArray[5], "WTF you good");
+      detailEnemy(enemyArray[9], "WTF you good");
       break;
     case "4":
-      detailEnemy(enemyArray[8], "I'm last one...");
+      detailEnemy(enemyArray[10], "I'm last one...");
       break;
     case "5":
       homeMadeAlert(
         "NEXT",
         "They are all silent... An other one comes in front of you. He is bigger than the others... "
       );
-      detailEnemy(enemyArray[9], "You killed enought. now you die.");
+      detailEnemy(enemyArray[11], "You killed enought. now you die.");
       break;
     case "6":
       afterFightOrcsLeader();
@@ -211,6 +210,8 @@ function agreeWithLeaderOrc() {
   addingStat("armor", 2);
   localStorage.setItem("theLostLandScenario", 1);
 }
+
+// END OF ORCS
 
 // EDMUND
 

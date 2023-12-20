@@ -12,6 +12,9 @@ function displayStatsPlayer(container) {
 }
 
 function profile() {
+  if (titleH1[0].innerHTML === "Menu") {
+    return;
+  }
   homeMadeAlert(
     "Profile",
     `<p> <u>Level</u>:${gameStuffData.level} <u>HP</u>:${gameStuffData.hp} <u>force</u>:${gameStuffData.force}   

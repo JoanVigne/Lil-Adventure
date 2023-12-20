@@ -68,7 +68,7 @@ let enemyArray = [
     done: false,
   },
   // ORCS
-  //sleeping
+  //sleeping 4
   {
     name: "orc-Leather",
     hp: 5,
@@ -78,7 +78,7 @@ let enemyArray = [
     xp: 7,
     done: false,
   },
-  //sleeping
+  //sleeping 5
   {
     name: "orc-Leather",
     hp: 5,
@@ -97,25 +97,7 @@ let enemyArray = [
     xp: 10,
     done: false,
   },
-  // ARENA
-  {
-    name: "orc-Leather",
-    hp: 5,
-    armor: 1,
-    force: 1,
-    spe: "",
-    xp: 7,
-    done: false,
-  },
-  {
-    name: "orc-Soldier-Dark",
-    hp: 5,
-    armor: 1,
-    force: 1,
-    spe: "",
-    xp: 7,
-    done: false,
-  },
+  // ARENA 7
   {
     name: "orc-Soldier-Light",
     hp: 5,
@@ -143,15 +125,7 @@ let enemyArray = [
     xp: 7,
     done: false,
   },
-  {
-    name: "orc-Strong",
-    hp: 10,
-    armor: 2,
-    force: 2,
-    spe: "",
-    xp: 10,
-    done: false,
-  },
+  // 10
   {
     name: "orc-Mass",
     hp: 5,
@@ -170,7 +144,7 @@ let enemyArray = [
     xp: 7,
     done: false,
   },
-  // number 12
+  // 12
   {
     name: "orc-Leader",
     hp: 18,
@@ -180,7 +154,7 @@ let enemyArray = [
     xp: 50,
     done: false,
   },
-  // humans
+  // humans 13
   {
     name: "guard-enemy",
     hp: 4,
@@ -199,6 +173,7 @@ let enemyArray = [
     xp: 25,
     done: false,
   },
+  // 15
   {
     name: "second-soldier",
     hp: 7,
@@ -226,6 +201,7 @@ let enemyArray = [
     xp: 50,
     done: false,
   },
+  // 18
   {
     name: "gorilla",
     hp: 15,
@@ -245,8 +221,3 @@ let enemyArray = [
     done: false,
   },
 ];
-
-/* function enemyArrayLocalStorage(data) {
-  localStorage.setItem("enemyArray", JSON.stringify(data));
-}
- */

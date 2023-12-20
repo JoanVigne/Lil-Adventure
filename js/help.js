@@ -50,25 +50,35 @@ function helpMessage() {
 function explainedMenu() {
   homeMadeAlert(
     "",
-    `If you already played, you hopefully 
-    saved your game, so click on continue.</br></br>
-    If you just arrived, Press on the red button and discover this amazing adventure !</br></br>
-    The about button is to know who created all of this... if you don't already know.`
+    `If you've already played, you hopefully have
+    saved your game, so click on "Continue the adventure".</br></br>
+    If you've just arrived, Press the red button and embark on this amazing adventure!</br></br>
+    The "About" button provides informations about who created all of this...`
   );
 }
 
 function lostOfSavedGames() {
   homeMadeAlert(
     "",
-    `You probably erased your saved games that were in the local storage of your browser
-    by cleaning your browsing history.</br></br>
-     But the adventure is not so long, you can speed run what you already did !`
+    `If you've cleaned your browsing history, you likely erased your saved games stored in your browser's local storage.</br></br>
+    But don't worry, the adventure isn't so long; you can speed run through what you've already accomplished!`
   );
 }
 // in  fight
 function tooManyEnemies() {
   let enemiesInContainer = document.getElementsByClassName("opponent");
-  if (enemiesInContainer.length > 1) {
+  if (enemiesInContainer.length < 1) {
+    homeMadeAlert(
+      "Everything seems ok",
+      "You only have one enemy detected right now... fight!"
+    );
+    return;
+  }
+  enemiesInContainer[1].remove();
+  closePromptBox();
+  closePromptBox();
+
+  /*   if (enemiesInContainer.length > 1) {
     enemiesInContainer[1].remove();
     closePromptBox();
     closePromptBox();
@@ -77,7 +87,7 @@ function tooManyEnemies() {
       "Everything seems ok",
       "You only have one enemy detected right now... fight!"
     );
-  }
+  } */
 }
 
 // on the map
