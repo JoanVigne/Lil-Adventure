@@ -15,14 +15,15 @@ function profile() {
   if (titleH1[0].innerHTML === "Menu") {
     return;
   }
+  // <p><u>spe</u>:${gameStuffData.spe}</p>
   homeMadeAlert(
     "Profile",
-    `<p> <u>Level</u>:${gameStuffData.level} <u>HP</u>:${gameStuffData.hp} <u>force</u>:${gameStuffData.force}   
-    <p><u>spe</u>:${gameStuffData.spe}</p>
-    <h4>gameStuffData</h4>
+    `<p><u>Level</u>:${gameStuffData.level} <u>HP</u>:${gameStuffData.hp} <u>force</u>:${gameStuffData.force}   
+    <h4>My stuff :</h4>
     <p><u>total armor</u>:${gameStuffData.armor}</p>
     <p><u>hat</u>:${gameStuffData.hat} <u>top</u>:${gameStuffData.top} </p>
-    <p><u>weapon</u>:${gameStuffData.weapon} <u>shield</u>:${gameStuffData.shield} </p>
+    <p><u>weapon</u>:${gameStuffData.weapon}</p>
+    <p><u>shield</u>:${gameStuffData.shield} </p>
  `
   );
   focusThisInput("alertBox");

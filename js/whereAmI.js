@@ -81,12 +81,9 @@ function whereAmI() {
       directionArrowsOnAndOff(north, east, south, west);
       break;
     case "The village south-west":
-      // corner left top
-      obstacleCreation1("brickWall", 1, 1);
       // corner bottom left
       obstacleCreation1("brickWall", 1, 11);
-      // corner bottom right
-      obstacleCreation1("brickWall", 7, 11);
+
       obstacleCreationSPAN("cityRoad", 5, 2, 1, 9);
       obstacleCreationSPAN("cityRoad", 5, 4, 2, 1);
       obstacleCreation4("home", 3, 2);
@@ -99,10 +96,7 @@ function whereAmI() {
     case "The village west":
       // corner left top
       obstacleCreation1("brickWall", 1, 1);
-      // corner right top
-      obstacleCreation1("brickWall", 7, 1);
-      // corner bottom left
-      obstacleCreation1("brickWall", 1, 11);
+
       obstacleCreationSPAN("cityRoad", 5, 5, 1, 6);
       obstacleCreationSPAN("cityRoad", 5, 5, 2, 1);
       obstacleCreation4("home", 3, 3);
@@ -123,31 +117,20 @@ function whereAmI() {
 
       obstacleCreationSPAN("home", 4, 8, 3, 3);
       obstacleCreationSPAN("home", 4, 5, 3, 3);
-      // obstacleCreation4("home", 3, 6);
-      // corner right top
-      obstacleCreation1("brickWall", 7, 1);
       // corner bottom right
       obstacleCreation1("brickWall", 7, 11);
-      // corner bottom left
-      obstacleCreation1("brickWall", 1, 11);
+
       directionArrowsOnAndOff(north, brickWall, brickWall, west);
       break;
     case "The village east":
-      /*       obstacleCreationSPAN("cityRoad", 4, 9, 1, 2);
-      obstacleCreationSPAN("cityRoad", 3, 9, 1, 1);
-      obstacleCreationSPAN("cityRoad", 3, 2, 1, 7); */
       obstacleCreationSPAN("cityRoad", 2, 6, 2, 1);
       obstacleCreationSPAN("cityRoad", 4, 2, 1, 2);
       obstacleCreationSPAN("cityRoad", 4, 4, 1, 2);
       obstacleCreationSPAN("cityRoad", 4, 6, 1, 2);
       obstacleCreationSPAN("cityRoad", 4, 8, 1, 2);
       obstacleCreationSPAN("cityRoad", 4, 10, 1, 1);
-      // corner left top
-      obstacleCreation1("brickWall", 1, 1);
       // corner right top
       obstacleCreation1("brickWall", 7, 1);
-      // corner bottom right
-      obstacleCreation1("brickWall", 7, 11);
 
       obstacleCreationSPAN("home", 5, 2, 2, 2);
       obstacleCreationSPAN("home", 5, 5, 2, 2);
@@ -677,6 +660,10 @@ function whereAmI() {
       directionArrowsOnAndOff(notThisArrow, east, notThisArrow, notThisArrow);
       /*  let westCampOrc = localStorage.getItem("westCampOrc"); */
 
+      if (enemyArray[5].done === false) {
+        obstacleCreation1("orc-Leather", 4, 2);
+        bubble("orc-Leather", "zzzz", 0, 1);
+      }
       if (enemyArray[5].done === true) {
         obstacleCreation1("blood", 4, 2);
       }
@@ -712,6 +699,7 @@ function whereAmI() {
         setTimeout(() => {
           detailEnemy(enemyArray[6], "Human? here? mmmh you need to disapear");
         }, 1000);
+        enemyArray[6].done = true;
       }
       obstacleCreationSPAN("tentOrc", 2, 2, 2, 2);
       obstacleCreationSPAN("tentOrc2", 2, 4, 2, 2);
@@ -759,7 +747,17 @@ function whereAmI() {
     case "The orc leader":
       container.classList.replace(containerBGI, "bigSnow");
       directionDisappear();
-      obstacleCreationSPAN("orc-Leader", 4, 1, 4, 4);
+      if (enemyArray[12].done === false) {
+        obstacleCreationSPAN("orc-Leader", 4, 1, 4, 4);
+        setTimeout(() => {
+          leaderOrcScenario();
+        }, 700);
+      }
+      if (enemyArray[12].done === true) {
+        obstacleCreationSPAN("blood", 4, 1, 4, 4);
+        leaderOrcDead();
+      }
+
       obstacleCreationSPAN("yourte", 2, 2, 3, 3);
 
       obstacleCreation1("torch", 2, 6);
@@ -768,9 +766,6 @@ function whereAmI() {
       obstacleCreation1("torch", 6, 6);
       obstacleCreation1("torch", 6, 8);
       obstacleCreation1("torch", 6, 10);
-      setTimeout(() => {
-        leaderOrcScenario();
-      }, 700);
 
       break;
     case "The fight arena":
@@ -795,15 +790,7 @@ function whereAmI() {
     case "After the river":
       container.classList.replace(containerBGI, "dryGround");
       directionArrowsOnAndOff(notThisArrow, east, notThisArrow, notThisArrow);
-      if (theLostLandScenario == "1") {
-        homeMadeAlert(
-          "Woaw",
-          `<p>You really did teleport somewhere else! what magic is that??<br>
-                You look amazing and ready to fight with this strong armor! <br>
-                You realise that you are close to the village, after the river on the east. To the old castle direction.</p>`
-        );
-      }
-      player.style.gridArea = "5 / 5 / auto / auto ";
+
       obstacleCreationSPAN("blueWater", 2, 2, 2, 9);
       obstacleCreation1("dryGround", 4, 6);
       obstacleCreation1("dryGround", 5, 6);
@@ -963,25 +950,34 @@ function whereAmI() {
       // scenario
       if (enemyArray[18].done === false) {
         obstacleCreation1("gorilla", 3, 10);
+        bubble("Edmund", "??", -1, -1);
+        setTimeout(() => {
+          edmundScenario();
+        }, 2000);
       }
       if (enemyArray[18].done === true) {
         obstacleCreation1("blood", 3, 10);
+        // scenario
+        fightEdmund2();
       }
       if (enemyArray[19].done === false) {
         obstacleCreation1("Edmund", 5, 10);
       }
       if (enemyArray[19].done === true) {
         obstacleCreation1("blood", 5, 10);
+        setTimeout(() => {
+          adventureIsOver();
+        }, 1500);
       }
-      bubble("Edmund", "??", -1, -1);
-      setTimeout(() => {
+
+      /* setTimeout(() => {
         if (theLostLandScenario == "6") {
           edmundScenario();
         }
         if (theLostLandScenario == "gorillaDown") {
           fightEdmund2();
         }
-      }, 2000);
+      }, 2000); */
 
       break;
     default:

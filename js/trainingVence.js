@@ -5,7 +5,10 @@ function localMasterPlace() {
   let isVenceDone = enemyArray[2].done;
   if (isVenceDone === true) {
     localStorage.setItem("localMaster", 4);
-    console.log("isVenceDone true ??", isVenceDone);
+    const venceFace = document.querySelector("#venceFace");
+    if (venceFace) {
+      venceFace.remove();
+    }
   }
 
   let sunFlower = localStorage.getItem("sunFlower");
@@ -138,8 +141,12 @@ function upgradeRollingPin() {
 function trainingVence3() {
   enemyArray[2].done = true;
   localStorage.setItem("localMaster", 4);
+  const containers = document.querySelectorAll(".opponent");
+  if (containers.length > 0) {
+    containers.forEach((container) => {
+      container.remove();
+    });
+  }
   endOfFight();
-  const venceFace = document.querySelector("#venceFace");
-  venceFace.remove();
   localMasterPlace();
 }

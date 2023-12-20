@@ -57,46 +57,11 @@ function newStuff(item, slot, title) {
     playerStuff();
   });
 }
-function orcLeaderStuff() {
-  console.log("changemente de stuff");
-  gameStuffData.weapon = "white-sword";
-  gameStuffData.shield = "bouclier";
-  gameStuffData.top = "armure";
-  playerStuff();
+
+function howMuchArmor() {
+  const stuff = {
+    bouclier: 2,
+    armure: 2,
+  };
+  gameStuffData.armor = stuff[gameStuffData.shield] + stuff[gameStuffData.top];
 }
-
-/*  ANCIENNE VERSION PLAYERSTUFF
-let theHat = document.createElement("div");
-let theFace = document.createElement("div");
-let theBody = document.createElement("div");
-let theWeapon = document.createElement("div");
-let theShield = document.createElement("div");
-
-theHat.setAttribute("id", "hat");
-theFace.setAttribute("id", "face");
-theBody.setAttribute("id", "top");
-theWeapon.setAttribute("id", "weapon");
-theShield.setAttribute("id", "shield");
-
-function playerStuff() {
-  let hat = gameStuffData.hat;
-  let face = gameStuffData.face;
-  let top = gameStuffData.top;
-  let weapon = gameStuffData.weapon;
-  let shield = gameStuffData.shield;
-
-  theHat.setAttribute("class", hat);
-  player.append(theHat);
-
-  theFace.setAttribute("class", face);
-  player.append(theFace);
-
-  theBody.setAttribute("class", top);
-  player.append(theBody);
-
-  theWeapon.setAttribute("class", weapon);
-  player.append(theWeapon);
-
-  theShield.setAttribute("class", shield);
-  player.append(theShield);
-} */

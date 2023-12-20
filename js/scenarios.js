@@ -17,7 +17,8 @@ function obey() {
     "I tell them to relax",
     refuse
   );
-  newStuff("", "weapon");
+  gameStuffData.weapon = "";
+  playerStuff();
   addingStat("hp", -1);
 }
 function refuse() {
@@ -107,6 +108,7 @@ function afterFightOrcsLeader() {
 function noFightLeader() {
   TP("The orc leader");
 }
+
 // VANGUARD END
 
 //LEADER START
@@ -126,12 +128,12 @@ function leaderOrcScenario() {
 }
 function dontKnee() {
   closePromptBox();
+  addingStat("hp", -2);
   promptBox(`<p><h4>"Imbecile" <br></h4>
                 He makes a sign with his enormous hand<br>[you hear a fast whistle behind you]<br><br>
                 You feel a pain in your right leg, you take a look and realise 
-                    that you have a spear through your thigh..<br>[-2hp] </p>
+                    that you have an arrow through your thigh..<br>[-2hp] </p>
                 <input type="button" onclick="kneeling()" value="Ouch">`);
-  addingStat("hp", -2);
 }
 function kneeling() {
   closePromptBox();
@@ -182,15 +184,12 @@ function investigate() {
 function fightLeaderOrc() {
   closePromptBox();
   /*   modifyWeapon("small-Axe"); */
-  newStuff(
-    "small-Axe",
-    "weapon",
-    "An other orc give you a small axe, smile at you, and run away. The leader comes to you."
-  );
-  /*   homeMadeAlert(
+  gameStuffData.weapon = "small-Axe";
+  playerStuff();
+  homeMadeAlert(
     "Really? AHAHAHA",
     "An other orc give you a small axe, smile at you, and run away. The leader comes to you."
-  ); */
+  );
   detailEnemy(enemyArray[12], "Idiot.");
 }
 
@@ -203,24 +202,56 @@ function agreeWithLeaderOrc() {
     [new stuff!]</p><br>
     
     
-    <input type="button" onclick='closePromptBox(), TP("After the river"), appearDirections(), orcLeaderStuff()' value="Let's go! Thank chef!">`);
+    <input type="button" onclick='tpAfterOrcs()' value="Let's go! Thanks chef!">`);
 
   addingStat("force", 1);
   addingStat("hp", 3);
   addingStat("armor", 2);
   localStorage.setItem("theLostLandScenario", 1);
 }
-
+function leaderOrcDead() {
+  promptBox(`<h4>The leader of the orcs has fallen.</h4>
+  <p>The moment he touches the ground, a large number of them surround you. <br>
+    One of them gets closer and starts to speak: <br>
+    "You, by the ancestral rules of our people, are the new chief.<br>
+    You are going to save the lands by fighting the evil in the east!"<br>
+    [He begins a magical ritual...]
+  </p>
+    <input type="button" onclick='tpAfterOrcs()' value="Wait, what? Where?">`);
+}
 // END OF ORCS
-
+function tpAfterOrcs() {
+  closePromptBox();
+  TP("After the river");
+  appearDirections();
+  player.style.gridArea = "5 / 5 / auto / auto ";
+  if (gameStuffData.hp < 10) {
+    gameStuffData.hp = 10;
+  }
+  gameStuffData.weapon = "white-sword";
+  gameStuffData.shield = "bouclier";
+  gameStuffData.top = "armure";
+  gameStuffData.armor = 3;
+  playerStuff();
+  setTimeout(() => {
+    homeMadeAlert(
+      "Woaw",
+      `<p>You really did teleport somewhere else! what magic is that??<br>
+              You look amazing and ready to fight with this strong armor! <br>
+              You realise that you are close to the village, after the river on the east. To the old castle direction.</p>`
+    );
+  }, 2000);
+}
 // EDMUND
 
 function edmundScenario() {
   choice(
-    `<h4>Edmun: ?</h4><p>So if i mix this ingredient with this one... it is killing this plant even faster!<br>
-    Oh hey, soldier, give me this bottle and... Hey you re not one of my men !!<br>
-    Who are you?<br> An other newbe investigator sent from the village?<br>
-    This city mayor is retarded as f*ck to sentence everybody to death.<br></p>`,
+    `<h4>Edmund:</h4>
+    <p>So if I mix this ingredient with that one, it will kill this plant even faster!<br>
+        Oh hey, soldier, give me that bottle and... Wait, you're not one of my men!!<br>
+        Who are you? Another new investigator sent from the village?<br>
+        This city's mayor is incredibly foolish to condemn everybody to death.<br></p>
+    `,
     `Yes i am.`,
     truth,
     `No no, i am here to help`,
@@ -230,10 +261,11 @@ function edmundScenario() {
 function truth() {
   closePromptBox();
   choice(
-    `<h4>Edmund: </h4><p> I see, honesty, good quality.<br>
-    Well, try to be honest with my pet now. <br>
-    Gorilla ! ATTACK !</p>`,
-    `Throw a peace of meat to him`,
+    `<h4>Edmund:</h4>
+    <p>I see, honesty, a good quality.<br>
+        Well, try to be honest with my pet now.<br>
+        Gorilla! ATTACK!</p>,`,
+    `Throw a piece of meat to him`,
     poop,
     `Prepare to fight`,
     fightGorilla
@@ -241,13 +273,13 @@ function truth() {
 }
 function poop() {
   closePromptBox();
-  promptBox(`<h4>Emdund:</h4> <p>"You throw a peace of meat to a fruit-eater animal?"<br>
-    The gorilla grabs the meat, smells it, put in on the table.<br>
-    Then he looks at you, put his hand behind his back, frowns for a second... <br>
-    His hand comes back from his back full of his own poop... and start throwing it to you<br>
-    The worm feeling of it on your face makes you lose your means, and you lose [-1 force].. <br></p>
+  promptBox(`<h4>Edmund:</h4>
+  <p>"You throw a piece of meat to a fruit-eating animal?"<br>
+      The gorilla grabs the meat, smells it, puts it on the table.<br>
+      Then he looks at you, puts his hand behind his back, frowns for a second...<br>
+      His hand comes back from behind with his own poop and starts throwing it at you.<br>
+      The unpleasant feeling on your face makes you lose your composure, resulting in a loss of [-1 force].</p>
     <input type="button" onclick='fightGorilla()' value="I am gonna kill IT">`);
-
   addingStat("force", -1);
 }
 function fightGorilla() {
@@ -257,11 +289,13 @@ function fightGorilla() {
 function lie() {
   closePromptBox();
   choice(
-    `<h4>Emdund: </h4><p> Oh, a new member of my big project!<br>
-    The first step was to push the local government to send the army against those smelly orcs.<br>
-    A success if i may ! They fought for a day now and no one wants to hear their defense about it.<br>
-    Then, the second phase of my master-plan can begin!<br></p>
-     Anyway, come closer.`,
+    `<h4>Edmund:</h4>
+    <p>Oh, a new member of my big project!<br>
+        The first step was to push the local government to send the army against those smelly orcs.<br>
+        A success if I may say so! They've been fighting for a day now, and no one wants to hear their defense about it.<br>
+        Now, the second phase of my master plan can begin!<br></p>
+    <p>Anyway, come closer.</p>
+    `,
     `Obeying`,
     obeyingEdmund1,
     `I refuse to obey you, Evil!`,
@@ -272,8 +306,10 @@ function lie() {
 function obeyingEdmund1() {
   closePromptBox();
   choice(
-    `<h4>Edmund:</h4><p> Your blade is full of blood... I can see that you passed through a lot. <br>
-    Give it to me, so i can collect the blood of those dead, it can be usefull for my next potions.<br></p>`,
+    `<h4>Edmund:</h4>
+    <p>Your blade is covered in blood... I can see that you've been through a lot.<br>
+        Give it to me, so I can collect the blood of the fallen; it can be useful for my next potions.</p>
+    `,
     `Obeying`,
     obeyingEdmund2,
     `Surprise attack on Edmund`,
@@ -282,20 +318,20 @@ function obeyingEdmund1() {
 }
 function surpriseAttack() {
   closePromptBox();
-  promptBox(`<p>You decide to try to surprise attack him.<br>
-    The gorilla is watching you...<br>
-    You draw your sword from your scabbard, <br>
-    but by doing it a bit fast to try to surprise... It became obvious.<br>
-    The gorilla jumps on you and pushes you a few steps away.</p>
-    <input type="button" onclick='fightGorilla()' value="Well, let's fight that">`);
+  promptBox(`<p>You decide to attempt a surprise attack on him.<br>
+  The gorilla watches you closely...<br>
+  You draw your sword from its scabbard,<br>
+  but in your haste to surprise him, it becomes apparent.<br>
+  The gorilla quickly jumps on you and pushes you a few steps away.</p>
+    <input type="button" onclick='fightGorilla()' value="Well, let's fight that beast">`);
 }
 
 function obeyingEdmund2() {
   closePromptBox();
   choice(
-    `<p> By giving him your weapon nicely, you can notice that the gorilla is less vigilent... <br>
-    Edmund collects the blood out of the blade, and give it back to you.<br>
-    It is time to attack, who are you gonna fight first? </p>`,
+    `<p>By giving him your weapon politely, you notice that the gorilla is less vigilant...<br>
+    Edmund collects the blood from the blade and hands it back to you.<br>
+    It's time to attack. Who are you going to fight first?</p>`,
     `Edmund`,
     fightEdmund1,
     `The gorilla`,
@@ -306,36 +342,43 @@ function obeyingEdmund2() {
 function fightEdmund1() {
   closePromptBox();
   addingStat("hp", -1);
-  promptBox(`<h4> You attack Edmund !</h4><br>
-    <p> The moment you raise your sword to hit first... <br>
-     the gorilla jumps on you and push you away, <br>
-     you fall on your back and lose [-1hp]<br>
-     Now you don't have any choice. the beast is between you and Edmund who yells at the animal "KILL HIIIIIM"!</p>
+  promptBox(`<h4>You attack Edmund!</h4>
+  <p>The moment you raise your sword to strike first...<br>
+      the gorilla jumps on you and pushes you away,<br>
+      you fall on your back and lose [-1 HP].<br>
+      Now you don't have any choice. The beast is between you and Edmund, who yells at the animal: "KILL HIIIM!"</p>
      <input type="button" onclick='fightGorilla()' value="Gorilla BBQ tonight!">`);
 }
 
 // start this function with whereAmI if localstorage theLostLandScenario === gorillaDown
 function fightEdmund2() {
   /* closePromptBox(); */
-  promptBox(`<h4>Edmund: </h4><p> "My ape ... what did you do to him... <br>
-    You re gonna suffer for this... "<br>
-    Edmund takes a small crossbow and shoots a small arrow, with a surprising precision, directly in your neck !<br>
-    You pull out the arrow as fast as possible.<br>
-    You feel a liquid flowing out of the impact... You touch it and look at it...<br>
-    There is some blood, but not only... a green liquid too ??<br></p>
+  promptBox(`<h4>Edmund:</h4>
+  <p>"My ape... what did you do to him...<br>
+      You're gonna suffer for this..."<br>
+      Edmund takes a small crossbow and shoots a small arrow with surprising precision, directly at your neck!<br>
+      You pull out the arrow as fast as possible.<br>
+      You feel a liquid flowing out of the impact... You touch it and look at it...<br>
+      There is some blood, amd... a green substance??</p>
+  
     <input type="button" onclick='wthIsThat()' value="What the hell is that?!">
     `);
 }
 function wthIsThat() {
   localStorage.setItem("theLostLandScenario", "poisoned");
   closePromptBox();
-  promptBox(`<h4>Edmund :</h4><p> It is the color of your punishment ! <br>
-    You re gonna slowly suffer until the death take you. <br>
-    No one can stop me, You were a fool to think you could do anything to stop me.</p>
+  promptBox(`<h4>Edmund:</h4>
+  <p>It is the color of your punishment!<br>
+      You're going to suffer slowly until death takes you.<br>
+      No one can stop me. You were a fool to think you could do anything to stop me.</p>  
     <input type="button" onclick='finalFight()' value="I AM GONNA KILL YOU">`);
 }
 
 function finalFight() {
   closePromptBox();
   detailEnemy(enemyArray[19], "It is just a question of time...");
+}
+
+function adventureIsOver() {
+  console.log("end");
 }

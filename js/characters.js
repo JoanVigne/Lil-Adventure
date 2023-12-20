@@ -64,7 +64,7 @@ let enemyArray = [
     armor: 1,
     force: 4,
     spe: "Fear",
-    xp: 6,
+    xp: 10,
     done: false,
   },
   // ORCS

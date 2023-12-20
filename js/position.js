@@ -196,7 +196,7 @@ function playerPositionEvent() {
           bubble("orc-Leather", "human???", 0, -1);
           setTimeout(() => {
             detailEnemy(enemyArray[4], "Me smash human");
-          }, 500);
+          }, 1000);
           enemyArray[4].done = true;
         }
       }
@@ -221,14 +221,12 @@ function playerPositionEvent() {
       break;
     case "The west of the orc camp":
       if (enemyArray[5].done === false) {
-        obstacleCreation1("orc-Leather", 4, 2);
-        bubble("orc-Leather", "zzzz", 0, 1);
         if (numberRow <= 5) {
           bubble("orc-Leather", "HUMANNN !!!!", 0, 1);
           setTimeout(() => {
             detailEnemy(enemyArray[5], "HUMAN IN CAMP? NEED ALERT");
           }, 500);
-          enemyArray[5].done === true;
+          enemyArray[5].done = true;
         }
       }
       if (position == "10 / 2" || position == "8 / 4") {
@@ -266,21 +264,36 @@ function playerPositionEvent() {
     case "The first ruins":
       if (column == 3) {
         let theLostLandScenario = localStorage.getItem("theLostLandScenario");
-        if (theLostLandScenario == "2") {
+        if (enemyArray[13].done === true) {
+          return;
+        }
+        promptBox(`Wtf? Who are you ? A civilian? What the hell are you doing here?<br>
+        <input type='button'
+         onclick='detailEnemy(enemyArray[14], "Stop!"), closePromptBox()' 
+         value="Okay!">`);
+        /* if (theLostLandScenario == "2") {
           promptBox(`Wtf? Who are you ? A civilian? What the hell are you doing here?<br>
                     <input type='button'
                      onclick='detailEnemy(enemyArray[14], "Stop!"), closePromptBox()' 
                      value="Okay!">`);
-        }
-      }
-      if (column == 5) {
-        let theLostLandScenario = localStorage.getItem("theLostLandScenario");
-        if (theLostLandScenario == "3") {
+        } */
+
+        if (column == 5) {
+          let theLostLandScenario = localStorage.getItem("theLostLandScenario");
+          if (enemyArray[14].done === true) {
+            return;
+          }
           promptBox(`Wtf? Who are you ? A civilian? What the hell are you doing here?<br>
                     <input type='button'
                      onclick='detailEnemy(enemyArray[15], "En guarde!"), closePromptBox()' 
                      value="Okay!">`);
         }
+        /* if (theLostLandScenario == "3") {
+          promptBox(`Wtf? Who are you ? A civilian? What the hell are you doing here?<br>
+                    <input type='button'
+                     onclick='detailEnemy(enemyArray[15], "En guarde!"), closePromptBox()' 
+                     value="Okay!">`);
+        } */
       }
       break;
     case "The second ruins":
