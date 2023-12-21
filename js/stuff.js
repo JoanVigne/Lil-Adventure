@@ -60,8 +60,8 @@ function newStuff(item, slot, title) {
 
 function howMuchArmor() {
   const stuff = {
-    bouclier: 2,
-    armure: 2,
+    Wooden: 2,
+    Iron: 2,
   };
   gameStuffData.armor = stuff[gameStuffData.shield] + stuff[gameStuffData.top];
 }

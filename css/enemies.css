@@ -1,169 +1,165 @@
 .hidden {
-    visibility: hidden;
+  visibility: hidden;
 }
 
 #spider {
-    background-image: url("../images/enemies/spider.png");
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-    z-index: 2;
+  background-image: url("../images/enemies/spider.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  z-index: 2;
 }
 
 #queenSpider {
-    background-image: url("../images/enemies/spider.png");
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-    z-index: 2;
+  background-image: url("../images/enemies/spider.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  z-index: 2;
 }
 
 #skeleton {
-    background-image: url("../images/enemies/skeleton.png");
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-    z-index: 2;
+  background-image: url("../images/enemies/skeleton.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  z-index: 2;
 }
 
 /* ORCS */
 #orc-Leather {
-    background-image: url("../images/enemies/orcLeather.png");
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-    opacity: 0.7;
-    z-index: 2;
+  background-image: url("../images/enemies/orcLeather.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  opacity: 0.7;
+  z-index: 2;
 }
 
 #orc-Soldier-Dark {
-    background-image: url("../images/enemies/orcSoldierDark.png");
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-    opacity: 0.7;
-    z-index: 2;
+  background-image: url("../images/enemies/orcSoldierDark.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  opacity: 0.7;
+  z-index: 2;
 }
 
 #orc-Soldier-Light {
-    background-image: url("../images/enemies/orcSoldierLight.png");
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-    opacity: 0.7;
-    z-index: 2;
+  background-image: url("../images/enemies/orcSoldierLight.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  opacity: 0.7;
+  z-index: 2;
 }
 
 #orc-Soldier-Armor {
-    background-image: url("../images/enemies/orcSoldierArmor.png");
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-    opacity: 0.7;
-    z-index: 2;
+  background-image: url("../images/enemies/orcSoldierArmor.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  opacity: 0.7;
+  z-index: 2;
 }
 
 #orc-Soldier-Armor-2 {
-    background-image: url("../images/enemies/orcSoldierArmor2.png");
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-    opacity: 0.7;
-    z-index: 2;
+  background-image: url("../images/enemies/orcSoldierArmor2.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  opacity: 0.7;
+  z-index: 2;
 }
 
 #orc-Strong {
-    background-image: url("../images/enemies/orcStrong.png");
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-    opacity: 0.7;
-    z-index: 2
+  background-image: url("../images/enemies/orcStrong.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  opacity: 0.7;
+  z-index: 2;
 }
 
 #orc-Mass {
-    background-image: url("../images/enemies/orcMass.png");
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-    opacity: 0.7;
-    z-index: 2;
+  background-image: url("../images/enemies/orcMass.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  opacity: 0.7;
+  z-index: 2;
 }
 
 #orc-Mass-Dark {
-    background-image: url("../images/enemies/orcMassDark.png");
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-    opacity: 0.7;
-    z-index: 2
+  background-image: url("../images/enemies/orcMassDark.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  opacity: 0.7;
+  z-index: 2;
 }
 
 #orc-Leader {
-    background-image: url("../images/enemies/orc-Leader.png");
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-    opacity: 0.7;
-    z-index: 2;
+  background-image: url("../images/enemies/orc-Leader.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  opacity: 0.7;
+  z-index: 2;
 }
 
 #guard-enemy {
-    background-image: url("../images/characters/guard.png");
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-    z-index: 2
+  background-image: url("../images/characters/guard.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  z-index: 2;
 }
 
 #first-soldier {
-    background-image: url("../images/characters/rogue.png");
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-    z-index: 2;
+  background-image: url("../images/characters/rogue.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  z-index: 2;
 }
 
 #second-soldier {
-    background-image: url("../images/characters/second-soldier.png");
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-    z-index: 2;
+  background-image: url("../images/characters/second-soldier.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  z-index: 2;
 }
 
 #third-soldier {
-    background-image: url("../images/characters/third-soldier.png");
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-    z-index: 2;
+  background-image: url("../images/characters/third-soldier.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  z-index: 2;
 }
 
 #Rider {
-    background-image: url("../images/characters/rider.png");
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-    z-index: 2;
+  background-image: url("../images/characters/rider.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  z-index: 2;
 }
 
 #gorilla {
-    background-image: url("../images/characters/gorilla.png");
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-    z-index: 2;
-    border: 4px solid red;
-    border-radius: 50%;
+  background-image: url("../images/characters/gorilla.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  z-index: 2;
 }
 
 #Edmund {
-    background-image: url("../images/characters/Edmund.png");
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-    z-index: 2;
-    border: 4px solid red;
-    border-radius: 50%;
+  background-image: url("../images/characters/Edmund.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  z-index: 2;
 }

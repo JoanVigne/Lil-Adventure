@@ -41,22 +41,6 @@ function addingStat(stat, howMuch) {
   }
 }
 
-/* function addingHp(howMuch) {
-  gameStuffData.hp = gameStuffData.hp += howMuch;
-  if (gameStuffData.hp <= 0) {
-    playerDeath();
-  }
-  playerStuff();
-}
-function addingForce(howMuch) {
-  gameStuffData.force = gameStuffData.force += howMuch;
-  playerStuff();
-}
-function addingArmor(howMuch) {
-  gameStuffData.armor = gameStuffData.armor += howMuch;
-  playerStuff();
-} */
-
 function orcBeerDrink() {
   homeMadeAlert(
     "GlupGlup",

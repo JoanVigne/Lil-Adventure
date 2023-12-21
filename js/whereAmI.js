@@ -9,7 +9,6 @@ function whereAmI() {
   // to delet the previous obstacles of the last visited map
   deletAllObstacle();
   deletAllPeople();
-  let theLostLandScenario = localStorage.getItem("theLostLandScenario");
   //
 
   switch (iAmHere) {
@@ -805,19 +804,13 @@ function whereAmI() {
       obstacleCreation1("dryGround", 5, 6);
       obstacleCreation1("dryGround", 6, 6);
       obstacleCreation1("dryGround", 4, 6);
-      // top of this funcion : let theLostLandScenario = localStorage.getItem("theLostLandScenario");
       if (enemyArray[13].done === false) {
         obstacleCreation1("guard-enemy", 5, 5);
       }
       if (enemyArray[13].done === true) {
         obstacleCreation1("blood", 5, 5);
       }
-      /*  if (theLostLandScenario == "1") {
-        obstacleCreation1("guard-enemy", 5, 5);
-      }
-      if (theLostLandScenario == "2") {
-        obstacleCreation1("blood", 5, 5);
-      } */
+
       break;
     case "The first ruins":
       container.classList.replace(containerBGI, "dryGround");
@@ -843,18 +836,6 @@ function whereAmI() {
       if (enemyArray[15].done === true) {
         obstacleCreation1("blood", 6, 5);
       }
-      /*       if (theLostLandScenario == "2") {
-        obstacleCreation1("first-soldier", 4, 5);
-        obstacleCreation1("second-soldier", 6, 5);
-      }
-      if (theLostLandScenario == "3") {
-        obstacleCreation1("blood", 4, 5);
-        obstacleCreation1("second-soldier", 6, 5);
-      }
-      if (theLostLandScenario == "4") {
-        obstacleCreation1("blood", 3, 5);
-        obstacleCreation1("blood", 6, 5);
-      } */
       break;
     case "The second ruins":
       container.classList.replace(containerBGI, "dryGround");
@@ -882,20 +863,6 @@ function whereAmI() {
       if (enemyArray[17].done === true) {
         obstacleCreation1("blood", 6, 8);
       }
-
-      /*   let theLostLandScenario4 = localStorage.getItem("theLostLandScenario"); */
-      /*  if (theLostLandScenario == "4") {
-        obstacleCreation1("third-soldier", 3, 3);
-        obstacleCreation1("Rider", 6, 8);
-      }
-      if (theLostLandScenario == "5") {
-        obstacleCreation1("blood", 3, 3);
-        obstacleCreation1("Rider", 6, 8);
-      }
-      if (theLostLandScenario == "6") {
-        obstacleCreation1("blood", 3, 3);
-        obstacleCreation1("blood", 6, 8);
-      } */
       break;
     case "The old castle":
       container.classList.replace(containerBGI, "cityFloor2");
@@ -944,12 +911,17 @@ function whereAmI() {
       obstacleCreation4("stones", 3, 2);
       obstacleCreation4("stones", 4, 7);
       //
-
-      /*       obstacleCreation1("Edmund", 5, 10);
-      obstacleCreation1("gorilla", 3, 10); */
+      if (enemyArray[19].done === true) {
+        obstacleCreation1("blood", 5, 10);
+        setTimeout(() => {
+          adventureIsOver();
+        }, 1500);
+        break;
+      }
+      obstacleCreation1("Edmund", 5, 10);
+      obstacleCreation1("gorilla", 3, 10);
       // scenario
       if (enemyArray[18].done === false) {
-        obstacleCreation1("gorilla", 3, 10);
         bubble("Edmund", "??", -1, -1);
         setTimeout(() => {
           edmundScenario();
@@ -960,24 +932,9 @@ function whereAmI() {
         // scenario
         fightEdmund2();
       }
-      if (enemyArray[19].done === false) {
+      /*       if (enemyArray[19].done === false) {
         obstacleCreation1("Edmund", 5, 10);
-      }
-      if (enemyArray[19].done === true) {
-        obstacleCreation1("blood", 5, 10);
-        setTimeout(() => {
-          adventureIsOver();
-        }, 1500);
-      }
-
-      /* setTimeout(() => {
-        if (theLostLandScenario == "6") {
-          edmundScenario();
-        }
-        if (theLostLandScenario == "gorillaDown") {
-          fightEdmund2();
-        }
-      }, 2000); */
+      } */
 
       break;
     default:

@@ -251,68 +251,53 @@ function playerPositionEvent() {
       }
       break;
     case "The lost land":
-      let theLostLandScenario = localStorage.getItem("theLostLandScenario");
-      if (theLostLandScenario == "1") {
-        if (column == 4) {
+      if (column == 4) {
+        if (enemyArray[13].done === false) {
           promptBox(`Wtf? Who are you ? A civilian? What the hell are you doing here?<br>
-                    <input type='button' 
-                    onclick='detailEnemy(enemyArray[13], "I cant let you!"), closePromptBox()'
-                     value="Okay!">`);
+            <input type='button' 
+            onclick='detailEnemy(enemyArray[13], "I cant let you!"), closePromptBox()'
+             value="Okay!">`);
+          enemyArray[13].done = true;
         }
       }
       break;
     case "The first ruins":
       if (column == 3) {
-        let theLostLandScenario = localStorage.getItem("theLostLandScenario");
-        if (enemyArray[13].done === true) {
-          return;
-        }
-        promptBox(`Wtf? Who are you ? A civilian? What the hell are you doing here?<br>
+        if (enemyArray[14].done === false) {
+          promptBox(`Wtf? Who are you ? A civilian? What the hell are you doing here?<br>
         <input type='button'
          onclick='detailEnemy(enemyArray[14], "Stop!"), closePromptBox()' 
          value="Okay!">`);
-        /* if (theLostLandScenario == "2") {
-          promptBox(`Wtf? Who are you ? A civilian? What the hell are you doing here?<br>
-                    <input type='button'
-                     onclick='detailEnemy(enemyArray[14], "Stop!"), closePromptBox()' 
-                     value="Okay!">`);
-        } */
-
-        if (column == 5) {
-          let theLostLandScenario = localStorage.getItem("theLostLandScenario");
-          if (enemyArray[14].done === true) {
-            return;
-          }
-          promptBox(`Wtf? Who are you ? A civilian? What the hell are you doing here?<br>
-                    <input type='button'
-                     onclick='detailEnemy(enemyArray[15], "En guarde!"), closePromptBox()' 
-                     value="Okay!">`);
+          enemyArray[14].done = true;
         }
-        /* if (theLostLandScenario == "3") {
+      }
+      if (column == 5) {
+        if (enemyArray[15].done === false) {
           promptBox(`Wtf? Who are you ? A civilian? What the hell are you doing here?<br>
-                    <input type='button'
-                     onclick='detailEnemy(enemyArray[15], "En guarde!"), closePromptBox()' 
-                     value="Okay!">`);
-        } */
+                  <input type='button'
+                   onclick='detailEnemy(enemyArray[15], "En guarde!"), closePromptBox()' 
+                   value="Okay!">`);
+          enemyArray[15].done = true;
+        }
       }
       break;
     case "The second ruins":
       if (column == 3) {
-        let theLostLandScenario = localStorage.getItem("theLostLandScenario");
-        if (theLostLandScenario == "4") {
+        if (enemyArray[16].done === false) {
           promptBox(`Wtf? Who are you ? A civilian? What the hell are you doing here?<br>
-                        <input type='button'
-                         onclick='detailEnemy(enemyArray[16], "Stop!"), closePromptBox()' 
-                         value="Okay!">`);
+                          <input type='button'
+                           onclick='detailEnemy(enemyArray[16], "Stop!"), closePromptBox()' 
+                           value="Okay!">`);
+          enemyArray[16].done = true;
         }
       }
       if (column == 5) {
-        let theLostLandScenario = localStorage.getItem("theLostLandScenario");
-        if (theLostLandScenario == "5") {
+        if (enemyArray[17].done === false) {
           promptBox(`Wtf? Who are you ? A civilian? What the hell are you doing here?<br>
                         <input type='button'
                          onclick='detailEnemy(enemyArray[17], "En guarde!"), closePromptBox()' 
                          value="Okay!">`);
+          enemyArray[17].done = true;
         }
       }
       break;

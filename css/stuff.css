@@ -12,6 +12,7 @@
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
+  animation: breathing 5s infinite;
 }
 
 #weapon {
@@ -79,12 +80,12 @@
   background-image: url("../images/stuff/shield.png");
 }
 
-.armure {
-  background-image: url("../images/stuff/armure.png");
+.Iron {
+  background-image: url("../images/stuff/Iron.png");
 }
 
-.bouclier {
-  background-image: url("../images/stuff/bouclier.png");
+.Wooden {
+  background-image: url("../images/stuff/Wooden.png");
 }
 
 /* .axeSmall {

@@ -229,8 +229,8 @@ function tpAfterOrcs() {
     gameStuffData.hp = 10;
   }
   gameStuffData.weapon = "white-sword";
-  gameStuffData.shield = "bouclier";
-  gameStuffData.top = "armure";
+  gameStuffData.shield = "Wooden";
+  gameStuffData.top = "Iron";
   gameStuffData.armor = 3;
   playerStuff();
   setTimeout(() => {
@@ -285,6 +285,7 @@ function poop() {
 function fightGorilla() {
   closePromptBox();
   detailEnemy(enemyArray[18], "HOUHOUHOHUHOU.");
+  enemyArray[18].done = true;
 }
 function lie() {
   closePromptBox();
@@ -352,20 +353,19 @@ function fightEdmund1() {
 
 // start this function with whereAmI if localstorage theLostLandScenario === gorillaDown
 function fightEdmund2() {
-  /* closePromptBox(); */
+  closePromptBox();
   promptBox(`<h4>Edmund:</h4>
   <p>"My ape... what did you do to him...<br>
       You're gonna suffer for this..."<br>
       Edmund takes a small crossbow and shoots a small arrow with surprising precision, directly at your neck!<br>
       You pull out the arrow as fast as possible.<br>
       You feel a liquid flowing out of the impact... You touch it and look at it...<br>
-      There is some blood, amd... a green substance??</p>
+      There is some blood, and... a green substance??</p>
   
     <input type="button" onclick='wthIsThat()' value="What the hell is that?!">
     `);
 }
 function wthIsThat() {
-  localStorage.setItem("theLostLandScenario", "poisoned");
   closePromptBox();
   promptBox(`<h4>Edmund:</h4>
   <p>It is the color of your punishment!<br>
@@ -377,8 +377,17 @@ function wthIsThat() {
 function finalFight() {
   closePromptBox();
   detailEnemy(enemyArray[19], "It is just a question of time...");
+  enemyArray[19].done = true;
 }
 
 function adventureIsOver() {
-  console.log("end");
+  /*  promptBox(` "Congrats, you win this game, you avoided bugs and death !<br><br>
+          <img src="./images/joan.png"><br>
+          (this is me, looking at you wondering how you went so far in my game)`); */
+  homeMadeAlert(
+    `<h3>You win !!!!! </h3>`,
+    `you avoided bugs and death !<br><br>
+          <img src="./images/joan.png"><br>
+          (this is me, looking at you wondering how you went so far in my game)`
+  );
 }
