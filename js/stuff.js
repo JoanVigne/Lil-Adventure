@@ -55,6 +55,7 @@ function newStuff(item, slot, title) {
       );
     }
     playerStuff();
+    whereAmI();
   });
 }
 

@@ -161,7 +161,8 @@ function roll(dammageValue, oddValue) {
   /* RESULTS functions IN FIGHT.JS*/
   if (resultOdd < oddValue) {
     setTimeout(() => {
-      youTouch(resultDammage);
+      /*     youTouch(resultDammage); */
+      newTouch(resultDammage);
       console.log("resultDammage in roll():", resultDammage);
     }, 500);
   } else {

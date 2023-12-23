@@ -37,7 +37,6 @@ function fightContainer() {
   playerContainer.append(player);
   displayStatsPlayer(statPlayerContainer);
   weaponChoseDices();
-  focusThisInput(0);
 }
 
 function endOfFight() {

@@ -12,10 +12,7 @@ function whereAmI() {
   //
 
   switch (iAmHere) {
-    // BEGGNING OF THE GAME { neighborhood }
     case "Home sweet home":
-      /*       player.style.gridColumn = 4;
-      player.style.gridRow = 6; */
       container.classList.replace(containerBGI, "homeSweetHome");
       obstacleCreation1("lightFromOutside", 4, 2);
       obstacleCreation1("tableMirror", 2, 4);
@@ -367,6 +364,7 @@ function whereAmI() {
       break;
     case "Tunnel second":
       container.classList.replace(containerBGI, "tunnel");
+      directionArrowsOnAndOff(north, notThisArrow, south, notThisArrow);
       obstacleCreation1("stones", 6, 10);
       obstacleCreation1("stones", 5, 10);
       obstacleCreation1("stones", 3, 10);
@@ -388,6 +386,7 @@ function whereAmI() {
       break;
     case "Tunnel third":
       container.classList.replace(containerBGI, "tunnel");
+      directionArrowsOnAndOff(north, notThisArrow, south, notThisArrow);
       obstacleCreation1("stones", 2, 10);
       obstacleCreation1("stones", 5, 10);
       obstacleCreation1("stones", 3, 10);
@@ -412,6 +411,7 @@ function whereAmI() {
       break;
     case "Tunnel fourth":
       container.classList.replace(containerBGI, "tunnel");
+      directionArrowsOnAndOff(north, notThisArrow, south, notThisArrow);
       if (enemyArray[1].done == false) {
         obstacleCreationSPAN("queenSpider", 3, 3, 3, 3);
       }
@@ -441,8 +441,12 @@ function whereAmI() {
       obstacleCreation1("barrel", 6, 7);
       obstacleCreation1("barrel", 2, 9);
       obstacleCreation1("barrel", 6, 8);
-      obstacleCreation1("good-t-shirt", 6, 6);
-      obstacleCreation1("hammer-small", 3, 3);
+      if (gameStuffData.weapon !== "hammer-small") {
+        obstacleCreation1("hammer-small", 3, 3);
+      }
+      if (gameStuffData.top !== "good-t-shirt") {
+        obstacleCreation1("good-t-shirt", 6, 6);
+      }
 
       break;
     case "Random House":
@@ -520,7 +524,9 @@ function whereAmI() {
 
       obstacleCreationSPAN("graveStoneTopCross", 3, 3, 1, 2);
       if (enemyArray[3].done === true) {
-        obstacleCreation1("dark-small-sword", 4, 4);
+        if (gameStuffData.weapon !== "dark-small-sword") {
+          obstacleCreation1("dark-small-sword", 4, 4);
+        }
       }
       if (enemyArray[3].done === false) {
         obstacleCreation1("graveStonePurple", 4, 4);

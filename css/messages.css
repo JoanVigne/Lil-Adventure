@@ -11,6 +11,8 @@
 
 input[type="button"] {
   background: darkgoldenrod;
+  margin: auto;
+  position: relative;
 }
 
 #alertBox {
@@ -51,10 +53,26 @@ input[type="button"] {
   padding: 2px;
   margin: 5px;
 }
-#promptBox input[type="button"]:focus {
-  outline: 2px solid rgb(36, 136, 243);
-}
-
 ::placeholder {
   color: rgb(208, 205, 205);
+}
+
+input[type="button"]:focus {
+  animation: focusAnimation 1.6s infinite;
+  outline-width: 3px;
+}
+@keyframes focusAnimation {
+  0% {
+    outline-color: rgba(36, 136, 243, 70%);
+    outline-style: dashed;
+  }
+  50% {
+    outline-color: rgb(36, 136, 243);
+    outline-style: dashed;
+  }
+  100% {
+    outline-color: rgb(36, 136, 243);
+    outline-style: dashed;
+    outline-style: auto;
+  }
 }

@@ -1,4 +1,14 @@
 // Bubble
+/* testParams = {
+  id: '',
+  message: '',
+}
+function bubble2(params){
+  params.
+
+} 
+bubble2(testParams);
+*/
 function bubble(id, message, bubCol, bubRow) {
   let bubble = document.createElement("div");
   bubble.classList.add("bubble");

@@ -78,62 +78,41 @@ function moreXp(amountOfXp) {
   let level = gameStuffData.level;
 
   if (newXp >= 100 && newXp < 200) {
-    /*     parseData.xp = newXp -= 100; */
     gameStuffData.xp = newXp -= 100;
     gameStuffData.level = level += 1;
-    /*     localStorage.setItem("gameStuff", JSON.stringify(parseData)); */
-    setTimeout(() => {
-      statUpgrade();
-    }, 500);
+    statUpgrade(1);
   }
   if (newXp >= 200 && newXp < 300) {
-    /*     parseData.xp = newXp -= 200;
-    parseData.level = parseData.level += 2; */
     gameStuffData.xp = newXp -= 200;
     gameStuffData.level = level += 2;
-    /*     localStorage.setItem("gameStuff", JSON.stringify(parseData)); */
-    setTimeout(() => {
-      statUpgrade();
-      statUpgrade();
-    }, 500);
+    statUpgrade(2);
   }
   if (newXp >= 300 && newXp < 400) {
-    /*     parseData.xp = newXp -= 300;
-    parseData.level = parseData.level += 3; */
     gameStuffData.xp = newXp -= 300;
     gameStuffData.level = level += 3;
-    /*     localStorage.setItem("gameStuff", JSON.stringify(parseData)); */
-    setTimeout(() => {
-      statUpgrade();
-      statUpgrade();
-      statUpgrade();
-    }, 500);
+
+    statUpgrade(3);
   }
   if (newXp >= 400) {
-    /*     parseData.xp = 0;
-    parseData.level = parseData.level += 4; */
     gameStuffData.xp = 0;
-    gameStuffData.level = level += 4;
-    /*    localStorage.setItem("gameStuff", JSON.stringify(parseData)); */
-    setTimeout(() => {
-      statUpgrade();
-      statUpgrade();
-      statUpgrade();
-      statUpgrade();
-    }, 500);
+    statUpgrade(4);
   } else {
     gameStuffData.xp = newXp;
-    /*     localStorage.setItem("gameStuff", JSON.stringify(parseData)); */
   }
-
   xpAndLevelDisplay();
 }
 
-function statUpgrade() {
-  promptBox(`<h3><u>Level up !</u></h3> <br> 
+function statUpgrade(howMany) {
+  let titleLevelUp = "Level up !";
+  if (howMany > 1) {
+    titleLevelUp = `You just gained ${howMany} levels!`;
+  }
+  promptBox(`<h3><u>${titleLevelUp}</u></h3> <br> 
     <h4>Chose a stat to upgrade :</h4>
     <br>
-    <input type="button" class="forceBut" onClick="addingStat('force', 1); closePromptBox();" value="Force +1"/> <br>
-    <input type="button" class="hpBut" onClick="addingStat('hp', 2); closePromptBox()" value="HP +2"/>`);
-  focusThisInput(0);
+    <input type="button" class="forceBut levelUpButton" onClick="addingStat('force', ${howMany}); closePromptBox(); focusThisInput(0);" value="Force +${howMany}"/> <br>
+    <input type="button" class="hpBut levelUpButton" onClick="addingStat('hp', ${
+      howMany * 2
+    }); closePromptBox(); focusThisInput(0);" value="HP +${howMany * 2}"/>`);
+  focusThisInput();
 }

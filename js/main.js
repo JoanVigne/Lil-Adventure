@@ -39,6 +39,11 @@ function removeThisClass(thisOne) {
 }
 
 function focusThisInput(indexOrContainer) {
+  const levelUpButton = document.querySelector(".levelUpButton");
+  if (levelUpButton) {
+    levelUpButton.focus();
+    return;
+  }
   if (indexOrContainer === "alertBox") {
     const alertButton = document.querySelector(
       "#alertBox input[type='button']"
@@ -46,7 +51,6 @@ function focusThisInput(indexOrContainer) {
     alertButton?.focus();
     return;
   }
-
   const promptboxON = document.querySelector("#promptBox");
   if (promptboxON) {
     promptboxON.querySelector('input[type="button"]').focus();
@@ -58,6 +62,7 @@ function focusThisInput(indexOrContainer) {
   }
   if (inputButtons.length >= 0) {
     inputButtons[indexOrContainer].focus();
+    inputButtons[indexOrContainer].classList.add("focusWithArrow");
   }
 }
 // directions au clavier
