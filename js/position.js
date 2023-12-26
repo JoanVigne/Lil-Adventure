@@ -104,15 +104,27 @@ function playerPositionEvent() {
         saving("auto-save");
       }
       if (numberRow == 5) {
+        if (enemyArray[0].done === true) {
+          return;
+        }
         bubble("player", "WOW !!", 0, -1);
         setTimeout(() => {
           detailEnemy(enemyArray[0], "ksksksks");
+          limitTheSpiderFarm();
         }, 500);
       }
       break;
     case "Tunnel third":
       if (position == "4 / 4" || position == "6 / 5" || position == "2 / 4") {
-        detailEnemy(enemyArray[0], "ksksksks");
+        if (enemyArray[0].done === true) {
+          bubble("player", "dead spidey good", 0, -1);
+          return;
+        }
+        bubble("player", "Yerk spidey", 0, -1);
+        setTimeout(() => {
+          detailEnemy(enemyArray[0], "ksksksks");
+          limitTheSpiderFarm();
+        }, 500);
       }
       break;
     case "Tunnel fourth":
@@ -245,11 +257,18 @@ function playerPositionEvent() {
 
       break;
     case "The north of the orc camp":
+      if (numberRow == 3) {
+        saving("auto-save");
+      }
       if (position == "10 / 2") {
         bubble("player", "fire burn.. [-1 hp]", 0, 1);
         addingStat("hp", -1);
       }
       break;
+    case "After the river":
+      if (column == 6) {
+        saving("auto-save");
+      }
     case "The lost land":
       if (column == 4) {
         if (enemyArray[13].done === false) {
@@ -257,6 +276,7 @@ function playerPositionEvent() {
             <input type='button' 
             onclick='detailEnemy(enemyArray[13], "I cant let you!"), closePromptBox()'
              value="Okay!">`);
+
           enemyArray[13].done = true;
         }
       }

@@ -1,14 +1,3 @@
-// Bubble
-/* testParams = {
-  id: '',
-  message: '',
-}
-function bubble2(params){
-  params.
-
-} 
-bubble2(testParams);
-*/
 function bubble(id, message, bubCol, bubRow) {
   let bubble = document.createElement("div");
   bubble.classList.add("bubble");
@@ -44,15 +33,12 @@ function bubble(id, message, bubCol, bubRow) {
     allTheBubble[0]?.parentNode.removeChild(bubble);
   }
 }
-
-// HOME MADE ALERT FOR SCENARIO MESSAGES
 function homeMadeAlert(title, message) {
   let alertBox = document.createElement("div");
   alertBox.setAttribute("id", "alertBox");
   alertBox.innerHTML = `<h3>${title}</h3><br>
                                 <p>${message}</p><br>
                                 <input type="button" value="Okay" onclick="closeHomeMadeAlert()">`;
-  /* container.append(alertBox); */
   setTimeout(() => {
     container.append(alertBox);
     focusThisInput("alertBox");
@@ -62,11 +48,10 @@ function closeHomeMadeAlert() {
   let alertBoxToClose = document.getElementById("alertBox");
   alertBoxToClose.remove();
 }
-
 // THE SCENARIO MESSAGES
 let indexOfVillageCenter = 0;
 function theVillageCenterMessage() {
-  if (indexOfVillageCenter !== 0) {
+  if (indexOfVillageCenter > 0) {
     return;
   }
   homeMadeAlert(
@@ -93,38 +78,31 @@ function theArmyRoadBlockMessage() {
   }
   indexArmyRoadBlock++;
 }
-
-function homeMadePrompt(
-  message,
-  valueOfFirstButton,
-  functionFirstButton,
-  valueOfThePlaceHolder
-) {
-  let promptBox = document.createElement("div");
-  promptBox.setAttribute("id", "promptBox");
-  promptBox.innerHTML = `${message}`;
-
-  let entry = document.createElement("input");
-  entry.setAttribute("type", "text");
-  entry.setAttribute("id", "entry");
-  entry.setAttribute("placeholder", valueOfThePlaceHolder);
-
-  let firstButton = document.createElement("input");
-  firstButton.setAttribute("type", "button");
-  firstButton.setAttribute("value", valueOfFirstButton);
-  firstButton.setAttribute("id", valueOfFirstButton);
-  firstButton.addEventListener("click", functionFirstButton);
-  let secondButton = document.createElement("input");
-  secondButton.setAttribute("type", "button");
-  secondButton.setAttribute("value", "Cancel");
-  secondButton.setAttribute("id", "Cancel");
-  secondButton.addEventListener("click", cancelFunction);
-
-  promptBox.append(entry, firstButton, secondButton);
-  container.append(promptBox);
-
-  function cancelFunction() {
-    promptBox.remove();
+function focusThisInput(indexOrContainer) {
+  const levelUpButton = document.querySelector(".levelUpButton");
+  if (levelUpButton) {
+    levelUpButton.focus();
+    return;
+  }
+  if (indexOrContainer === "alertBox") {
+    const alertButton = document.querySelector(
+      "#alertBox input[type='button']"
+    );
+    alertButton?.focus();
+    return;
+  }
+  const promptboxON = document.querySelector("#promptBox");
+  if (promptboxON) {
+    promptboxON.querySelector('input[type="button"]').focus();
+    return;
+  }
+  const inputButtons = document.querySelectorAll('input[type="button"]');
+  if (typeof indexOrContainer === "number") {
+    indexOrContainer = indexOrContainer.toString();
+  }
+  if (inputButtons.length >= 0) {
+    inputButtons[indexOrContainer].focus();
+    inputButtons[indexOrContainer].classList.add("focusWithArrow");
   }
 }
 function choice(

@@ -38,33 +38,6 @@ function removeThisClass(thisOne) {
   });
 }
 
-function focusThisInput(indexOrContainer) {
-  const levelUpButton = document.querySelector(".levelUpButton");
-  if (levelUpButton) {
-    levelUpButton.focus();
-    return;
-  }
-  if (indexOrContainer === "alertBox") {
-    const alertButton = document.querySelector(
-      "#alertBox input[type='button']"
-    );
-    alertButton?.focus();
-    return;
-  }
-  const promptboxON = document.querySelector("#promptBox");
-  if (promptboxON) {
-    promptboxON.querySelector('input[type="button"]').focus();
-    return;
-  }
-  const inputButtons = document.querySelectorAll('input[type="button"]');
-  if (typeof indexOrContainer === "number") {
-    indexOrContainer = indexOrContainer.toString();
-  }
-  if (inputButtons.length >= 0) {
-    inputButtons[indexOrContainer].focus();
-    inputButtons[indexOrContainer].classList.add("focusWithArrow");
-  }
-}
 // directions au clavier
 document.addEventListener("keydown", function (event) {
   const alertBox = document.querySelector("#alertBox");
@@ -128,3 +101,31 @@ document.addEventListener("keydown", function (event) {
       break;
   }
 });
+
+function focusThisInput(indexOrContainer) {
+  const levelUpButton = document.querySelector(".levelUpButton");
+  if (levelUpButton) {
+    levelUpButton.focus();
+    return;
+  }
+  if (indexOrContainer === "alertBox") {
+    const alertButton = document.querySelector(
+      "#alertBox input[type='button']"
+    );
+    alertButton?.focus();
+    return;
+  }
+  const promptboxON = document.querySelector("#promptBox");
+  if (promptboxON) {
+    promptboxON.querySelector('input[type="button"]').focus();
+    return;
+  }
+  const inputButtons = document.querySelectorAll('input[type="button"]');
+  if (typeof indexOrContainer === "number") {
+    indexOrContainer = indexOrContainer.toString();
+  }
+  if (inputButtons.length >= 0) {
+    inputButtons[indexOrContainer].focus();
+    inputButtons[indexOrContainer].classList.add("focusWithArrow");
+  }
+}

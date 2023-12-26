@@ -1,5 +1,12 @@
 // VANGUARD START
+function avoidMultiplePrompts() {
+  const multiplePromptBox = document.querySelectorAll("#promptBox");
+  if (multiplePromptBox.length > 0) {
+    return;
+  }
+}
 function vanguardScenario() {
+  avoidMultiplePrompts();
   choice(
     'They surround you. <br> One of the orcs: <br>"Drop weapon pity human, or die.',
     "I obey",
@@ -32,6 +39,7 @@ function refuse() {
   );
 }
 function toTheLeader() {
+  avoidMultiplePrompts();
   gameStuffData.weapon = "";
   playerStuff();
   /*   newStuff("", "weapon"); */
@@ -50,6 +58,7 @@ function fightOrcs() {
 }
 
 function toTheArena() {
+  avoidMultiplePrompts();
   closePromptBox();
   TP("The fight arena");
   directionDisappear();
@@ -63,10 +72,13 @@ function orderFightOrcs() {
   /*  let indexturn = 0; */
   switch (whosTurn) {
     case "1":
-      homeMadeAlert(
+      promptBox(`<h4>ME FIRST !!</h4>
+      <p>One of them come forward and get his weapon. He is ready to fight</p>
+      <input type="button" onclick='closePromptBox(); focusThisInput(0)' value="Let's do this">`);
+      /*       homeMadeAlert(
         "ME FIRST !!",
         "One of them come forward and get his weapon. He is ready to fight"
-      );
+      ); */
       detailEnemy(enemyArray[7], "ME FIRST");
       break;
     case "2":
@@ -77,17 +89,17 @@ function orderFightOrcs() {
       detailEnemy(enemyArray[8], "ME BETTER");
       break;
     case "3":
-      homeMadeAlert("NEXT", "It feels like it will never end...");
+      promptBox(`<h4>MY TURN !!!</h4><p>It feels like it will never end...</p>
+      <input type="button" onclick='closePromptBox(); focusThisInput(0)' value="Kill it">`);
       detailEnemy(enemyArray[9], "WTF you good");
       break;
     case "4":
       detailEnemy(enemyArray[10], "I'm last one...");
       break;
     case "5":
-      homeMadeAlert(
-        "NEXT",
-        "They are all silent... An other one comes in front of you. He is bigger than the others... "
-      );
+      promptBox(`<h4>NEXT</h4>
+      <p>They are all quiet... An other one comes in front of you. He is bigger than the others...</p>
+      <input type="button" onclick='closeProntBox(); focusThisInput(0)' value="This is a big one..">`);
       detailEnemy(enemyArray[11], "You killed enought. now you die.");
       break;
     case "6":
@@ -132,7 +144,7 @@ function dontKnee() {
   promptBox(`<p><h4>"Imbecile" <br></h4>
                 He makes a sign with his enormous hand<br>[you hear a fast whistle behind you]<br><br>
                 You feel a pain in your right leg, you take a look and realise 
-                    that you have an arrow through your thigh..<br>[-2hp] </p>
+                    that you have an arrow to the knee...<br>[-2hp] </p>
                 <input type="button" onclick="kneeling()" value="Ouch">`);
 }
 function kneeling() {

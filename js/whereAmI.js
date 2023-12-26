@@ -50,6 +50,7 @@ function whereAmI() {
       obstacleCreation1("leftTreeBlack", 3, 7);
       obstacleCreation1("bigTreeBlack", 6, 9);
       directionArrowsOnAndOff(north, notThisArrow, south, notThisArrow);
+      bubble("player", "Here too?!", -1, -1);
       break;
     // THE VILLAGE
     case "The entrance of the village":
@@ -348,6 +349,7 @@ function whereAmI() {
       obstacleCreation1("barrel", 6, 7);
       obstacleCreation1("barrel", 2, 9);
       obstacleCreation1("barrel", 6, 8);
+      bubble("player", "It's so dark!", 0, -1);
       break;
     case "Tunnel first":
       container.classList.replace(containerBGI, "tunnel");
@@ -921,11 +923,11 @@ function whereAmI() {
         obstacleCreation1("blood", 5, 10);
         setTimeout(() => {
           adventureIsOver();
-        }, 1500);
+        }, 2500);
         break;
       }
-      obstacleCreation1("Edmund", 5, 10);
-      obstacleCreation1("gorilla", 3, 10);
+      obstacleCreationSPAN("Edmund", 6, 10, 4, 4);
+      obstacleCreationSPAN("gorilla", 3, 10, 4, 4);
       // scenario
       if (enemyArray[18].done === false) {
         bubble("Edmund", "??", -1, -1);
@@ -938,9 +940,6 @@ function whereAmI() {
         // scenario
         fightEdmund2();
       }
-      /*       if (enemyArray[19].done === false) {
-        obstacleCreation1("Edmund", 5, 10);
-      } */
 
       break;
     default:

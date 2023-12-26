@@ -29,6 +29,15 @@ function deletAllPeople() {
     person.remove();
   });
 }
+let howManySpiderYouKilled = 0;
+function limitTheSpiderFarm() {
+  howManySpiderYouKilled++;
+  console.log("passe dans linitTheSpiderFaram", howManySpiderYouKilled);
+  if (howManySpiderYouKilled >= 5) {
+    enemyArray[0].done = true;
+    console.log("too many spiders have been killed");
+  }
+}
 
 let enemyArray = [
   {

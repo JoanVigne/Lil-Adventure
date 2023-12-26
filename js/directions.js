@@ -1,6 +1,5 @@
 // in this document :
 // - going from a map to an other
-// - bubble and alert when you arrive on a map
 
 // directions click
 let northDirection = document.createElement("div");
@@ -101,7 +100,6 @@ function toTheNorth() {
       case "The Garden":
         titleH1[0].innerHTML = `The way to the village`;
         player.style.gridRowStart = 10;
-        bubble("player", "Here too?!", 0, -1);
         break;
       case "The way to the village":
         titleH1[0].innerHTML = `The entrance of the village`;
@@ -158,7 +156,7 @@ function toTheNorth() {
       case "Tunnel entrance":
         titleH1[0].innerHTML = `Tunnel first`;
         player.style.gridRowStart = 10;
-        bubble("player", "It's so dark!", 0, -1);
+
         break;
       case "Tunnel first":
         titleH1[0].innerHTML = `Tunnel second`;
