@@ -111,8 +111,8 @@ function trainingVence2() {
   enemyChatContainer.innerHTML = `<p>I can see that you don't have any weapons. I only have this for you</p>`;
   mainChatContainer.innerHTML = `<p>You recieve a rolling pin ... 
      </p>`;
-  newStuff("rolling-pin", "weapon");
-
+  gameStuffData.weapon = "rolling-pin";
+  playerStuff();
   buttons(
     "no",
     "no",
@@ -134,7 +134,8 @@ function upgradeRollingPin() {
   mainChatContainer.innerHTML = `<p>Vence found a little hammer !<br>
     You recieve a little hammer 
     </p>`;
-  newStuff("hammer-small", "weapon");
+  gameStuffData.weapon = "hammer-small";
+  playerStuff();
   buttons("ok", "ok", "Okay", "trainingVence3()", mainChatContainer);
 }
 

@@ -30,6 +30,7 @@ function oneToAHundred() {
 }
 
 function enemyDmgDisplay() {
+  console.log("dans enemyDmgDisplay()");
   const forcex = document.getElementById("force");
   let force = parseInt(forcex.innerHTML, 10);
   const chanceToTouch = oneToAHundred();
@@ -38,6 +39,9 @@ function enemyDmgDisplay() {
     mainChatContainer.innerHTML += `<p>Your enemy attacked and you lost <span class="enemyDmg"> ${dmgEnemy}</span> HP </p> `;
     gameStuffData.hp = gameStuffData.hp - dmgEnemy;
     dammageEnemyMovement();
+    /*  playerStuff(); */
+    let hpContainer = document.getElementById("hpPlayer");
+    hpContainer.innerHTML = gameStuffData.hp;
   }
   if (chanceToTouch >= 50 + force * 2) {
     mainChatContainer.innerHTML += `<p>Your enemy failed his attack</p> `;
@@ -73,7 +77,9 @@ function enemyDeath(DMG) {
   );
 }
 function newTouch(DMG) {
-  if (titleH1.innerHTML === "The local master") {
+  const etape = localStorage.getItem("localMaster");
+  if (etape === "3") {
+    console.log("dans le if");
     enemyChatContainer.innerHTML = `<p>You success !</p>`;
     mainChatContainer.innerHTML = `<p>If it was a real fight, you would ve done <br><span class="myDmg"> ${DMG}<span> dammage .<br>`;
     buttons("ok", "ok", "Okay", "trainingVence2()", mainChatContainer);
@@ -117,17 +123,18 @@ function youMiss(result) {
     buttons("ok", "ok", "Okay", "choseYourDice(2, 4, 6, 8)", mainChatContainer);
   }
   // ENEMY DAMMAGE
-  const chanceToTouch = oneToAHundred();
+  /*   const chanceToTouch = oneToAHundred();
   const dmgEnemy = 1 + force - armorPlayer;
-  let newHPPlayer = hpPlayer - dmgEnemy;
+  let newHPPlayer = hpPlayer - dmgEnemy; */
   if (chanceToTouch <= 50 + force * 2) {
     if (hpPlayer <= 0) {
       playerDeath();
     }
     mainChatContainer.innerHTML = `<h4>You missed the target ! The opponent is laughing at you.. </h4>
                  <p>Your enemy attacked and you lost <span class="enemyDmg"> ${dmgEnemy}</span> HP </p> `;
-    hpPlayerData.innerHTML = newHPPlayer;
+    /* hpPlayerData.innerHTML = newHPPlayer; */
     dammageEnemyMovement();
+    enemyDmgDisplay();
   } else {
     mainChatContainer.innerHTML = `
                  <h4>You missed the target ! The opponent is laughing at you.. </h4>

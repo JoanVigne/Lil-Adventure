@@ -350,6 +350,12 @@ function whereAmI() {
       obstacleCreation1("barrel", 2, 9);
       obstacleCreation1("barrel", 6, 8);
       bubble("player", "It's so dark!", 0, -1);
+      const venceScenarioStorage = localStorage.getItem("localMaster");
+      if (venceScenarioStorage === "4") {
+        enemyArray[2].done = true;
+        localStorage.removeItem("localMaster");
+        localStorage.removeItem("sunFlower");
+      }
       break;
     case "Tunnel first":
       container.classList.replace(containerBGI, "tunnel");
@@ -753,6 +759,7 @@ function whereAmI() {
       break;
     case "The orc leader":
       container.classList.replace(containerBGI, "bigSnow");
+      localStorage.removeItem("whosTurn");
       directionDisappear();
       if (enemyArray[12].done === false) {
         obstacleCreationSPAN("orc-Leader", 4, 1, 4, 4);
