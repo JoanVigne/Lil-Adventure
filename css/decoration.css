@@ -1,172 +1,172 @@
 #lightFromOutside {
-    background-color: rgba(250, 250, 250, 0.4);
-    z-index: 1
+  background-color: rgba(250, 250, 250, 0.4);
+  z-index: 1;
 }
 
 #tableMirror {
-    background-image: url("../images/obstacles/tableMirror.png");
-    background-repeat: no-repeat;
-    z-index: 3;
+  background-image: url("../images/obstacles/tableMirror.png");
+  background-repeat: no-repeat;
+  z-index: 3;
 }
 
 #purpleBed {
-    background-image: url("../images/obstacles/purpleBed.png");
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: bottom;
-    z-index: 1;
+  background-image: url("../images/obstacles/purpleBed.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: bottom;
+  z-index: 1;
 }
 
 #cityRoad {
-    background-image: url("../images/obstacles/cityFloor2.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    z-index: 1;
-    background-position: bottom;
+  background-image: url("../images/obstacles/cityFloor2.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: 1;
+  background-position: bottom;
 }
 
 #cityFloorHolly {
-    background-image: url("../images/floor-ground/cityFloorHolly.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    z-index: 1;
-    background-position: bottom;
+  background-image: url("../images/floor-ground/cityFloorHolly.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: 1;
+  background-position: bottom;
 }
 
 #dryGround {
-    background-image: url("../images/floor-ground/dryGround.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    z-index: 1;
-    background-position: bottom;
+  background-image: url("../images/floor-ground/dryGround.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: 1;
+  background-position: bottom;
 }
 
 /* GRASS AND FLOWERS */
 
 #grass {
-    background-image: url("../images/floor-ground/grass.jpg");
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: bottom;
+  background-image: url("../images/floor-ground/grass.jpg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: bottom;
 }
 
 #grassClose {
-    background-image: url("../images/floor-ground/grassClose.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: bottom;
+  background-image: url("../images/floor-ground/grassClose.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom;
 }
 
 #pinkFlowers {
-    background-image: url("../images/floor-ground/pinkFlowers.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: bottom;
+  background-image: url("../images/floor-ground/pinkFlowers.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom;
 }
 
 #redFlowers {
-    background-image: url("../images/floor-ground/redFlowers.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: bottom;
+  background-image: url("../images/floor-ground/redFlowers.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom;
 }
 
 #purpleFlowers {
-    background-image: url("../images/floor-ground/purpleFlowers.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: bottom;
+  background-image: url("../images/floor-ground/purpleFlowers.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom;
 }
 
 #yellowFlowers {
-    background-image: url("../images/floor-ground/yellowFlowers.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: bottom;
+  background-image: url("../images/floor-ground/yellowFlowers.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom;
 }
 
 /* TUNNEL */
 #spiderWeb {
-    background-image: url("../images/obstacles/spiderweb.png");
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: bottom;
+  background-image: url("../images/obstacles/spiderweb.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom;
 }
 
 #barrel {
-    background-image: url("../images/obstacles/barrel.png");
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: bottom;
+  background-image: url("../images/obstacles/barrel.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: bottom;
 }
 
 #stones {
-    background-image: url("../images/obstacles/stones.png");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: bottom;
+  background-image: url("../images/obstacles/stones.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom;
 }
 
 /* NORTH */
 #pierre {
-    background-image: url("../images/obstacles/pierre.png");
-    background-repeat: no-repeat;
-    background-size: auto;
-    background-position: center;
+  background-image: url("../images/obstacles/pierre.png");
+  background-repeat: no-repeat;
+  background-size: auto;
+  background-position: center;
 }
 
 #metalPieces {
-    background-image: url("../images/obstacles/metalPieces.png");
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: bottom;
+  background-image: url("../images/obstacles/metalPieces.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: bottom;
 }
 
 #blood {
-    background-image: url("../images/obstacles/blood.png");
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: bottom;
-    opacity: 0.7;
+  background-image: url("../images/obstacles/blood.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: bottom;
+  opacity: 0.7;
 }
 
 #fog {
-    background-image: url("../images/obstacles/fog.png");
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: bottom;
-    opacity: 0.7;
+  background-image: url("../images/obstacles/fog.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: bottom;
+  opacity: 0.7;
 }
 
 #wood {
-    background-image: url("../images/obstacles/wood.png");
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: bottom;
-    opacity: 0.7;
+  background-image: url("../images/obstacles/wood.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: bottom;
+  opacity: 0.7;
 }
 
 #torch {
-    background-image: url("../images/obstacles/torch.png");
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: bottom;
-    opacity: 0.7;
+  background-image: url("../images/obstacles/torch.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: bottom;
+  opacity: 0.7;
 }
 
 /* EAST */
 
 #chaudron {
-    background-image: url("../images/obstacles/chaudron.png");
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: bottom;
-    opacity: 0.7;
+  background-image: url("../images/obstacles/chaudron.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: bottom;
+  opacity: 0.7;
 }
 
 #simpleTable {
-    background-image: url("../images/obstacles/simpleTable.png");
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: bottom;
+  background-image: url("../images/obstacles/simpleTable.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: bottom;
 }

@@ -151,6 +151,7 @@ function whereAmI() {
       creationOfPeople("rogue", 3, 9);
       directionArrowsOnAndOff(north, east, south, west);
       theVillageCenterMessage();
+
       break;
     case "The village north":
       container.classList.replace(containerBGI, "cityFloorHolly");

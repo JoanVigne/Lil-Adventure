@@ -112,8 +112,7 @@ function toTheNorth() {
         break;
       case "The village south":
         titleH1[0].innerHTML = `The village center`;
-        player.style.gridColumnStart = 4;
-        player.style.gridRowStart = 9;
+        player.style.gridRowStart = 10;
         break;
       case "The village center":
         titleH1[0].innerHTML = `The village north`;

@@ -30,7 +30,6 @@ function oneToAHundred() {
 }
 
 function enemyDmgDisplay() {
-  console.log("dans enemyDmgDisplay()");
   const forcex = document.getElementById("force");
   let force = parseInt(forcex.innerHTML, 10);
   const chanceToTouch = oneToAHundred();
@@ -39,7 +38,6 @@ function enemyDmgDisplay() {
     mainChatContainer.innerHTML += `<p>Your enemy attacked and you lost <span class="enemyDmg"> ${dmgEnemy}</span> HP </p> `;
     gameStuffData.hp = gameStuffData.hp - dmgEnemy;
     dammageEnemyMovement();
-    /*  playerStuff(); */
     let hpContainer = document.getElementById("hpPlayer");
     hpContainer.innerHTML = gameStuffData.hp;
   }
@@ -116,16 +114,16 @@ function newTouch(DMG) {
   focusThisInput(0);
 }
 
-function youMiss(result) {
+function youMiss() {
   if (titleH1[0].innerHTML === "The local master") {
     enemyChatContainer.innerHTML = `<p> YOU FAILED NOOB</p> `;
     mainChatContainer.innerHTML = `<p> Try again...</p><br>`;
     buttons("ok", "ok", "Okay", "choseYourDice(2, 4, 6, 8)", mainChatContainer);
   }
   // ENEMY DAMMAGE
-  /*   const chanceToTouch = oneToAHundred();
+  const chanceToTouch = oneToAHundred();
   const dmgEnemy = 1 + force - armorPlayer;
-  let newHPPlayer = hpPlayer - dmgEnemy; */
+  /*   let newHPPlayer = hpPlayer - dmgEnemy;  */
   if (chanceToTouch <= 50 + force * 2) {
     if (hpPlayer <= 0) {
       playerDeath();

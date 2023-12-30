@@ -103,7 +103,7 @@ function playerPositionEvent() {
       if (numberRow == 9) {
         saving("auto-save");
       }
-      if (numberRow == 5) {
+      if (numberRow == 5 && column > 2) {
         if (enemyArray[0].done === true) {
           return;
         }

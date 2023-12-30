@@ -2,6 +2,7 @@ let saveLogo = document.getElementById("save");
 saveLogo.addEventListener("click", saveGamePrompt);
 
 function saveGamePrompt() {
+  // if not possible to save :
   let itsAFight = document.getElementById("enemyContainer");
   if (itsAFight) {
     homeMadeAlert(
@@ -16,15 +17,10 @@ function saveGamePrompt() {
     return;
   }
   // IF YOU CAN SAVE :
-  homeMadePrompt(
-    "<p>Do you wanna save this game? It is gonna be saved in your browser.</p>",
-    "SAVE",
-    /* saveFunction, */
-    () => {
-      saving(document.getElementById("entry").value);
-    },
-    "Name of your save"
-  );
+  promptBox(`<p>Do you wanna save this game? It is gonna be saved in your browser.</p>
+  <input type="text" placeholder="Name of your save" id="entry" />
+  <input type="button" value="SAVE" onclick="saving(document.getElementById('entry').value)" />
+ `);
   let saves = localStorage.getItem("saves");
   if (saves == null) {
     let arrayOfSaves = [];

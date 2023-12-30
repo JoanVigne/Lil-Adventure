@@ -99,7 +99,7 @@ function orderFightOrcs() {
     case "5":
       promptBox(`<h4>NEXT</h4>
       <p>They are all quiet... An other one comes in front of you. He is bigger than the others...</p>
-      <input type="button" onclick='closeProntBox(); focusThisInput(0)' value="This is a big one..">`);
+      <input type="button" onclick='closePromptBox(); focusThisInput(0)' value="This is a big one..">`);
       detailEnemy(enemyArray[11], "You killed enought. now you die.");
       break;
     case "6":
