@@ -67,7 +67,8 @@ function lostOfSavedGames() {
 // in  fight
 function tooManyEnemies() {
   let enemiesInContainer = document.getElementsByClassName("opponent");
-  if (enemiesInContainer.length < 1) {
+
+  if (enemiesInContainer.length <= 1) {
     homeMadeAlert(
       "Everything seems ok",
       "You only have one enemy detected right now... fight!"

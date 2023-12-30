@@ -30,7 +30,6 @@ function saveGamePrompt() {
 
 function saving(name) {
   const saves = JSON.parse(localStorage.getItem("saves")) || [];
-
   const location = titleH1[0].innerHTML;
   const stuff = gameStuffData;
   const thePosition = player.style.gridArea;

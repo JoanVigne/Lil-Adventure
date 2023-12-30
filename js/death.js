@@ -15,12 +15,12 @@ function importantEnemyDeath(where) {
     case "The north of the graveyard":
       /*       localStorage.setItem("skeleton", "dead"); */
       enemyArray[3].done = true;
-      newStuff(
+      /*  newStuff(
         "dark-small-sword",
         "weapon",
         `You got closer to the sword that the skeleton left. <br>
       While getting your hand clother of it, you feel something strange, It's as if the blade retains a whisper of the fallen warrior's essence. <br>`
-      );
+      ); */
 
       break;
     case "The fight arena":

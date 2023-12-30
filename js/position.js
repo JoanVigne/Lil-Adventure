@@ -1,6 +1,4 @@
 function playerPositionEvent() {
-  // QUEL EST MON STUFF :
-  let stuff = gameStuffData;
   // A METTRE ICI LOW HP ANIMATION
   let position = player.style.gridArea;
   let column = player.style.gridColumnStart;
@@ -174,9 +172,7 @@ function playerPositionEvent() {
       break;
     case "The north of the graveyard":
       if (position == "5 / 4") {
-        if (enemyArray[3].done == true) {
-          bubble("player", "Just bones", 1, 1);
-        } else {
+        if (enemyArray[3].done == false) {
           confirmMessage(
             "You hear a sound inside this shiny tomb, do you want to open it?",
             "I'm curious...",
@@ -185,6 +181,23 @@ function playerPositionEvent() {
               closePromptBox();
             }
           );
+        }
+      }
+      if (position == "4 / 4") {
+        if (enemyArray[3].done == true) {
+          if (gameStuffData.weapon !== "dark-small-sword") {
+            confirmMessage(
+              `You got closer to the sword that the skeleton left. <br>
+            While getting your hand clother of it, you feel something strange, 
+            It's as if the blade retains a whisper of the fallen warrior's essence. <br>`,
+              `I want to take it!`,
+              () => {
+                closePromptBox(), newStuff("dark-small-sword", "weapon");
+              }
+            );
+            return;
+          }
+          bubble("player", "Just bones", 1, 1);
         }
       }
       break;
