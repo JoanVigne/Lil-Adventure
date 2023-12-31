@@ -41,6 +41,7 @@ function addingStat(stat, howMuch) {
   }
 }
 
+let amIDrunk = false;
 function orcBeerDrink() {
   homeMadeAlert(
     "GlupGlup",
@@ -50,6 +51,8 @@ function orcBeerDrink() {
   addingStat("force", 1);
   /*   addingHp(-1); */
   addingStat("hp", -1);
+  amIDrunk = true;
+  whereAmI();
 }
 function greenPotion() {
   homeMadeAlert(

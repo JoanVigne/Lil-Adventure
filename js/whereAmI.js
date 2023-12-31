@@ -681,11 +681,9 @@ function whereAmI() {
       if (enemyArray[5].done === true) {
         obstacleCreation1("blood", 4, 2);
       }
-      /* if (westCampOrc != "dead") {
-        obstacleCreation1("orc-Leather", 4, 2);
-        bubble("orc-Leather", "zzzz", 0, 1);
-      } */
-      obstacleCreation1("mug", 3, 9);
+      if (amIDrunk === false) {
+        obstacleCreation1("mug", 3, 9);
+      }
 
       obstacleCreationSPAN("tentOrc", 2, 2, 2, 2);
       obstacleCreationSPAN("tentOrc2", 2, 4, 2, 2);

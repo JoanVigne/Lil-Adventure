@@ -136,6 +136,7 @@ function playerPositionEvent() {
           bubble("player", "Let's goooo", 0, 1);
           setTimeout(() => {
             detailEnemy(enemyArray[1], "KSKSKSS MY BABIES ARE DEAD");
+            enemyArray[1].done = true;
           }, 500);
         }
       }
@@ -179,6 +180,7 @@ function playerPositionEvent() {
             () => {
               detailEnemy(enemyArray[3], "My tomb, your death..");
               closePromptBox();
+              enemyArray[3].done = true;
             }
           );
         }
@@ -258,7 +260,7 @@ function playerPositionEvent() {
         bubble("player", "fire burn.. [-1 hp]", 0, 1);
         addingStat("hp", -1);
       }
-      if (position == "9 / 3") {
+      if (position == "9 / 3" && amIDrunk === false) {
         confirmMessage(
           "The orc beer is well known as making you stronger and weaker at the same time...",
           "I wanna try!",
