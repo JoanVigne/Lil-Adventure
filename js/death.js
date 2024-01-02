@@ -2,10 +2,21 @@ function playerDeath() {
   homeMadeAlert("You're dead...", "I hope you saved before !");
   directionDisappear();
   deletAllObstacle();
-  console.log(player);
-  setTimeout(() => {
+  player.classList.add("death");
+  player.style.gridArea = " 8 / 4";
+  obstacleCreation1(gameStuffData.weapon, 5, 8);
+  obstacleCreation1(gameStuffData.shield, 3, 8);
+  gameStuffData.weapon = "";
+  gameStuffData.shield = "";
+  playerStuff();
+  let hat = document.getElementById("hat");
+  hat.style.gridColumn = "3 / span 2";
+  let top = document.getElementById("top");
+  top.style.gridColumn = "1 / span 2";
+  top.style.animation = "none";
+  /*   setTimeout(() => {
     location.reload();
-  }, 5000);
+  }, 5000); */
 }
 
 function importantEnemyDeath(where) {

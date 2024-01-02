@@ -89,17 +89,22 @@
 /* PLAYER  */
 #player {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
   /*TO BE ABLE TO CHOSE IF I PASS ON OR BEHIND OBSTACLES */
   z-index: 2;
 }
 
+.death {
+  background: url("../images/obstacles/blood.png");
+  background-repeat: no-repeat;
+  background-position: right;
+}
 .joan {
-  background-image: url("../images/joan.png");
-  grid-column: 2 / span 2;
-  grid-row: 2;
-  background-size: contain;
+  background-image: url("../images/characters/joan-face.png");
+  grid-column: 3 / span 2;
+  grid-row: 2 / span 2;
+  background-size: 90%;
   background-repeat: no-repeat;
   background-position: center;
 }
