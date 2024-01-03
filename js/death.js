@@ -14,9 +14,9 @@ function playerDeath() {
   let top = document.getElementById("top");
   top.style.gridColumn = "1 / span 2";
   top.style.animation = "none";
-  /*   setTimeout(() => {
+  setTimeout(() => {
     location.reload();
-  }, 5000); */
+  }, 5000);
 }
 
 function importantEnemyDeath(where) {

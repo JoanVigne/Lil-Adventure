@@ -284,6 +284,7 @@ function playerPositionEvent() {
       if (column == 6) {
         saving("auto-save");
       }
+      break;
     case "The lost land":
       if (column == 4) {
         if (enemyArray[13].done === false) {
