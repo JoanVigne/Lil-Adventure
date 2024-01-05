@@ -124,18 +124,20 @@ function displayMyGames() {
     let oneSaving = document.createElement("div");
     oneSaving.classList.add("savings");
     let title = element[0];
-    let location = element[1];
-    let stuff = element[2];
-    let timeOfSaving = element[3];
-    let position = element[4];
-    let enemyArray = element[5];
+    // [1]location; [2]stuff; [3]date; [4]position; [5]enemyArray
     let elementContainer = document.createElement("input");
     elementContainer.type = "button";
     elementContainer.addEventListener("click", () =>
-      load(title, location, JSON.parse(stuff), position, JSON.parse(enemyArray))
+      load(
+        title,
+        element[1],
+        JSON.parse(element[2]),
+        element[4],
+        JSON.parse(element[5])
+      )
     );
     const containerTimeOfSaving = document.createElement("p");
-    containerTimeOfSaving.innerHTML = timeOfSaving;
+    containerTimeOfSaving.innerHTML = element[3];
     let buttonDelet = document.createElement("button");
     buttonDelet.innerHTML = "x";
     buttonDelet.setAttribute("class", "buttonDelet");
