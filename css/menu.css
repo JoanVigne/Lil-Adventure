@@ -47,20 +47,19 @@ fieldset {
   align-items: center;
 }
 
-#theGameSaved p {
-  border-bottom: 1px black solid;
-  cursor: pointer;
-}
-
 .savings {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   width: 80%;
   height: 30px;
-  margin: 2px;
+  margin: 4px;
 }
 
 .savings input[type="button"] {
   height: 100%;
-  width: 90%;
+  width: 190px;
+  margin: 2px;
 }
 
 .savings input[type="button"]:focus,
