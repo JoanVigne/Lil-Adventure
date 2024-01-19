@@ -4,10 +4,12 @@ Lil-Adventure is a small adventure video game created in 2021 using HTML, CSS, a
 
 ## How to Play
 
-To play Lil-Adventure, follow these simple steps:
+Playing Lil-Adventure is easy!
 
-1. Use your mouse to click on the black zones on the screen.
-2. Clicking on different areas will move your character vertically and horizontally.
+1. Use your mouse to click on the black zones on the screen or use the arrow keys !
+2. It moves your character vertically and horizontally.
+3. Blue arrows on black zones indicate pathways to other maps.
+4. To interact with messages, you can click or use arrow key and enter.
 
 ## Demo
 
@@ -23,7 +25,7 @@ Watch the gameplay in action! Check out the images below:
 
 ## Installation
 
-No installation is required. Simply open the game in a web browser that supports HTML, CSS, and JS.
+No installation is needed. Just open the game in any web browser
 
 ## Contributing
 
