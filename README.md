@@ -13,7 +13,12 @@ To play Lil-Adventure, follow these simple steps:
 
 Watch the gameplay in action! Check out the video below:
 
-[![Lil-Adventure Demo](link_to_demo_video)](link_to_demo_video)
+
+<img width="236" alt="screenshot-liladventure-1" src="https://github.com/JoanVigne/Lil-Adventure/assets/100919931/6edca783-9261-4c44-9fff-f50f4cdf06c1">
+<img width="283" alt="screenshot-liladventure-2" src="https://github.com/JoanVigne/Lil-Adventure/assets/100919931/0fd28742-9a87-4e6c-a2b6-6d2f47d783bd">
+<img width="282" alt="screenshot-liladventure-3" src="https://github.com/JoanVigne/Lil-Adventure/assets/100919931/59283a6b-83de-4340-b345-6ed8f4d42c85">
+<img width="283" alt="screenshot-liladventure-4" src="https://github.com/JoanVigne/Lil-Adventure/assets/100919931/bfe9e7e6-aaec-4f2f-b436-d46bcb64d010">
+
 
 > Note: This game is designed for mobile devices, so it works best on smaller screens.
 
